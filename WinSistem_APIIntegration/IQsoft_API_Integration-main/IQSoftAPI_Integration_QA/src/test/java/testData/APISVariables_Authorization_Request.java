@@ -11,7 +11,7 @@ public class APISVariables_Authorization_Request {
 
     @SerializedName("CurrencyId")
     @Expose
-    private String CurrencyId;
+    private String CurrencyId = "EUR";
 
     @SerializedName("PartnerId")
     @Expose

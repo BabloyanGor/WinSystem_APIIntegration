@@ -1,102 +1,98 @@
-2022-09-21 14:11:15,417 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-21 14:11:15,426 [main] INFO API - API Integration Automation Test Test execution starts
-2022-09-21 14:11:15,470 [main] INFO API - Pass TestCase execution starts
-2022-09-21 14:11:16,374 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:11:16,377 [main] INFO API - Pass Test passed
-2022-09-21 14:11:16,410 [main] INFO API - Skipped TestCase execution starts
-2022-09-21 14:11:16,953 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:11:17,118 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:11:17,121 [main] WARN API - Skipped Test failed
-2022-09-21 14:11:17,127 [main] INFO API - Fail TestCase execution starts
-2022-09-21 14:11:17,626 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:11:17,768 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:11:17,773 [main] ERROR API - Fail Test failed
-2022-09-21 14:11:17,778 [main] INFO API - API Integration Automation Test Test execution finished
-2022-09-21 14:31:10,521 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-21 14:31:10,530 [main] INFO API - API Integration Automation Test: Test execution starts
-2022-09-21 14:31:11,482 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:31:11,485 [main] INFO API - Pass: Test passed
-2022-09-21 14:31:12,056 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:31:12,197 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:31:12,198 [main] WARN API - Skipped Test failed
-2022-09-21 14:31:12,500 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:31:12,647 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:31:12,653 [main] ERROR API - Fail Test failed
-2022-09-21 14:31:12,659 [main] INFO API - API Integration Automation Test: Test execution finished
-2022-09-21 14:35:12,658 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-21 14:35:12,667 [main] INFO API - API Integration Automation Test: Test execution starts
-2022-09-21 14:35:13,578 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:35:13,583 [main] INFO API - Pass: Test passed
-2022-09-21 14:35:14,172 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:35:14,327 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:35:14,329 [main] WARN API - Skipped Test failed
-2022-09-21 14:35:14,638 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:35:14,785 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
-2022-09-21 14:35:14,790 [main] ERROR API - Fail Test failed
-2022-09-21 14:35:14,795 [main] INFO API - API Integration Automation Test: Test execution finished
-2022-09-22 14:13:46,871 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:13:48,523 [main] INFO API - Body is equal :   null
-2022-09-22 14:14:13,963 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:14:15,197 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 14:15:52,459 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:15:53,750 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 14:17:30,954 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:17:32,240 [main] INFO API - Body is equal :   {X-Frame-Options=[DENY], Server=[Microsoft-IIS/10.0], X-Content-Type-Options=[nosniff], Access-Control-Allow-Methods=[GET,POST], Content-Length=[115], X-XSS-Protection=[1; mode=block], Access-Control-Allow-Headers=[Content-Type], Date=[Thu, 22 Sep 2022 10:19:23 GMT], Content-Type=[application/json; charset=utf-8]}
-2022-09-22 14:18:21,032 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:18:22,450 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 14:20:45,008 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:20:46,318 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 14:25:57,285 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:25:58,686 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 14:31:19,649 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 14:31:20,945 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:20:39,769 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:20:41,250 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:29:52,871 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:29:54,758 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:34:55,187 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:34:58,950 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:35:40,184 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:35:41,910 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:36:41,641 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:36:43,341 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
-2022-09-22 15:37:14,051 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:37:41,376 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 15:47:26,124 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:02:40,268 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:08:28,029 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:09:25,831 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:09:59,483 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:11:53,973 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:13:41,041 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:13:58,216 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:14:21,412 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:14:25,802 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:14:57,840 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:15:53,349 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:33:41,667 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:34:24,630 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:34:45,727 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:40:45,222 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 16:51:01,338 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:12:03,480 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:12:35,838 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:12:53,730 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:13:31,075 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:14:06,343 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:14:44,416 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:19:25,757 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:20:41,671 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:21:27,231 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:21:46,925 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:22:01,724 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:22:31,351 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:26:38,591 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:27:21,898 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:32:42,286 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:33:02,169 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:33:52,717 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:38:51,900 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:39:25,794 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:40:08,552 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-22 17:59:24,163 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:43:12,122 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:43:12,130 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:43:13,507 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-22 21:43:13,508 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-22 21:43:13,508 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=eb1fd1f39b5a42ea8084495a71ebafb9
+2022-09-22 21:43:13,508 [main] INFO API - authorizationToken : eb1fd1f39b5a42ea8084495a71ebafb9
+2022-09-22 21:43:13,539 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:43:13,547 [main] ERROR API - validateStatusCodTest Test failed
+2022-09-22 21:43:13,585 [main] WARN API - validateResponseCodTest Test failed
+2022-09-22 21:43:13,589 [main] WARN API - validateDescriptionTest Test failed
+2022-09-22 21:43:13,591 [main] WARN API - validateResponseObjectTest Test failed
+2022-09-22 21:43:13,594 [main] WARN API - validateAuthorizationTokenTest Test failed
+2022-09-22 21:43:13,597 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:43:43,266 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:43:43,273 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:43:44,589 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-22 21:43:44,590 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-22 21:43:44,590 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=6b4907b788054387aca2658589db4da8
+2022-09-22 21:43:44,590 [main] INFO API - authorizationToken : 6b4907b788054387aca2658589db4da8
+2022-09-22 21:43:44,622 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:43:44,624 [main] INFO API - validateStatusCodTest: Test passed
+2022-09-22 21:43:44,659 [main] INFO API - validateResponseCodTest: Test passed
+2022-09-22 21:43:44,663 [main] INFO API - validateDescriptionTest: Test passed
+2022-09-22 21:43:44,668 [main] INFO API - validateResponseObjectTest: Test passed
+2022-09-22 21:43:44,671 [main] INFO API - validateAuthorizationTokenTest: Test passed
+2022-09-22 21:43:44,674 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:44:05,199 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:44:05,208 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:44:06,520 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-22 21:44:06,520 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-22 21:44:06,521 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=83eb614e292b49c08a3b79faa4672d27
+2022-09-22 21:44:06,521 [main] INFO API - authorizationToken : null
+2022-09-22 21:44:06,556 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:44:06,558 [main] INFO API - validateStatusCodTest: Test passed
+2022-09-22 21:44:06,592 [main] INFO API - validateResponseCodTest: Test passed
+2022-09-22 21:44:06,595 [main] INFO API - validateDescriptionTest: Test passed
+2022-09-22 21:44:06,599 [main] INFO API - validateResponseObjectTest: Test passed
+2022-09-22 21:44:06,606 [main] ERROR API - validateAuthorizationTokenTest Test failed
+2022-09-22 21:44:06,612 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:44:44,835 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:44:44,843 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:44:45,685 [main] WARN API - validateStatusCodTest Test failed
+2022-09-22 21:44:45,691 [main] WARN API - validateResponseCodTest Test failed
+2022-09-22 21:44:45,694 [main] WARN API - validateDescriptionTest Test failed
+2022-09-22 21:44:45,697 [main] WARN API - validateResponseObjectTest Test failed
+2022-09-22 21:44:45,700 [main] WARN API - validateAuthorizationTokenTest Test failed
+2022-09-22 21:44:45,703 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:45:07,480 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:45:07,488 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:45:08,770 [main] INFO API - getGameUrl API ResponseCode is Equal: 28
+2022-09-22 21:45:08,770 [main] INFO API - getGameUrl API Description is Equal: SessionNotFound
+2022-09-22 21:45:08,770 [main] INFO API - getGameUrl API ResponseObject is Equal: null
+2022-09-22 21:45:08,848 [main] WARN API - validateStatusCodTest Test failed
+2022-09-22 21:45:08,855 [main] WARN API - validateResponseCodTest Test failed
+2022-09-22 21:45:08,858 [main] WARN API - validateDescriptionTest Test failed
+2022-09-22 21:45:08,861 [main] WARN API - validateResponseObjectTest Test failed
+2022-09-22 21:45:08,865 [main] WARN API - validateAuthorizationTokenTest Test failed
+2022-09-22 21:45:08,868 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:46:59,938 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:46:59,946 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:47:01,216 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-22 21:47:01,216 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-22 21:47:01,216 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=f700fa3e1f19494bbfd58c2bed4272b7
+2022-09-22 21:47:01,216 [main] INFO API - authorizationToken : f700fa3e1f19494bbfd58c2bed4272b7
+2022-09-22 21:47:01,248 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:47:01,250 [main] INFO API - validateStatusCodTest: Test passed
+2022-09-22 21:47:01,285 [main] INFO API - validateResponseCodTest: Test passed
+2022-09-22 21:47:01,289 [main] INFO API - validateDescriptionTest: Test passed
+2022-09-22 21:47:01,293 [main] INFO API - validateResponseObjectTest: Test passed
+2022-09-22 21:47:01,296 [main] INFO API - validateAuthorizationTokenTest: Test passed
+2022-09-22 21:47:01,298 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:47:18,202 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:47:18,211 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:47:19,507 [main] INFO API - getGameUrl API ResponseCode is Equal: 28
+2022-09-22 21:47:19,508 [main] INFO API - getGameUrl API Description is Equal: SessionNotFound
+2022-09-22 21:47:19,508 [main] INFO API - getGameUrl API ResponseObject is Equal: null
+2022-09-22 21:47:19,508 [main] INFO API - authorizationToken has Exception : java.lang.ArrayIndexOutOfBoundsException: Index 2 out of bounds for length 1
+2022-09-22 21:47:19,508 [main] INFO API - authorizationToken : null
+2022-09-22 21:47:19,540 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:47:19,542 [main] INFO API - validateStatusCodTest: Test passed
+2022-09-22 21:47:19,583 [main] ERROR API - validateResponseCodTest Test failed
+2022-09-22 21:47:19,590 [main] ERROR API - validateDescriptionTest Test failed
+2022-09-22 21:47:19,595 [main] ERROR API - validateResponseObjectTest Test failed
+2022-09-22 21:47:19,599 [main] ERROR API - validateAuthorizationTokenTest Test failed
+2022-09-22 21:47:19,602 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 21:48:16,479 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 21:48:16,488 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-22 21:48:17,739 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-22 21:48:17,740 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-22 21:48:17,740 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=6d07ead548f34ecca874ce900cb9bb24
+2022-09-22 21:48:17,740 [main] INFO API - authorizationToken : 6d07ead548f34ecca874ce900cb9bb24
+2022-09-22 21:48:17,787 [main] INFO API - getGameUrl API Status Cod is Equal: 200
+2022-09-22 21:48:17,790 [main] INFO API - validateStatusCodTest: Test passed
+2022-09-22 21:48:17,832 [main] INFO API - validateResponseCodTest: Test passed
+2022-09-22 21:48:17,836 [main] INFO API - validateDescriptionTest: Test passed
+2022-09-22 21:48:17,840 [main] INFO API - validateResponseObjectTest: Test passed
+2022-09-22 21:48:17,843 [main] INFO API - validateAuthorizationTokenTest: Test passed
+2022-09-22 21:48:17,846 [main] INFO API - API Integration Automation Test: Test execution finished

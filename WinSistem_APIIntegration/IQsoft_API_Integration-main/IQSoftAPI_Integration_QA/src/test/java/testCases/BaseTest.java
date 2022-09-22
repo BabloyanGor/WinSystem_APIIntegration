@@ -11,6 +11,7 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.json.JSONObject;
 import org.testng.annotations.*;
+import testData.APISVariables_Authorization_Request;
 import testData.APIVariables_GetProductUrl_Request;
 import utilities.ReadConfig;
 import java.io.FileOutputStream;
@@ -60,7 +61,7 @@ public class BaseTest {
 
 
 
-    public JSONObject getUrlAPI() throws UnirestException, IOException {
+    public HttpResponse<String> getUrlAPI() throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
         APIVariables_GetProductUrl_Request apiVariables_getProductUrl_request = new APIVariables_GetProductUrl_Request();
@@ -69,36 +70,29 @@ public class BaseTest {
         apiVariables_getProductUrl_request.setClientId(clientId);
         apiVariables_getProductUrl_request.setUserToken(userToken);
         getURLRequestBody  = gson.toJson(apiVariables_getProductUrl_request);
-//        System.out.println(getURLRequestBody);
 
         HttpResponse<String> response = Unirest.post(gameLaunchURL)
                 .header("Content-Type", "application/json")
                 .body(getURLRequestBody )
                 .asString();
-        System.out.println();
-        JSONObject jsonObjectBody = new JSONObject(response.getBody());
-        Unirest.shutdown();
-        return jsonObjectBody;
+        return response;
     }
 
-//    public String authorizationAPI() throws UnirestException {
+//    public HttpResponse<String> authorizationAPI() throws UnirestException {
 //        Gson gson = new Gson();
 //        Unirest.setTimeouts(0, 0);
 //        APISVariables_Authorization_Request apisVariables_authorization_request = new APISVariables_Authorization_Request();
-//        apisVariables_authorization_request.setToken(sessionToken);
-//        apisVariables_authorization_request.setCurrencyId(currencyId);
+//        API1_GetUrl api1_getUrl = new API1_GetUrl();
+//        apisVariables_authorization_request.setToken(api1_getUrl.getAuthorizationToken());
 //        apisVariables_authorization_request.setPartnerId(partnerID);
 //        apisVariables_authorization_request.setProductId(productID);
-//        apisVariables_authorization_request.setLanguageId(languageId);
 //        authorizationRequestBody  = gson.toJson(apisVariables_authorization_request);
 //
 //        HttpResponse<String> response = Unirest.post(callbackUrl + "/Authorization")
 //                .header("Content-Type", "application/json")
 //                .body(authorizationRequestBody )
-//                //.body("{\"Token\":" + sessionToken + ", \"CurrencyId\": "+currencyId+", \"PartnerId\":" + partnerID + ", \"ProductId\":"+ productID +", \"LanguageId\": \"\"}")
 //                .asString();
-//        authorizationResponseBody = response.getBody();
-//        return authorizationResponseBody;
+//        return response;
 //    }
 
 
