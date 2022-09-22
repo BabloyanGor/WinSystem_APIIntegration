@@ -1,0 +1,102 @@
+2022-09-21 14:11:15,417 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-21 14:11:15,426 [main] INFO API - API Integration Automation Test Test execution starts
+2022-09-21 14:11:15,470 [main] INFO API - Pass TestCase execution starts
+2022-09-21 14:11:16,374 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:11:16,377 [main] INFO API - Pass Test passed
+2022-09-21 14:11:16,410 [main] INFO API - Skipped TestCase execution starts
+2022-09-21 14:11:16,953 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:11:17,118 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:11:17,121 [main] WARN API - Skipped Test failed
+2022-09-21 14:11:17,127 [main] INFO API - Fail TestCase execution starts
+2022-09-21 14:11:17,626 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:11:17,768 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:11:17,773 [main] ERROR API - Fail Test failed
+2022-09-21 14:11:17,778 [main] INFO API - API Integration Automation Test Test execution finished
+2022-09-21 14:31:10,521 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-21 14:31:10,530 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-21 14:31:11,482 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:31:11,485 [main] INFO API - Pass: Test passed
+2022-09-21 14:31:12,056 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:31:12,197 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:31:12,198 [main] WARN API - Skipped Test failed
+2022-09-21 14:31:12,500 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:31:12,647 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:31:12,653 [main] ERROR API - Fail Test failed
+2022-09-21 14:31:12,659 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-21 14:35:12,658 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-21 14:35:12,667 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-21 14:35:13,578 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:35:13,583 [main] INFO API - Pass: Test passed
+2022-09-21 14:35:14,172 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:35:14,327 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:35:14,329 [main] WARN API - Skipped Test failed
+2022-09-21 14:35:14,638 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:35:14,785 [main] INFO API - Body is equal :   {"ClientNotFound":22,"Description":"User Not Found"}
+2022-09-21 14:35:14,790 [main] ERROR API - Fail Test failed
+2022-09-21 14:35:14,795 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-22 14:13:46,871 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:13:48,523 [main] INFO API - Body is equal :   null
+2022-09-22 14:14:13,963 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:14:15,197 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 14:15:52,459 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:15:53,750 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 14:17:30,954 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:17:32,240 [main] INFO API - Body is equal :   {X-Frame-Options=[DENY], Server=[Microsoft-IIS/10.0], X-Content-Type-Options=[nosniff], Access-Control-Allow-Methods=[GET,POST], Content-Length=[115], X-XSS-Protection=[1; mode=block], Access-Control-Allow-Headers=[Content-Type], Date=[Thu, 22 Sep 2022 10:19:23 GMT], Content-Type=[application/json; charset=utf-8]}
+2022-09-22 14:18:21,032 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:18:22,450 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 14:20:45,008 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:20:46,318 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 14:25:57,285 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:25:58,686 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 14:31:19,649 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 14:31:20,945 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:20:39,769 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:20:41,250 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:29:52,871 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:29:54,758 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:34:55,187 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:34:58,950 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:35:40,184 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:35:41,910 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:36:41,641 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:36:43,341 [main] INFO API - Body is equal :   {"ResponseCode":0,"Description":null,"ResponseObject":"http://ipls-stg.winsysgroup.com/games/lotto/6/40/?gameId=4"}
+2022-09-22 15:37:14,051 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:37:41,376 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 15:47:26,124 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:02:40,268 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:08:28,029 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:09:25,831 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:09:59,483 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:11:53,973 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:13:41,041 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:13:58,216 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:14:21,412 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:14:25,802 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:14:57,840 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:15:53,349 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:33:41,667 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:34:24,630 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:34:45,727 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:40:45,222 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 16:51:01,338 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:12:03,480 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:12:35,838 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:12:53,730 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:13:31,075 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:14:06,343 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:14:44,416 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:19:25,757 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:20:41,671 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:21:27,231 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:21:46,925 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:22:01,724 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:22:31,351 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:26:38,591 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:27:21,898 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:32:42,286 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:33:02,169 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:33:52,717 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:38:51,900 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:39:25,794 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:40:08,552 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-22 17:59:24,163 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
