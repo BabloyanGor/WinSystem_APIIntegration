@@ -1,112 +1,62 @@
-2022-09-23 15:36:28,162 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-23 15:36:28,426 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
-2022-09-23 15:36:28,458 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Nerses Khachatryan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
-2022-09-23 15:36:56,989 [main] INFO API - Captured Token : 34ad1c956f4141ec818cb010cbe53ae7
-2022-09-23 15:36:57,143 [main] INFO API - API Integration Automation Test: Test execution starts
-2022-09-23 15:36:57,417 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"34ad1c956f4141ec818cb010cbe53ae7"}
-2022-09-23 15:36:58,453 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
-2022-09-23 15:36:58,454 [main] INFO API - getGameUrl API Description is Equal: null
-2022-09-23 15:36:58,454 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=586407575ace401da186451678be2c84
-2022-09-23 15:36:58,454 [main] INFO API - authorizationToken : 586407575ace401da186451678be2c84
-2022-09-23 15:36:58,511 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
-2022-09-23 15:36:58,516 [main] INFO API - getUrlValidateStatusCodGameLaunchAPI: Test passed
-2022-09-23 15:36:58,627 [main] INFO API - getUrlValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:36:58,635 [main] INFO API - getUrlValidateDescriptionNotNull: Test passed
-2022-09-23 15:36:58,650 [main] INFO API - getUrlValidateResponseObjectContainsHTTP: Test passed
-2022-09-23 15:36:58,663 [main] INFO API - getUrlValidateAuthorizationTokenNotNull: Test passed
-2022-09-23 15:36:58,682 [main] INFO API - AuthorizationRequestBody : {"Token":"586407575ace401da186451678be2c84","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
-2022-09-23 15:36:58,963 [main] INFO API - Authorization API Response ClientId : 25
-2022-09-23 15:36:58,963 [main] INFO API - Authorization API Response CurrencyId : EUR
-2022-09-23 15:36:58,969 [main] INFO API - Authorization API Response Balance : 108.0
-2022-09-23 15:36:58,970 [main] INFO API - Authorization API Response ResponseCode : 0
-2022-09-23 15:36:58,970 [main] INFO API - Authorization API Response Description : null
-2022-09-23 15:36:58,971 [main] INFO API - Authorization API Response ResponseObject : null
-2022-09-23 15:36:58,980 [main] INFO API - Authorization API Status Cod is Equal: 200
-2022-09-23 15:36:58,981 [main] INFO API - AuthorizationValidateStatusCodAuthorizationAPI: Test passed
-2022-09-23 15:36:58,999 [main] INFO API - AuthorizationValidateClientIDISNotNull: Test passed
-2022-09-23 15:36:59,029 [main] INFO API - AuthorizationValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
-2022-09-23 15:36:59,042 [main] INFO API - AuthorizationValidateBalanceNotNull: Test passed
-2022-09-23 15:36:59,052 [main] INFO API - AuthorizationValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:36:59,063 [main] INFO API - AuthorizationValidateDescriptionEqualsNull: Test passed
-2022-09-23 15:36:59,070 [main] INFO API - AuthorizationValidateResponseObjectEqualsNull: Test passed
-2022-09-23 15:36:59,083 [main] INFO API - GetBalanceRequestBody : {"Token":"586407575ace401da186451678be2c84","ProductId":4}
-2022-09-23 15:36:59,351 [main] INFO API - GetBalance API Response ClientId : 25
-2022-09-23 15:36:59,352 [main] INFO API - GetBalance API Response CurrencyId : EUR
-2022-09-23 15:36:59,352 [main] INFO API - GetBalance API Response Balance : 108.0
-2022-09-23 15:36:59,352 [main] INFO API - GetBalance API Response ResponseCode : 0
-2022-09-23 15:36:59,352 [main] INFO API - GetBalance API Response Description : null
-2022-09-23 15:36:59,352 [main] INFO API - GetBalance API Response ResponseObject : null
-2022-09-23 15:36:59,356 [main] INFO API - GetBalance API Status Cod is Equal: 200
-2022-09-23 15:36:59,357 [main] INFO API - validateStatusCodGetBalanceAPI: Test passed
-2022-09-23 15:36:59,364 [main] INFO API - GetBalanceValidateClientIDISNotNull: Test passed
-2022-09-23 15:36:59,374 [main] INFO API - GetBalanceValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
-2022-09-23 15:36:59,380 [main] INFO API - GetBalanceValidateBalanceNotNull: Test passed
-2022-09-23 15:36:59,393 [main] INFO API - GetBalanceValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:36:59,403 [main] INFO API - GetBalanceValidateDescriptionEqualsNull: Test passed
-2022-09-23 15:36:59,417 [main] INFO API - GetBalanceValidateResponseObjectEqualsNull: Test passed
-2022-09-23 15:36:59,419 [main] INFO API - API Integration Automation Test: Test execution finished
-2022-09-23 15:37:00,284 [main] INFO API - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
-2022-09-23 15:51:52,397 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
-2022-09-23 15:51:52,748 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
-2022-09-23 15:51:52,783 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Nerses Khachatryan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
-2022-09-23 15:52:35,801 [main] INFO API - Captured Token : 185db88e080c4cbebba5082a7532329f
-2022-09-23 15:52:35,911 [main] INFO API - API Integration Automation Test: Test execution starts
-2022-09-23 15:52:36,145 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"185db88e080c4cbebba5082a7532329f"}
-2022-09-23 15:52:37,198 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
-2022-09-23 15:52:37,198 [main] INFO API - getGameUrl API Description is Equal: null
-2022-09-23 15:52:37,198 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=03c54cb4534c48369204db7664993e29
-2022-09-23 15:52:37,198 [main] INFO API - authorizationToken : 03c54cb4534c48369204db7664993e29
-2022-09-23 15:52:37,230 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
-2022-09-23 15:52:37,233 [main] INFO API - getUrlValidateStatusCodGameLaunchAPI: Test passed
-2022-09-23 15:52:37,297 [main] INFO API - getUrlValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:52:37,304 [main] INFO API - getUrlValidateDescriptionNotNull: Test passed
-2022-09-23 15:52:37,312 [main] INFO API - getUrlValidateResponseObjectContainsHTTP: Test passed
-2022-09-23 15:52:37,316 [main] INFO API - getUrlValidateAuthorizationTokenNotNull: Test passed
-2022-09-23 15:52:37,329 [main] INFO API - AuthorizationRequestBody : {"Token":"03c54cb4534c48369204db7664993e29","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
-2022-09-23 15:52:37,656 [main] INFO API - Authorization API Response ClientId : 25
-2022-09-23 15:52:37,656 [main] INFO API - Authorization API Response CurrencyId : EUR
-2022-09-23 15:52:37,658 [main] INFO API - Authorization API Response Balance : 108.0
-2022-09-23 15:52:37,659 [main] INFO API - Authorization API Response ResponseCode : 0
-2022-09-23 15:52:37,659 [main] INFO API - Authorization API Response Description : null
-2022-09-23 15:52:37,659 [main] INFO API - Authorization API Response ResponseObject : null
-2022-09-23 15:52:37,664 [main] INFO API - Authorization API Status Cod is Equal: 200
-2022-09-23 15:52:37,664 [main] INFO API - AuthorizationValidateStatusCodAuthorizationAPI: Test passed
-2022-09-23 15:52:37,678 [main] INFO API - AuthorizationValidateClientIDISNotNull: Test passed
-2022-09-23 15:52:37,707 [main] INFO API - AuthorizationValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
-2022-09-23 15:52:37,725 [main] INFO API - AuthorizationValidateBalanceNotNull: Test passed
-2022-09-23 15:52:37,733 [main] INFO API - AuthorizationValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:52:37,765 [main] INFO API - AuthorizationValidateDescriptionEqualsNull: Test passed
-2022-09-23 15:52:37,779 [main] INFO API - AuthorizationValidateResponseObjectEqualsNull: Test passed
-2022-09-23 15:52:37,796 [main] INFO API - GetBalanceRequestBody : {"Token":"03c54cb4534c48369204db7664993e29","ProductId":4}
-2022-09-23 15:52:38,325 [main] INFO API - GetBalance API Response ClientId : 25
-2022-09-23 15:52:38,326 [main] INFO API - GetBalance API Response CurrencyId : EUR
-2022-09-23 15:52:38,327 [main] INFO API - GetBalance API Response Balance : 108.0
-2022-09-23 15:52:38,327 [main] INFO API - GetBalance API Response ResponseCode : 0
-2022-09-23 15:52:38,327 [main] INFO API - GetBalance API Response Description : null
-2022-09-23 15:52:38,328 [main] INFO API - GetBalance API Response ResponseObject : null
-2022-09-23 15:52:38,345 [main] INFO API - GetBalance API Status Cod is Equal: 200
-2022-09-23 15:52:38,345 [main] INFO API - validateStatusCodGetBalanceAPI: Test passed
-2022-09-23 15:52:38,354 [main] INFO API - GetBalanceValidateClientIDISNotNull: Test passed
-2022-09-23 15:52:38,368 [main] INFO API - GetBalanceValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
-2022-09-23 15:52:38,380 [main] INFO API - GetBalanceValidateBalanceNotNull: Test passed
-2022-09-23 15:52:38,395 [main] INFO API - GetBalanceValidateResponseCodEqualsZero: Test passed
-2022-09-23 15:52:38,406 [main] INFO API - GetBalanceValidateDescriptionEqualsNull: Test passed
-2022-09-23 15:52:38,412 [main] INFO API - GetBalanceValidateResponseObjectEqualsNull: Test passed
-2022-09-23 15:52:38,415 [main] INFO API - API Integration Automation Test: Test execution finished
-2022-09-23 15:52:38,930 [AsyncHttpClient-1-4] WARN org.asynchttpclient.netty.handler.WebSocketHandler - onError
-java.net.SocketException: Connection reset
-	at java.base/sun.nio.ch.SocketChannelImpl.throwConnectionReset(SocketChannelImpl.java:394)
-	at java.base/sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:426)
-	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:258)
-	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
-	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
-	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:722)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:658)
-	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:584)
-	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:496)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	at java.base/java.lang.Thread.run(Thread.java:833)
-2022-09-23 15:52:39,113 [main] INFO API - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+2022-09-23 17:36:43,258 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-23 17:36:43,574 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+2022-09-23 17:36:43,617 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\Nerses Khachatryan\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+2022-09-23 17:37:04,909 [main] INFO API - Captured Token : 3294904fd9144169b735980f31b35e94
+2022-09-23 17:37:05,004 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-23 17:37:05,196 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"3294904fd9144169b735980f31b35e94"}
+2022-09-23 17:37:05,998 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-23 17:37:05,999 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-23 17:37:05,999 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=cb95306c563947d4a5d5f726046f3fc5
+2022-09-23 17:37:05,999 [main] INFO API - authorizationToken : cb95306c563947d4a5d5f726046f3fc5
+2022-09-23 17:37:06,030 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-09-23 17:37:06,033 [main] INFO API - getUrlAPIValidateStatusCod: Test passed
+2022-09-23 17:37:06,089 [main] INFO API - getUrlAPIValidateResponseCodEqualsZero: Test passed
+2022-09-23 17:37:06,094 [main] INFO API - getUrlAPIValidateDescriptionNotNull: Test passed
+2022-09-23 17:37:06,103 [main] INFO API - getUrlAPIValidateResponseObjectContainsHTTP: Test passed
+2022-09-23 17:37:06,107 [main] INFO API - getUrlAPIValidateAuthorizationTokenNotNull: Test passed
+2022-09-23 17:37:06,119 [main] INFO API - AuthorizationRequestBody : {"Token":"cb95306c563947d4a5d5f726046f3fc5","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-09-23 17:37:06,371 [main] INFO API - Authorization API Response ClientId : 25
+2022-09-23 17:37:06,372 [main] INFO API - Authorization API Response CurrencyId : EUR
+2022-09-23 17:37:06,377 [main] INFO API - Authorization API Response Balance : 100.0
+2022-09-23 17:37:06,377 [main] INFO API - Authorization API Response ResponseCode : 0
+2022-09-23 17:37:06,378 [main] INFO API - Authorization API Response Description : null
+2022-09-23 17:37:06,378 [main] INFO API - Authorization API Response ResponseObject : null
+2022-09-23 17:37:06,385 [main] INFO API - Authorization API Status Cod is Equal: 200
+2022-09-23 17:37:06,385 [main] INFO API - AuthorizationAPIValidateStatusCod: Test passed
+2022-09-23 17:37:06,393 [main] INFO API - AuthorizationAPIValidateClientIDISNotNull: Test passed
+2022-09-23 17:37:06,405 [main] INFO API - AuthorizationAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
+2022-09-23 17:37:06,412 [main] INFO API - AuthorizationAPIValidateBalanceNotNull: Test passed
+2022-09-23 17:37:06,417 [main] INFO API - AuthorizationAPIValidateResponseCodEqualsZero: Test passed
+2022-09-23 17:37:06,424 [main] INFO API - AuthorizationAPIValidateDescriptionEqualsNull: Test passed
+2022-09-23 17:37:06,430 [main] INFO API - AuthorizationAPIValidateResponseObjectEqualsNull: Test passed
+2022-09-23 17:37:06,442 [main] INFO API - GetBalanceRequestBody : {"Token":"cb95306c563947d4a5d5f726046f3fc5","ProductId":4}
+2022-09-23 17:37:06,692 [main] INFO API - GetBalance API Response ClientId : 25
+2022-09-23 17:37:06,693 [main] INFO API - GetBalance API Response CurrencyId : EUR
+2022-09-23 17:37:06,693 [main] INFO API - GetBalance API Response Balance : 100.0
+2022-09-23 17:37:06,694 [main] INFO API - GetBalance API Response ResponseCode : 0
+2022-09-23 17:37:06,695 [main] INFO API - GetBalance API Response Description : null
+2022-09-23 17:37:06,695 [main] INFO API - GetBalance API Response ResponseObject : null
+2022-09-23 17:37:06,700 [main] INFO API - GetBalance API Status Cod is Equal: 200
+2022-09-23 17:37:06,700 [main] INFO API - GetBalanceAPIValidateStatusCod: Test passed
+2022-09-23 17:37:06,711 [main] INFO API - GetBalanceAPIValidateClientIDISNotNull: Test passed
+2022-09-23 17:37:06,728 [main] INFO API - GetBalanceAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull: Test passed
+2022-09-23 17:37:06,738 [main] INFO API - GetBalanceAPIValidateBalanceNotNull: Test passed
+2022-09-23 17:37:06,758 [main] INFO API - GetBalanceAPIValidateResponseCodEqualsZero: Test passed
+2022-09-23 17:37:06,764 [main] INFO API - GetBalanceAPIValidateDescriptionEqualsNull: Test passed
+2022-09-23 17:37:06,778 [main] INFO API - GetBalanceAPIValidateResponseObjectEqualsNull: Test passed
+2022-09-23 17:37:06,790 [main] INFO API - creditRequestBody : {"RoundId":"RoundId-wPeoL2MhQO","TransactionId":"RoundId-sqr4vLNbRC","ProductId":4,"Amount":1,"Token":"cb95306c563947d4a5d5f726046f3fc5","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-09-23 17:37:07,060 [main] INFO API - Credit API Response BetId : 27
+2022-09-23 17:37:07,060 [main] INFO API - Credit API Response TransactionId : null
+2022-09-23 17:37:07,060 [main] INFO API - Credit API Response ClientId : 25
+2022-09-23 17:37:07,060 [main] INFO API - Credit API Response CurrencyId : EUR
+2022-09-23 17:37:07,060 [main] INFO API - Credit API Response Balance : 99.0
+2022-09-23 17:37:07,061 [main] INFO API - Credit API Response ResponseCode : 0
+2022-09-23 17:37:07,061 [main] INFO API - Credit API Response Description : null
+2022-09-23 17:37:07,061 [main] INFO API - Credit API Response ResponseObject : null
+2022-09-23 17:37:07,063 [main] INFO API - Credit API Status Cod is Equal: 200
+2022-09-23 17:37:07,063 [main] INFO API - CreditAPIValidateStatusCod: Test passed
+2022-09-23 17:37:07,068 [main] INFO API - CreditAPIValidateResponseCodEqualsZero: Test passed
+2022-09-23 17:37:07,080 [main] INFO API - CreditAPIValidateDescriptionEqualsNull: Test passed
+2022-09-23 17:37:07,096 [main] INFO API - CreditAPIValidateResponseObjectEqualsNull: Test passed
+2022-09-23 17:37:07,100 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-23 17:37:08,029 [main] INFO API - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  

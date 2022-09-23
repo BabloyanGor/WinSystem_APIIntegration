@@ -17,7 +17,6 @@ import testData.IqSoft_01_APIVariables_GetProductUrl_Response;
 import java.io.IOException;
 
 public class API_1_GetUrl extends BaseTest {
-    IqSoft_01_APIVariables_GetProductUrl_Response iqSoft01ApiVariables_getProductUrl_response = new IqSoft_01_APIVariables_GetProductUrl_Response();
     JSONObject jsonObjectBody;
     int statusCod;
 
@@ -54,42 +53,42 @@ public class API_1_GetUrl extends BaseTest {
     @Test(priority = 1)
     @Description("Verify getURL API_s Status Cod equals to 200")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlValidateStatusCodGameLaunchAPI() {
+    public void getUrlAPIValidateStatusCod() {
         logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
         Assert.assertEquals(statusCod, 200);
     }
 
 
-    @Test(priority = 2, dependsOnMethods = {"getUrlValidateStatusCodGameLaunchAPI"})
+    @Test(priority = 2, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
     @Description("Verify getGameUrl API_s Response ResponseCode = 0")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlValidateResponseCodEqualsZero() {
+    public void getUrlAPIValidateResponseCodEqualsZero() {
         Assert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseCode(), 0);
     }
 
 
-    @Test(priority = 3, dependsOnMethods = {"getUrlValidateStatusCodGameLaunchAPI"})
+    @Test(priority = 3, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
     @Description("Verify getGameUrl API_s Response Description = null")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlValidateDescriptionNotNull() {
+    public void getUrlAPIValidateDescriptionNotNull() {
         Assert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getDescription(), "null");
     }
 
 
-    @Test(priority = 4, dependsOnMethods = {"getUrlValidateStatusCodGameLaunchAPI"})
+    @Test(priority = 4, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
     @Description("Verify getGameUrl API_s Response ResponseObject != null")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlValidateResponseObjectContainsHTTP() {
+    public void getUrlAPIValidateResponseObjectContainsHTTP() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertNotEquals("null", iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
         softAssert.assertTrue(iqSoft01ApiVariables_getProductUrl_response.getResponseObject().contains("http://ipls-stg.winsysgroup.com/games/?gameId="));
         softAssert.assertAll();
     }
 
-    @Test(priority = 5, dependsOnMethods = {"getUrlValidateStatusCodGameLaunchAPI"})
+    @Test(priority = 5, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
     @Description("Verify getGameUrl API_s Response AuthorizationToken != null")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlValidateAuthorizationTokenNotNull() {
+    public void getUrlAPIValidateAuthorizationTokenNotNull() {
         Assert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), null);
     }
 

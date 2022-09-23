@@ -33,9 +33,15 @@ public class BaseTest {
 
     IqSoft_01_APIVariables_GetProductUrl_Request iqSoft02ApiVariables_getProductUrl_request = new IqSoft_01_APIVariables_GetProductUrl_Request();
     IqSoft_01_APIVariables_GetProductUrl_Response iqSoft01ApiVariables_getProductUrl_response = new IqSoft_01_APIVariables_GetProductUrl_Response();
+
     IqSoft_02_APISVariables_Authorization_Request iqSoft02ApisVariables_authorization_request = new IqSoft_02_APISVariables_Authorization_Request();
+    IqSoft_02_APISVariables_Authorization_Response iqSoft_02_apisVariables_authorization_response = new IqSoft_02_APISVariables_Authorization_Response();
+
     IqSoft_03_APIVariables_GetBalance_Request iqSoft03ApiVariables_getBalance_request = new IqSoft_03_APIVariables_GetBalance_Request();
     IqSoft_03_APIVariables_GetBalance_Response iqSoft03ApiVariables_getBalance_response = new IqSoft_03_APIVariables_GetBalance_Response();
+
+    IqSoft_04_APIVariables_Credit_Request iqSoft_04_apiVariables_credit_request = new IqSoft_04_APIVariables_Credit_Request();
+    IqSoft_04_APIVariables_Credit_Response iqSoft_04_apiVariables_credit_response = new IqSoft_04_APIVariables_Credit_Response();
     public static Logger logger;
     ReadConfig readConfig = new ReadConfig();
 
@@ -116,6 +122,20 @@ public class BaseTest {
     }
 
 
+    public HttpResponse<String> creditAPI() throws UnirestException {
+        Gson gson = new Gson();
+        Unirest.setTimeouts(0, 0);
+        iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+
+        String creditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
+        logger.info("creditRequestBody : " + creditRequestBody);
+
+        HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
+                .header("Content-Type", "application/json")
+                .body(creditRequestBody)
+                .asString();
+        return response;
+    }
 
 
 
