@@ -7,7 +7,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class IqSoft_04_APIVariables_Credit_Request {
 
     public String generateRandomRoundID() {
-        String randomNumber = RandomStringUtils.randomAlphanumeric(10);
+        String randomNumber = RandomStringUtils.randomNumeric(10);
         return "RoundId-"+randomNumber;
     }
 
