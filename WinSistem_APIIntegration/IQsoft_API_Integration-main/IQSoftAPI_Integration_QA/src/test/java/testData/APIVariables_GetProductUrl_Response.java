@@ -9,10 +9,21 @@ public class APIVariables_GetProductUrl_Response {
     private int ResponseCode;
     @SerializedName("Description")
     @Expose
-    private int Description;
+    private String Description;
     @SerializedName("ResponseObject")
     @Expose
     private String ResponseObject;
+
+
+    private static String Token;
+
+    public String getAuthorizationToken() {
+        return Token;
+    }
+
+    public void setAuthorizationToken(String authorizationToken) {
+        this.Token = authorizationToken;
+    }
 
     public int getResponseCode() {
         return ResponseCode;
@@ -22,11 +33,11 @@ public class APIVariables_GetProductUrl_Response {
         ResponseCode = responseCode;
     }
 
-    public int getDescription() {
+    public String getDescription() {
         return Description;
     }
 
-    public void setDescription(int description) {
+    public void setDescription(String description) {
         Description = description;
     }
 

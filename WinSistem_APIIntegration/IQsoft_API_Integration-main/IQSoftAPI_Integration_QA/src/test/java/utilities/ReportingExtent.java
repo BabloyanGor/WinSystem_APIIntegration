@@ -57,8 +57,7 @@ public class ReportingExtent extends TestListenerAdapter {
         extentLogger.log(Status.PASS, MarkupHelper.createLabel(tr.getName(), ExtentColor.GREEN)); // send the passed information to the report with GREEN color highlighted
 //        extentLogger.pass(baseTest.authorizationRequestBody);
 //        extentLogger.pass(baseTest.authorizationResponseBody);
-        BaseTest.logger.info(tr.getName() + "--------------------------------------------------------->  Success");
-        BaseTest.logger.info(tr.getName() + "----------------------------------------------------------");
+//        BaseTest.logger.info(tr.getName() + "--------------------------------------------------------->  Success");
     }
 
     public void onTestFailure(ITestResult tr) {
@@ -71,8 +70,7 @@ public class ReportingExtent extends TestListenerAdapter {
 //        } catch (UnirestException e) {
 //            throw new RuntimeException(e);
 //        }
-        BaseTest.logger.error(tr.getName() + "--------------------------------------------------------->   Fail" );
-        BaseTest.logger.error(tr.getName() + "-----------------------------------------------------------------");
+//        BaseTest.logger.error(tr.getName() + "--------------------------------------------------------->   Fail" );
     }
 
     public void onTestSkipped(ITestResult tr) {
@@ -80,8 +78,7 @@ public class ReportingExtent extends TestListenerAdapter {
         extentLogger.log(Status.SKIP, MarkupHelper.createLabel(tr.getName(), ExtentColor.ORANGE));
 //        extentLogger.skip(baseTest.authorizationRequestBody);
 //        extentLogger.skip(baseTest.authorizationResponseBody);
-        BaseTest.logger.warn(tr.getName() + "--------------------------------------------------------->  Skipped");
-        BaseTest.logger.warn(tr.getName() + "-------------------------------------------------------------------");
+//        BaseTest.logger.warn(tr.getName() + "--------------------------------------------------------->  Skipped");
     }
 
     public void onFinish(ITestContext testContext) {

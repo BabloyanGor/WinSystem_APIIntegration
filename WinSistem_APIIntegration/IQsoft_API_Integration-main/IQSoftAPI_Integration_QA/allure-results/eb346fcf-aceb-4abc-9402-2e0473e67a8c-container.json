@@ -1,1 +1,0 @@
-{"uuid":"eb346fcf-aceb-4abc-9402-2e0473e67a8c","name":"IQsoft API Integration","children":["93913c08-f3ca-4541-b5d2-1163977845b1"],"befores":[{"name":"setup","status":"passed","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1663868838174,"stop":1663868838206}],"afters":[],"start":1663868838159,"stop":1663868839611}

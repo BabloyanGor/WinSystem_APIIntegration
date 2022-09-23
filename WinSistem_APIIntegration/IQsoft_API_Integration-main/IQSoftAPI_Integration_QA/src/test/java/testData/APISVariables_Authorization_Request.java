@@ -8,23 +8,20 @@ public class APISVariables_Authorization_Request {
     @SerializedName("Token")
     @Expose
     private String Token;
-
+    @SerializedName("ProductId")
+    @Expose
+    private int ProductId = 4;
     @SerializedName("CurrencyId")
     @Expose
     private String CurrencyId = "EUR";
 
     @SerializedName("PartnerId")
     @Expose
-    private int PartnerId;
-
-    @SerializedName("ProductId")
-    @Expose
-    private String ProductId;
+    private int PartnerId = 1;
 
     @SerializedName("LanguageId")
     @Expose
-    private String LanguageId;
-
+    private String LanguageId = "";
 
 
     public String getToken() {
@@ -33,6 +30,14 @@ public class APISVariables_Authorization_Request {
 
     public void setToken(String token) {
         Token = token;
+    }
+
+    public int getProductId() {
+        return ProductId;
+    }
+
+    public void setProductId(int productId) {
+        ProductId = productId;
     }
 
     public String getCurrencyId() {
@@ -49,14 +54,6 @@ public class APISVariables_Authorization_Request {
 
     public void setPartnerId(int partnerId) {
         PartnerId = partnerId;
-    }
-
-    public String getProductId() {
-        return ProductId;
-    }
-
-    public void setProductId(String productId) {
-        ProductId = productId;
     }
 
     public String getLanguageId() {

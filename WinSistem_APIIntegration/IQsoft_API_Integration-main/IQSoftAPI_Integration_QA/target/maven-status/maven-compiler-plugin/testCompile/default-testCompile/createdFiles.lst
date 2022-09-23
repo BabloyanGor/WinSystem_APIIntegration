@@ -1,0 +1,11 @@
+testData\APIVariables_GetProductUrl_Response.class
+utilities\ReportingAllure.class
+utilities\XLUtils.class
+testCases\API_1_GetUrl.class
+testCases\API_2_Authorization.class
+testCases\BaseTest.class
+testData\APISVariables_Authorization_Request.class
+utilities\ReportingExtent.class
+testData\APISVariables_Authorization_Response.class
+testData\APIVariables_GetProductUrl_Request.class
+utilities\ReadConfig.class

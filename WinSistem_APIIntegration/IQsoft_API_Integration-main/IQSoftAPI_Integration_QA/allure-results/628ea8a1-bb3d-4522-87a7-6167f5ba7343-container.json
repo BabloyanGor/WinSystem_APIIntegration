@@ -1,1 +1,0 @@
-{"uuid":"628ea8a1-bb3d-4522-87a7-6167f5ba7343","name":"testCases.API1_OpenGame","children":["e4effc0e-fefe-4d9d-99ab-8d65cc75e089"],"befores":[],"afters":[{"name":"tearDown","status":"broken","stage":"finished","description":"","steps":[],"attachments":[],"parameters":[],"start":1663833813960,"stop":1663833813960}],"start":1663833813932,"stop":1663833813967}

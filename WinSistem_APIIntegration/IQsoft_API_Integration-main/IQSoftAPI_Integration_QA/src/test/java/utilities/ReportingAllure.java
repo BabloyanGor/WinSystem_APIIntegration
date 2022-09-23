@@ -52,24 +52,18 @@ public class ReportingAllure implements ITestListener {
     @Override
     public void onTestSuccess(ITestResult iTestResult) {
         saveTextLog(getTestMethodName(iTestResult) + ": Test passed");
-        saveTextLog("RequestBody : " + baseTest.authorizationRequestBody);
-        saveTextLog("ResponseBody : " + baseTest.authorizationResponseBody);
         BaseTest.logger.info(getTestMethodName(iTestResult) + ": Test passed");
     }
 
     @Override
     public void onTestFailure(ITestResult iTestResult) {
         saveTextLog(getTestMethodName(iTestResult) + ": Test failed");
-        saveTextLog("RequestBody : " + baseTest.authorizationRequestBody);
-        saveTextLog("ResponseBody : " + baseTest.authorizationResponseBody);
         BaseTest.logger.error(getTestMethodName(iTestResult) + " Test failed");
     }
 
     @Override
     public void onTestSkipped(ITestResult iTestResult) {
         saveTextLog(getTestMethodName(iTestResult) + ": Test Skipped");
-        saveTextLog("RequestBody : " + baseTest.authorizationRequestBody);
-        saveTextLog("ResponseBody : " + baseTest.authorizationResponseBody);
         BaseTest.logger.warn(getTestMethodName(iTestResult) + " Test failed");
     }
 

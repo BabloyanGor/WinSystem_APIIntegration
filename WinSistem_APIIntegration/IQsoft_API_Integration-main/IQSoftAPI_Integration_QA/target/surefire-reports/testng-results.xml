@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="1" total="13" passed="12" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2022-09-23T13:49:35 AMT" name="IQsoft API Integration" finished-at="2022-09-23T13:49:37 AMT" duration-ms="2503">
+    <groups>
+    </groups>
+    <test started-at="2022-09-23T13:49:35 AMT" name="API Integration Automation Test" finished-at="2022-09-23T13:49:37 AMT" duration-ms="2503">
+      <class name="testCases.API_1_GetUrl">
+        <test-method is-config="true" signature="setup()[pri:0, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:21 AMT" name="setup" finished-at="2022-09-23T13:49:35 AMT" duration-ms="14225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:35 AMT" name="setUp" finished-at="2022-09-23T13:49:37 AMT" duration-ms="1650" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateStatusCodGameLaunchAPI()[pri:1, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="validateStatusCodGameLaunchAPI" finished-at="2022-09-23T13:49:37 AMT" duration-ms="35" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodGameLaunchAPI -->
+        <test-method signature="validateResponseCodEqualsZero()[pri:2, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="validateResponseCodEqualsZero" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_1_GetUrl.validateStatusCodGameLaunchAPI" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseCodEqualsZero -->
+        <test-method signature="validateDescriptionNotNull()[pri:3, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="validateDescriptionNotNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_1_GetUrl.validateStatusCodGameLaunchAPI" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDescriptionNotNull -->
+        <test-method signature="validateResponseObjectContainsHTTP()[pri:4, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="validateResponseObjectContainsHTTP" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_1_GetUrl.validateStatusCodGameLaunchAPI" duration-ms="5" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectContainsHTTP -->
+        <test-method signature="validateAuthorizationTokenNotNull()[pri:5, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="validateAuthorizationTokenNotNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_1_GetUrl.validateStatusCodGameLaunchAPI" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateAuthorizationTokenNotNull -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.API_1_GetUrl@20140db9]" started-at="2022-09-23T13:49:37 AMT" name="tearDown" finished-at="2022-09-23T13:49:37 AMT" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.API_1_GetUrl -->
+      <class name="testCases.API_2_Authorization">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="setUp" finished-at="2022-09-23T13:49:37 AMT" duration-ms="422" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="validateStatusCodAuthorizationAPI()[pri:1, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateStatusCodAuthorizationAPI" finished-at="2022-09-23T13:49:37 AMT" duration-ms="4" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateStatusCodAuthorizationAPI -->
+        <test-method signature="validateClientIDISNotNull()[pri:2, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateClientIDISNotNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateClientIDISNotNull -->
+        <test-method signature="validateCurrencyIDEqualRequestCurrencyIDAndNotNull()[pri:3, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateCurrencyIDEqualRequestCurrencyIDAndNotNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="11" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateCurrencyIDEqualRequestCurrencyIDAndNotNull -->
+        <test-method signature="validateBalance()[pri:4, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateBalance" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateBalance -->
+        <test-method signature="validateResponseCodEqualsZero()[pri:5, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateResponseCodEqualsZero" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseCodEqualsZero -->
+        <test-method signature="validateDescriptionNotNull()[pri:6, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateDescriptionNotNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateDescriptionNotNull -->
+        <test-method signature="validateResponseObjectEqualsNull()[pri:7, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:37 AMT" name="validateResponseObjectEqualsNull" finished-at="2022-09-23T13:49:37 AMT" depends-on-methods="testCases.API_2_Authorization.validateStatusCodAuthorizationAPI" duration-ms="3" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- validateResponseObjectEqualsNull -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.API_2_Authorization@4145bad8]" started-at="2022-09-23T13:49:38 AMT" name="tearDown" finished-at="2022-09-23T13:49:38 AMT" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.API_2_Authorization -->
+    </test> <!-- API Integration Automation Test -->
+  </suite> <!-- IQsoft API Integration -->
+</testng-results>
