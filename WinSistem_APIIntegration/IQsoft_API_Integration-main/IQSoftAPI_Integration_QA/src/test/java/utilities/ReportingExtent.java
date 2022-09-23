@@ -1,7 +1,5 @@
 package utilities;
 
-//Listener class used to generate Extent reports
-
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
@@ -39,9 +37,9 @@ public class ReportingExtent extends TestListenerAdapter {
         extent = new ExtentReports();
 
         extent.attachReporter(htmlReporter);
-        extent.setSystemInfo("Name", "API Integration Automation Report");
+        extent.setSystemInfo("Reports Name", "API Integration Automation Report");
         extent.setSystemInfo("Environment", "Windows");
-        extent.setSystemInfo("Test", "QA Automation API");
+        extent.setSystemInfo("Test", "IQ Soft Integration API Test");
         extent.setSystemInfo("QA Engineer", "Gor Babloyan");
 
         htmlReporter.config().setDocumentTitle("IQ Soft Integration"); // Title of report

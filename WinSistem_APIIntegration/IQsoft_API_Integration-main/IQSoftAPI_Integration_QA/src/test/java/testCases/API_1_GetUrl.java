@@ -12,42 +12,41 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import testData.APIVariables_GetProductUrl_Response;
+import testData.IqSoft_01_APIVariables_GetProductUrl_Response;
 
 import java.io.IOException;
 
 public class API_1_GetUrl extends BaseTest {
-    APIVariables_GetProductUrl_Response apiVariables_getProductUrl_response = new APIVariables_GetProductUrl_Response();
+    IqSoft_01_APIVariables_GetProductUrl_Response iqSoft01ApiVariables_getProductUrl_response = new IqSoft_01_APIVariables_GetProductUrl_Response();
     JSONObject jsonObjectBody;
     int statusCod;
 
 
     @BeforeClass
-    public void setUp() throws UnirestException, IOException {
+    public void setUpTestCase() throws UnirestException, IOException {
         HttpResponse<String> response = getUrlAPI();
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
 
 
-        apiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("getGameUrl API ResponseCode is Equal: " + apiVariables_getProductUrl_response.getResponseCode());
+        iqSoft01ApiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
+        logger.info("getGameUrl API ResponseCode is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseCode());
 
-        apiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("getGameUrl API Description is Equal: " + apiVariables_getProductUrl_response.getDescription());
+        iqSoft01ApiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
+        logger.info("getGameUrl API Description is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
 
-        apiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
-        logger.info("getGameUrl API ResponseObject is Equal: " + apiVariables_getProductUrl_response.getResponseObject());
+        iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
+        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
 
         try {
-            String parts[] = apiVariables_getProductUrl_response.getResponseObject().split("=");
-            apiVariables_getProductUrl_response.setAuthorizationToken(parts[2]);
+            String parts[] = iqSoft01ApiVariables_getProductUrl_response.getResponseObject().split("=");
+            iqSoft01ApiVariables_getProductUrl_response.setAuthorizationToken(parts[2]);
         } catch (Exception e) {
             logger.info("authorizationToken has Exception : " + e);
         }
 
-        logger.info("authorizationToken : " + apiVariables_getProductUrl_response.getAuthorizationToken());
-
+        logger.info("authorizationToken : " + iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
 
     }
 
@@ -65,7 +64,7 @@ public class API_1_GetUrl extends BaseTest {
     @Description("Verify getGameUrl API_s Response ResponseCode = 0")
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlValidateResponseCodEqualsZero() {
-        Assert.assertEquals(apiVariables_getProductUrl_response.getResponseCode(), 0);
+        Assert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseCode(), 0);
     }
 
 
@@ -73,7 +72,7 @@ public class API_1_GetUrl extends BaseTest {
     @Description("Verify getGameUrl API_s Response Description = null")
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlValidateDescriptionNotNull() {
-        Assert.assertEquals(apiVariables_getProductUrl_response.getDescription(), "null");
+        Assert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getDescription(), "null");
     }
 
 
@@ -82,8 +81,8 @@ public class API_1_GetUrl extends BaseTest {
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlValidateResponseObjectContainsHTTP() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertNotEquals("null", apiVariables_getProductUrl_response.getResponseObject());
-        softAssert.assertTrue(apiVariables_getProductUrl_response.getResponseObject().contains("http://ipls-stg.winsysgroup.com/games/?gameId="));
+        softAssert.assertNotEquals("null", iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
+        softAssert.assertTrue(iqSoft01ApiVariables_getProductUrl_response.getResponseObject().contains("http://ipls-stg.winsysgroup.com/games/?gameId="));
         softAssert.assertAll();
     }
 
@@ -91,12 +90,12 @@ public class API_1_GetUrl extends BaseTest {
     @Description("Verify getGameUrl API_s Response AuthorizationToken != null")
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlValidateAuthorizationTokenNotNull() {
-        Assert.assertNotEquals(apiVariables_getProductUrl_response.getAuthorizationToken(), null);
+        Assert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), null);
     }
 
 
     @AfterClass
-    public void tearDown() {
+    public void tearDownTestCase() {
 
     }
 

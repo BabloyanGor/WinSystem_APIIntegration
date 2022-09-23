@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="TestSuite" time="0.212" tests="12" errors="0" skipped="0" failures="0">
+<testsuite name="TestSuite" time="0.161" tests="19" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="17.0.2+8-LTS-86"/>
@@ -60,16 +60,23 @@
     <property name="sun.stdout.encoding" value="cp437"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase name="validateStatusCodGameLaunchAPI" classname="testCases.API_1_GetUrl" time="0.123"/>
-  <testcase name="validateResponseCodEqualsZero" classname="testCases.API_1_GetUrl" time="0.011"/>
-  <testcase name="validateDescriptionNotNull" classname="testCases.API_1_GetUrl" time="0.006"/>
-  <testcase name="validateResponseObjectContainsHTTP" classname="testCases.API_1_GetUrl" time="0.008"/>
-  <testcase name="validateAuthorizationTokenNotNull" classname="testCases.API_1_GetUrl" time="0.009"/>
-  <testcase name="validateStatusCodAuthorizationAPI" classname="testCases.API_2_Authorization" time="0.008"/>
-  <testcase name="validateClientIDISNotNull" classname="testCases.API_2_Authorization" time="0.004"/>
-  <testcase name="validateCurrencyIDEqualRequestCurrencyIDAndNotNull" classname="testCases.API_2_Authorization" time="0.012"/>
-  <testcase name="validateBalance" classname="testCases.API_2_Authorization" time="0.004"/>
-  <testcase name="validateResponseCodEqualsZero" classname="testCases.API_2_Authorization" time="0.012"/>
-  <testcase name="validateDescriptionNotNull" classname="testCases.API_2_Authorization" time="0.008"/>
-  <testcase name="validateResponseObjectEqualsNull" classname="testCases.API_2_Authorization" time="0.007"/>
+  <testcase name="getUrlValidateStatusCodGameLaunchAPI" classname="testCases.API_1_GetUrl" time="0.088"/>
+  <testcase name="getUrlValidateResponseCodEqualsZero" classname="testCases.API_1_GetUrl" time="0.004"/>
+  <testcase name="getUrlValidateDescriptionNotNull" classname="testCases.API_1_GetUrl" time="0.004"/>
+  <testcase name="getUrlValidateResponseObjectContainsHTTP" classname="testCases.API_1_GetUrl" time="0.006"/>
+  <testcase name="getUrlValidateAuthorizationTokenNotNull" classname="testCases.API_1_GetUrl" time="0.006"/>
+  <testcase name="AuthorizationValidateStatusCodAuthorizationAPI" classname="testCases.API_2_Authorization" time="0.001"/>
+  <testcase name="AuthorizationValidateClientIDISNotNull" classname="testCases.API_2_Authorization" time="0.001"/>
+  <testcase name="AuthorizationValidateCurrencyIDEqualRequestCurrencyIDAndNotNull" classname="testCases.API_2_Authorization" time="0.008"/>
+  <testcase name="AuthorizationValidateBalanceNotNull" classname="testCases.API_2_Authorization" time="0.008"/>
+  <testcase name="AuthorizationValidateResponseCodEqualsZero" classname="testCases.API_2_Authorization" time="0.003"/>
+  <testcase name="AuthorizationValidateDescriptionEqualsNull" classname="testCases.API_2_Authorization" time="0.004"/>
+  <testcase name="AuthorizationValidateResponseObjectEqualsNull" classname="testCases.API_2_Authorization" time="0.005"/>
+  <testcase name="validateStatusCodGetBalanceAPI" classname="testCases.API_3_GetBalance" time="0.001"/>
+  <testcase name="GetBalanceValidateClientIDISNotNull" classname="testCases.API_3_GetBalance" time="0.002"/>
+  <testcase name="GetBalanceValidateCurrencyIDEqualRequestCurrencyIDAndNotNull" classname="testCases.API_3_GetBalance" time="0.003"/>
+  <testcase name="GetBalanceValidateBalanceNotNull" classname="testCases.API_3_GetBalance" time="0.008"/>
+  <testcase name="GetBalanceValidateResponseCodEqualsZero" classname="testCases.API_3_GetBalance" time="0.003"/>
+  <testcase name="GetBalanceValidateDescriptionEqualsNull" classname="testCases.API_3_GetBalance" time="0.002"/>
+  <testcase name="GetBalanceValidateResponseObjectEqualsNull" classname="testCases.API_3_GetBalance" time="0.004"/>
 </testsuite>

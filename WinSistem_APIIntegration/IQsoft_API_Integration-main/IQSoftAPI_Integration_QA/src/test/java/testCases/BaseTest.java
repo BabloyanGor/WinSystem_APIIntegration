@@ -31,11 +31,11 @@ public class BaseTest {
     public BaseTest() {
     }
 
-    APIVariables_GetProductUrl_Request apiVariables_getProductUrl_request = new APIVariables_GetProductUrl_Request();
-    APIVariables_GetProductUrl_Response apiVariables_getProductUrl_response = new APIVariables_GetProductUrl_Response();
-    APISVariables_Authorization_Request apisVariables_authorization_request = new APISVariables_Authorization_Request();
-    APIVariables_GetBalance_Request apiVariables_getBalance_request = new APIVariables_GetBalance_Request();
-    APIVariables_GetBalance_Response apiVariables_getBalance_response = new APIVariables_GetBalance_Response();
+    IqSoft_01_APIVariables_GetProductUrl_Request iqSoft02ApiVariables_getProductUrl_request = new IqSoft_01_APIVariables_GetProductUrl_Request();
+    IqSoft_01_APIVariables_GetProductUrl_Response iqSoft01ApiVariables_getProductUrl_response = new IqSoft_01_APIVariables_GetProductUrl_Response();
+    IqSoft_02_APISVariables_Authorization_Request iqSoft02ApisVariables_authorization_request = new IqSoft_02_APISVariables_Authorization_Request();
+    IqSoft_03_APIVariables_GetBalance_Request iqSoft03ApiVariables_getBalance_request = new IqSoft_03_APIVariables_GetBalance_Request();
+    IqSoft_03_APIVariables_GetBalance_Response iqSoft03ApiVariables_getBalance_response = new IqSoft_03_APIVariables_GetBalance_Response();
     public static Logger logger;
     ReadConfig readConfig = new ReadConfig();
 
@@ -70,11 +70,11 @@ public class BaseTest {
     public HttpResponse<String> getUrlAPI() throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        apiVariables_getProductUrl_request.setPartnerId(partnerID);
-        apiVariables_getProductUrl_request.setProductId(productID);
-        apiVariables_getProductUrl_request.setClientId(clientId);
-        apiVariables_getProductUrl_request.setUserToken(capturedToken);  //use var <userToken> if token was passed from config
-        String getURLRequestBody = gson.toJson(apiVariables_getProductUrl_request);
+        iqSoft02ApiVariables_getProductUrl_request.setPartnerId(partnerID);
+        iqSoft02ApiVariables_getProductUrl_request.setProductId(productID);
+        iqSoft02ApiVariables_getProductUrl_request.setClientId(clientId);
+        iqSoft02ApiVariables_getProductUrl_request.setUserToken(capturedToken);  //use var <userToken> if token was passed from config
+        String getURLRequestBody = gson.toJson(iqSoft02ApiVariables_getProductUrl_request);
         logger.info("getURLRequestBody :" + getURLRequestBody);
         HttpResponse<String> response = Unirest.post(gameLaunchURL)
                 .header("Content-Type", "application/json")
@@ -87,9 +87,9 @@ public class BaseTest {
     public HttpResponse<String> authorizationAPI() throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        apisVariables_authorization_request.setToken(apiVariables_getProductUrl_response.getAuthorizationToken());
-//        apisVariables_authorization_request.setPartnerId(partnerID);
-        String authorizationRequestBody = gson.toJson(apisVariables_authorization_request);
+        iqSoft02ApisVariables_authorization_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+//        iqSoft02ApisVariables_authorization_request.setPartnerId(partnerID);
+        String authorizationRequestBody = gson.toJson(iqSoft02ApisVariables_authorization_request);
         logger.info("AuthorizationRequestBody : " + authorizationRequestBody);
 
         HttpResponse<String> response = Unirest.post(callbackUrl + "/Authorization")
@@ -103,9 +103,9 @@ public class BaseTest {
     public HttpResponse<String> getBalanceAPI() throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        apiVariables_getBalance_request.setToken(apiVariables_getProductUrl_response.getAuthorizationToken());
-//        apisVariables_authorization_request.setPartnerId(partnerID);
-        String getBalanceRequestBody = gson.toJson(apiVariables_getBalance_request);
+        iqSoft03ApiVariables_getBalance_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+//        iqSoft02ApisVariables_authorization_request.setPartnerId(partnerID);
+        String getBalanceRequestBody = gson.toJson(iqSoft03ApiVariables_getBalance_request);
         logger.info("GetBalanceRequestBody : " + getBalanceRequestBody);
 
         HttpResponse<String> response = Unirest.post(callbackUrl + "/GetBalance")
@@ -136,7 +136,7 @@ public class BaseTest {
     }
 
     @BeforeSuite
-    public void setup() throws InterruptedException {
+    public void setupSuite() throws InterruptedException {
         logger = Logger.getLogger("API");
         PropertyConfigurator.configure("Log4j.properties");
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started ");
@@ -180,7 +180,7 @@ public class BaseTest {
     }
 
     @AfterSuite
-    public void tearDown() {
+    public void tearDownSuite() {
         driver.quit();
         logger.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
     }
