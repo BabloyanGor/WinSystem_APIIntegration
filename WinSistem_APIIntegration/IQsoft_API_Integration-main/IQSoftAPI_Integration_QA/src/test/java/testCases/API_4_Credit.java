@@ -21,7 +21,7 @@ public class API_4_Credit extends BaseTest {
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = creditAPI(1);
+        HttpResponse<String> response = creditAPIOneTime();
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -100,10 +100,10 @@ public class API_4_Credit extends BaseTest {
     @Description("Verify Credit API_s Response Balance = Balance - BetAmount * num")
     public void CreditAPIValidateBalance() throws UnirestException {
         double balance = iqSoft_04_apiVariables_credit_response.getBalance();
-        HttpResponse<String> responseSecond = creditAPI(num);
+        HttpResponse<String> responseSecond = creditAPINumTimes(num);
         jsonObjectBody = new JSONObject(responseSecond.getBody());
         balanceAfter = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        check = balance - balanceAfter + iqSoft_04_apiVariables_credit_request.getAmount();
+        check = balance - balanceAfter;
         Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount())*num);
     }
 

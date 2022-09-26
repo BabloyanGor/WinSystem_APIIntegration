@@ -11,6 +11,7 @@
             <class name="testCases.API_2_Authorization"/>
             <class name="testCases.API_3_GetBalance"/>
             <class name="testCases.API_4_Credit"/>
+            <class name="testCases.API_5_Debit"/>
         </classes>
     </test>
 </suite>

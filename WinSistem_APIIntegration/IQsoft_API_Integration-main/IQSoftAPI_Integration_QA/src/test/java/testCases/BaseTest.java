@@ -43,6 +43,9 @@ public class BaseTest {
 
     IqSoft_04_APIVariables_Credit_Request iqSoft_04_apiVariables_credit_request = new IqSoft_04_APIVariables_Credit_Request();
     IqSoft_04_APIVariables_Credit_Response iqSoft_04_apiVariables_credit_response = new IqSoft_04_APIVariables_Credit_Response();
+
+    IqSoft_05_APIVariables_Debit_Request iqSoft_05_apiVariables_debit_request = new IqSoft_05_APIVariables_Debit_Request();
+    IqSoft_05_APIVariables_Debit_Response iqSoft_05_apiVariables_debit_response = new IqSoft_05_APIVariables_Debit_Response();
     public static Logger logger;
     ReadConfig readConfig = new ReadConfig();
 
@@ -124,51 +127,94 @@ public class BaseTest {
 
 
 
-    ArrayList<String> IDArrayList = new ArrayList<>();
 
+
+    static ArrayList<String> IDArrayList = new ArrayList<>();
+    static String ID = "QA_Test-"+ RandomStringUtils.randomNumeric(10);;
     public ArrayList<String> generateRandomIDArray(int num) {
         String randomNumber;
-        for (int i=0;i<=num;i++){
+        for (int i=0;i<num;i++){
             randomNumber ="QA_Test-"+ RandomStringUtils.randomNumeric(10);
             IDArrayList.add(randomNumber);
         }
         return IDArrayList;
     }
 
+    public HttpResponse<String> creditAPIOneTime() throws UnirestException {
+            Gson gson = new Gson();
+            Unirest.setTimeouts(0, 0);
+            iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+            iqSoft_04_apiVariables_credit_request.setRoundId(ID);
+            iqSoft_04_apiVariables_credit_request.setTransactionId(ID);
+            String CreditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
+            logger.info("CreditRequestBody : " + CreditRequestBody);
+            HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
+                    .header("Content-Type", "application/json")
+                    .body(CreditRequestBody)
+                    .asString();
+        return response;
+    }
 
-    public HttpResponse<String> creditAPI(int num) throws UnirestException {
+
+    public HttpResponse<String> creditAPINumTimes(int num) throws UnirestException {
         generateRandomIDArray(num);
-        for (int j=0; j<num-1; j++){
-            String randomID = IDArrayList.get(j);
+        HttpResponse<String> response = null;
+            for (String randomID : IDArrayList){
             Gson gson = new Gson();
             Unirest.setTimeouts(0, 0);
             iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
             iqSoft_04_apiVariables_credit_request.setRoundId(randomID);
             iqSoft_04_apiVariables_credit_request.setTransactionId(randomID);
-            String creditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
-            logger.info("creditRequestBody : " + creditRequestBody);
-            Unirest.post(callbackUrl + "/Credit")
+            String CreditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
+            logger.info("CreditRequestBody : " + CreditRequestBody);
+            response = Unirest.post(callbackUrl + "/Credit")
                     .header("Content-Type", "application/json")
-                    .body(creditRequestBody)
+                    .body(CreditRequestBody)
                     .asString();
         }
-
-        Gson gson = new Gson();
-        Unirest.setTimeouts(0, 0);
-        iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-
-        iqSoft_04_apiVariables_credit_request.setRoundId(generateRandomIDArray(num).get(IDArrayList.size()-1));
-        iqSoft_04_apiVariables_credit_request.setTransactionId(generateRandomIDArray(num).get(IDArrayList.size()-1));
-        String creditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
-        logger.info("creditRequestBody : " + creditRequestBody);
-
-        HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
-                .header("Content-Type", "application/json")
-                .body(creditRequestBody)
-                .asString();
         return response;
     }
 
+
+
+
+
+
+
+    public HttpResponse<String> debitAPIOneTime() throws UnirestException {  //if type = 1 one time else IDArrayList size
+            Gson gson = new Gson();
+            Unirest.setTimeouts(0, 0);
+            iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+            iqSoft_05_apiVariables_debit_request.setRoundId(ID);
+            iqSoft_05_apiVariables_debit_request.setTransactionId(ID);
+            iqSoft_05_apiVariables_debit_request.setCreditTransactionId(ID);
+            String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
+            logger.info("DebitRequestBody : " + DebitRequestBody);
+            HttpResponse<String> response = Unirest.post(callbackUrl + "/Debit")
+                    .header("Content-Type", "application/json")
+                    .body(DebitRequestBody)
+                    .asString();
+        return response;
+    }
+
+
+    public HttpResponse<String> debitAPINumTimes() throws UnirestException {  //if type = 1 one time else IDArrayList size
+        HttpResponse<String> response = null;
+            for (String randomID : IDArrayList){
+                Gson gson = new Gson();
+                Unirest.setTimeouts(0, 0);
+                iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+                iqSoft_05_apiVariables_debit_request.setRoundId(randomID);
+                iqSoft_05_apiVariables_debit_request.setTransactionId(randomID);
+                String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
+                logger.info("DebitRequestBody : " + DebitRequestBody);
+                response = Unirest.post(callbackUrl + "/Debit")
+                        .header("Content-Type", "application/json")
+                        .body(DebitRequestBody)
+                        .asString();
+            }
+        return response;
+    }
 
 
 
