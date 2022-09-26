@@ -6,18 +6,16 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class IqSoft_04_APIVariables_Credit_Request {
 
-    public String generateRandomRoundID() {
-        String randomNumber = RandomStringUtils.randomNumeric(10);
-        return "RoundId-"+randomNumber;
-    }
+
+
 
     @SerializedName("RoundId")
     @Expose
-    private String RoundId = generateRandomRoundID();
+    private String RoundId;
 
     @SerializedName("TransactionId")
     @Expose
-    private String TransactionId = generateRandomRoundID();
+    private String TransactionId;
 
     @SerializedName("ProductId")
     @Expose

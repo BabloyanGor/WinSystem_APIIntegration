@@ -21,7 +21,7 @@ public class API_4_Credit extends BaseTest {
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = creditAPI();
+        HttpResponse<String> response = creditAPI(1);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -50,7 +50,6 @@ public class API_4_Credit extends BaseTest {
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
         logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
-
     }
 
 
@@ -70,21 +69,52 @@ public class API_4_Credit extends BaseTest {
     }
 
     @Test(priority = 3, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Response Description = null")
+    @Description("Verify Credit API_s Response Description = null")
     public void CreditAPIValidateDescriptionEqualsNull() {
         Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getDescription(), "null");
     }
 
-
     @Test(priority = 4, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Response ResponseObject = null")
+    @Description("Verify Credit API_s Response ResponseObject = null")
     public void CreditAPIValidateResponseObjectEqualsNull() {
         Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseObject(), "null");
     }
 
+    @Test(priority = 5, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Response BetID != null")
+    public void CreditAPIValidateBetIdNotNull() {
+        Assert.assertNotEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
+    }
 
+    @Test(priority = 6, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Response ClientID = 25")
+    public void CreditAPIValidateClientID() {
+        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), "25");
+    }
 
+    double balanceAfter = 0;
+    double check = 0;
+    int num = 10;
 
+    @Test(priority = 7, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Response Balance = Balance - BetAmount * num")
+    public void CreditAPIValidateBalance() throws UnirestException {
+        double balance = iqSoft_04_apiVariables_credit_response.getBalance();
+        HttpResponse<String> responseSecond = creditAPI(num);
+        jsonObjectBody = new JSONObject(responseSecond.getBody());
+        balanceAfter = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+        check = balance - balanceAfter + iqSoft_04_apiVariables_credit_request.getAmount();
+        Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount())*num);
+    }
+
+    @Test(priority = 8, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify GetBalance API_s Balance after Credit")
+    public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
+        HttpResponse<String> response = getBalanceAPI();
+        jsonObjectBody = new JSONObject(response.getBody());
+        double balanceAfterCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+        Assert.assertEquals(balanceAfterCredit,balanceAfter);
+    }
 
 
 

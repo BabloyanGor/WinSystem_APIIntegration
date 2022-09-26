@@ -5,6 +5,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.apache.log4j.Logger;
 import org.apache.log4j.PropertyConfigurator;
 import org.apache.poi.xssf.usermodel.XSSFRow;
@@ -122,11 +123,42 @@ public class BaseTest {
     }
 
 
-    public HttpResponse<String> creditAPI() throws UnirestException {
+
+    ArrayList<String> IDArrayList = new ArrayList<>();
+
+    public ArrayList<String> generateRandomIDArray(int num) {
+        String randomNumber;
+        for (int i=0;i<=num;i++){
+            randomNumber ="QA_Test-"+ RandomStringUtils.randomNumeric(10);
+            IDArrayList.add(randomNumber);
+        }
+        return IDArrayList;
+    }
+
+
+    public HttpResponse<String> creditAPI(int num) throws UnirestException {
+        generateRandomIDArray(num);
+        for (int j=0; j<num-1; j++){
+            String randomID = IDArrayList.get(j);
+            Gson gson = new Gson();
+            Unirest.setTimeouts(0, 0);
+            iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+            iqSoft_04_apiVariables_credit_request.setRoundId(randomID);
+            iqSoft_04_apiVariables_credit_request.setTransactionId(randomID);
+            String creditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
+            logger.info("creditRequestBody : " + creditRequestBody);
+            Unirest.post(callbackUrl + "/Credit")
+                    .header("Content-Type", "application/json")
+                    .body(creditRequestBody)
+                    .asString();
+        }
+
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
         iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
 
+        iqSoft_04_apiVariables_credit_request.setRoundId(generateRandomIDArray(num).get(IDArrayList.size()-1));
+        iqSoft_04_apiVariables_credit_request.setTransactionId(generateRandomIDArray(num).get(IDArrayList.size()-1));
         String creditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
         logger.info("creditRequestBody : " + creditRequestBody);
 
