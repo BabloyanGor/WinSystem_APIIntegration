@@ -17,6 +17,9 @@ public class IqSoft_04_APIVariables_Credit_Request {
     @Expose
     private String TransactionId;
 
+    @SerializedName("CreditTransactionId")
+    @Expose
+    private String CreditTransactionId;
     @SerializedName("ProductId")
     @Expose
     private int ProductId = 4;

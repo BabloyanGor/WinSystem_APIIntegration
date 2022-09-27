@@ -13,6 +13,7 @@ testData\IqSoft_02_APISVariables_Authorization_Request.class
 testData\IqSoft_05_APIVariables_Debit_Request.class
 testData\IqSoft_04_APIVariables_Credit_Response.class
 utilities\ReadConfig.class
+testCases\API_5_Debit.class
 testCases\API_2_Authorization.class
 testCases\API_3_GetBalance.class
 utilities\ReportingExtent.class

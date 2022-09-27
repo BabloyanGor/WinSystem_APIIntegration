@@ -126,32 +126,31 @@ public class BaseTest {
     }
 
 
-
-
-
     static ArrayList<String> IDArrayList = new ArrayList<>();
-    static String ID = "QA_Test-"+ RandomStringUtils.randomNumeric(10);;
+    static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(10);
+    static int repeatNum = 10;
+
     public ArrayList<String> generateRandomIDArray(int num) {
         String randomNumber;
-        for (int i=0;i<num;i++){
-            randomNumber ="QA_Test-"+ RandomStringUtils.randomNumeric(10);
+        for (int i = 0; i < num; i++) {
+            randomNumber = "QA_Test-" + RandomStringUtils.randomNumeric(10);
             IDArrayList.add(randomNumber);
         }
         return IDArrayList;
     }
 
     public HttpResponse<String> creditAPIOneTime() throws UnirestException {
-            Gson gson = new Gson();
-            Unirest.setTimeouts(0, 0);
-            iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-            iqSoft_04_apiVariables_credit_request.setRoundId(ID);
-            iqSoft_04_apiVariables_credit_request.setTransactionId(ID);
-            String CreditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
-            logger.info("CreditRequestBody : " + CreditRequestBody);
-            HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
-                    .header("Content-Type", "application/json")
-                    .body(CreditRequestBody)
-                    .asString();
+        Gson gson = new Gson();
+        Unirest.setTimeouts(0, 0);
+        iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+        iqSoft_04_apiVariables_credit_request.setRoundId(ID);
+        iqSoft_04_apiVariables_credit_request.setTransactionId(ID);
+        String CreditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
+        logger.info("CreditRequestBody : " + CreditRequestBody);
+        HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
+                .header("Content-Type", "application/json")
+                .body(CreditRequestBody)
+                .asString();
         return response;
     }
 
@@ -159,7 +158,7 @@ public class BaseTest {
     public HttpResponse<String> creditAPINumTimes(int num) throws UnirestException {
         generateRandomIDArray(num);
         HttpResponse<String> response = null;
-            for (String randomID : IDArrayList){
+        for (String randomID : IDArrayList) {
             Gson gson = new Gson();
             Unirest.setTimeouts(0, 0);
             iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
@@ -176,46 +175,41 @@ public class BaseTest {
     }
 
 
-
-
-
-
-
     public HttpResponse<String> debitAPIOneTime() throws UnirestException {  //if type = 1 one time else IDArrayList size
-            Gson gson = new Gson();
-            Unirest.setTimeouts(0, 0);
-            iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-            iqSoft_05_apiVariables_debit_request.setRoundId(ID);
-            iqSoft_05_apiVariables_debit_request.setTransactionId(ID);
-            iqSoft_05_apiVariables_debit_request.setCreditTransactionId(ID);
-            String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
-            logger.info("DebitRequestBody : " + DebitRequestBody);
-            HttpResponse<String> response = Unirest.post(callbackUrl + "/Debit")
-                    .header("Content-Type", "application/json")
-                    .body(DebitRequestBody)
-                    .asString();
+        Gson gson = new Gson();
+        Unirest.setTimeouts(0, 0);
+        iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+        iqSoft_05_apiVariables_debit_request.setRoundId(ID);
+        iqSoft_05_apiVariables_debit_request.setTransactionId(ID);
+        iqSoft_05_apiVariables_debit_request.setCreditTransactionId(ID);
+        String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
+        logger.info("DebitRequestBody : " + DebitRequestBody);
+        HttpResponse<String> response = Unirest.post(callbackUrl + "/Debit")
+                .header("Content-Type", "application/json")
+                .body(DebitRequestBody)
+                .asString();
         return response;
     }
 
 
     public HttpResponse<String> debitAPINumTimes() throws UnirestException {  //if type = 1 one time else IDArrayList size
         HttpResponse<String> response = null;
-            for (String randomID : IDArrayList){
-                Gson gson = new Gson();
-                Unirest.setTimeouts(0, 0);
-                iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-                iqSoft_05_apiVariables_debit_request.setRoundId(randomID);
-                iqSoft_05_apiVariables_debit_request.setTransactionId(randomID);
-                String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
-                logger.info("DebitRequestBody : " + DebitRequestBody);
-                response = Unirest.post(callbackUrl + "/Debit")
-                        .header("Content-Type", "application/json")
-                        .body(DebitRequestBody)
-                        .asString();
-            }
+        for (String randomID : IDArrayList) {
+            Gson gson = new Gson();
+            Unirest.setTimeouts(0, 0);
+            iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+            iqSoft_05_apiVariables_debit_request.setRoundId(randomID);
+            iqSoft_05_apiVariables_debit_request.setTransactionId(randomID);
+            iqSoft_05_apiVariables_debit_request.setCreditTransactionId(randomID);
+            String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
+            logger.info("DebitRequestBody : " + DebitRequestBody);
+            response = Unirest.post(callbackUrl + "/Debit")
+                    .header("Content-Type", "application/json")
+                    .body(DebitRequestBody)
+                    .asString();
+        }
         return response;
     }
-
 
 
     static ChromeDriver driver;
@@ -226,9 +220,11 @@ public class BaseTest {
         WebStorage webStorage = (WebStorage) driver;
         return webStorage.getLocalStorage();
     }
+
     public void waitElementToBeVisible(WebElement element) {
         this.webDriverWait.until(ExpectedConditions.visibilityOf(element));
     }
+
     public String getItem(String key) {
         return getLocalStorage().getItem(key);
     }
@@ -240,10 +236,10 @@ public class BaseTest {
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started ");
 
         WebDriverManager.chromedriver().setup();
-            ChromeOptions cOptions = new ChromeOptions();
-            cOptions.addArguments("--headless", "--window-size=1920,1080");
-            cOptions.setHeadless(true);
-            driver = new ChromeDriver(cOptions);
+        ChromeOptions cOptions = new ChromeOptions();
+        cOptions.addArguments("--headless", "--window-size=1920,1080");
+        cOptions.setHeadless(true);
+        driver = new ChromeDriver(cOptions);
 
 //        driver = new ChromeDriver();
 
@@ -264,15 +260,15 @@ public class BaseTest {
         waitElementToBeVisible(password);
         password.sendKeys("Test123456");
 
-        WebElement loginButtonPopUp =driver.findElement(By.xpath("//button[@class='craft_btn login_btn -btn']"));
+        WebElement loginButtonPopUp = driver.findElement(By.xpath("//button[@class='craft_btn login_btn -btn']"));
         waitElementToBeVisible(loginButtonPopUp);
         loginButtonPopUp.click();
 
-        WebElement balanceSection =driver.findElement(By.xpath("//div[@class='balance_section']"));
+        WebElement balanceSection = driver.findElement(By.xpath("//div[@class='balance_section']"));
         waitElementToBeVisible(balanceSection);
 
         capturedToken = getItem("token");
-        logger.info("Captured Token : " + capturedToken);
+        logger.info("Captured User Token : " + capturedToken);
 
 
     }
@@ -281,6 +277,11 @@ public class BaseTest {
     public void tearDownSuite() {
         driver.quit();
         logger.info("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  ");
+        logger.info("");
+        logger.info("");
+        logger.info("");
+
+
     }
 
 

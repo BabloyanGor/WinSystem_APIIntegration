@@ -87,16 +87,28 @@ public class API_4_Credit extends BaseTest {
     }
 
     @Test(priority = 6, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Response TransactionId != null")
+    public void CreditAPIValidateTransactionIdNotNull() {
+        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
+    }
+
+    @Test(priority = 7, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify Credit API_s Response ClientID = 25")
     public void CreditAPIValidateClientID() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), "25");
+        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), String.valueOf(clientId));
+    }
+
+    @Test(priority = 8, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Response CurrencyId != null")
+    public void CreditAPIValidateCurrencyIdNotNull() {
+        Assert.assertNotEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), "null");
     }
 
     double balanceAfter = 0;
     double check = 0;
-    int num = 10;
+    int num = repeatNum;
 
-    @Test(priority = 7, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Test(priority = 9, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify Credit API_s Response Balance = Balance - BetAmount * num")
     public void CreditAPIValidateBalance() throws UnirestException {
         double balance = iqSoft_04_apiVariables_credit_response.getBalance();
@@ -107,7 +119,7 @@ public class API_4_Credit extends BaseTest {
         Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount())*num);
     }
 
-    @Test(priority = 8, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Test(priority = 10, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify GetBalance API_s Balance after Credit")
     public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
         HttpResponse<String> response = getBalanceAPI();

@@ -56,27 +56,76 @@ public class API_5_Debit extends BaseTest{
     @Description("Verify Credit API_s Response Status Cod equals to 200")
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateStatusCod() {
-        logger.info("Credit API Status Cod is Equal: " + statusCod);
+        logger.info("Debit API Status Cod is Equal: " + statusCod);
         Assert.assertEquals(200, statusCod);
     }
 
     @Test(priority = 2, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response ResponseCode = 0")
+    @Description("Verify Debit API_s Response ResponseCode = 0")
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseCodEqualsZero() {
         Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 0);
     }
 
     @Test(priority = 3, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response Description = null")
+    @Description("Verify Debit API_s Response Description = null")
     public void DebitAPIValidateDescriptionEqualsNull() {
         Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "null");
     }
 
     @Test(priority = 4, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response ResponseObject = null")
+    @Description("Verify Debit API_s Response ResponseObject = null")
     public void DebitAPIValidateResponseObjectEqualsNull() {
         Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseObject(), "null");
+    }
+
+
+    @Test(priority = 5, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Response BetID != null")
+    public void CreditAPIValidateBetIdNotNull() {
+        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getBetId(), "null");
+    }
+
+    @Test(priority = 6, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Response TransactionId != null")
+    public void CreditAPIValidateTransactionIdNotNull() {
+        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getTransactionId(), "null");
+    }
+
+    @Test(priority = 7, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Response ClientID = 25")
+    public void CreditAPIValidateClientID() {
+        Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getClientId(), String.valueOf(clientId));
+    }
+
+    @Test(priority = 8, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Response CurrencyId != null")
+    public void DebitAPIValidateCurrencyIdNotNull() {
+        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getCurrencyId(), "null");
+    }
+
+    double balanceAfter = 0;
+    double check = 0;
+    int num = repeatNum;
+
+    @Test(priority = 9, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Response Balance = Balance - BetAmount * num")
+    public void CreditAPIValidateBalance() throws UnirestException {
+        double balance = iqSoft_05_apiVariables_debit_response.getBalance();
+        HttpResponse<String> responseSecond = debitAPINumTimes();
+        jsonObjectBody = new JSONObject(responseSecond.getBody());
+        balanceAfter = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+        check =  balanceAfter - balance;
+        Assert.assertEquals(check, (iqSoft_05_apiVariables_debit_request.getAmount())*num);
+    }
+
+    @Test(priority = 10, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify GetBalance API_s Balance after Debit")
+    public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
+        HttpResponse<String> response = getBalanceAPI();
+        jsonObjectBody = new JSONObject(response.getBody());
+        double balanceAfterCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+        Assert.assertEquals(balanceAfterCredit,balanceAfter);
     }
 
 }
