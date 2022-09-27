@@ -12,11 +12,10 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
-import testData.IqSoft_01_APIVariables_GetProductUrl_Response;
 
 import java.io.IOException;
 
-public class API_1_GetUrl extends BaseTest {
+public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
     JSONObject jsonObjectBody;
     int statusCod;
 

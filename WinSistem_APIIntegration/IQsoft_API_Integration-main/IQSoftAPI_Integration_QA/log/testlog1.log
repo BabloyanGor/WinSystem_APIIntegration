@@ -224,3 +224,62 @@
 2022-09-27 17:13:46,100 [main] INFO API - 
 2022-09-27 17:13:46,101 [main] INFO API - 
 2022-09-27 17:13:46,101 [main] INFO API - 
+2022-09-27 22:18:54,711 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-09-27 22:18:55,409 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using chromedriver 105.0.5195.52 (resolved driver for Chrome 105)
+2022-09-27 22:18:55,431 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.chrome.driver as C:\Users\user\.cache\selenium\chromedriver\win32\105.0.5195.52\chromedriver.exe
+2022-09-27 22:19:26,477 [main] INFO API - Captured User Token : b953c996cb7c4d7a8db504557a6c43f3
+2022-09-27 22:19:26,550 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-09-27 22:19:26,698 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"b953c996cb7c4d7a8db504557a6c43f3"}
+2022-09-27 22:19:27,888 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-09-27 22:19:27,888 [main] INFO API - getGameUrl API Description is Equal: null
+2022-09-27 22:19:27,888 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=f4da50cff533403992c1cd08dc1b214c
+2022-09-27 22:19:27,888 [main] INFO API - authorizationToken : f4da50cff533403992c1cd08dc1b214c
+2022-09-27 22:19:27,910 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-09-27 22:19:27,913 [main] INFO API - getUrlAPIValidateStatusCod: Test passed
+2022-09-27 22:19:27,961 [main] INFO API - getUrlAPIValidateResponseCodEqualsZero: Test passed
+2022-09-27 22:19:27,965 [main] INFO API - getUrlAPIValidateDescriptionNotNull: Test passed
+2022-09-27 22:19:27,971 [main] INFO API - getUrlAPIValidateResponseObjectContainsHTTP: Test passed
+2022-09-27 22:19:27,974 [main] INFO API - getUrlAPIValidateAuthorizationTokenNotNull: Test passed
+2022-09-27 22:19:27,983 [main] INFO API - AuthorizationRequestBody : {"Token":"f4da50cff533403992c1cd08dc1b214c","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-09-27 22:19:28,107 [main] WARN API - AuthorizationAPIValidateStatusCod Test failed
+2022-09-27 22:19:28,111 [main] WARN API - AuthorizationAPIValidateClientIDISNotNull Test failed
+2022-09-27 22:19:28,113 [main] WARN API - AuthorizationAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull Test failed
+2022-09-27 22:19:28,116 [main] WARN API - AuthorizationAPIValidateBalanceNotNull Test failed
+2022-09-27 22:19:28,119 [main] WARN API - AuthorizationAPIValidateResponseCodEqualsZero Test failed
+2022-09-27 22:19:28,121 [main] WARN API - AuthorizationAPIValidateDescriptionEqualsNull Test failed
+2022-09-27 22:19:28,124 [main] WARN API - AuthorizationAPIValidateResponseObjectEqualsNull Test failed
+2022-09-27 22:19:28,128 [main] INFO API - GetBalanceRequestBody : {"Token":"f4da50cff533403992c1cd08dc1b214c","ProductId":4}
+2022-09-27 22:19:28,132 [main] WARN API - GetBalanceAPIValidateStatusCod Test failed
+2022-09-27 22:19:28,134 [main] WARN API - GetBalanceAPIValidateClientIDISNotNull Test failed
+2022-09-27 22:19:28,140 [main] WARN API - GetBalanceAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull Test failed
+2022-09-27 22:19:28,143 [main] WARN API - GetBalanceAPIValidateBalanceNotNull Test failed
+2022-09-27 22:19:28,145 [main] WARN API - GetBalanceAPIValidateResponseCodEqualsZero Test failed
+2022-09-27 22:19:28,147 [main] WARN API - GetBalanceAPIValidateDescriptionEqualsNull Test failed
+2022-09-27 22:19:28,150 [main] WARN API - GetBalanceAPIValidateResponseObjectEqualsNull Test failed
+2022-09-27 22:19:28,155 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-clREebaqQR","TransactionId":"QA_Test-clREebaqQR","ProductId":4,"Amount":1,"Token":"f4da50cff533403992c1cd08dc1b214c","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-09-27 22:19:28,162 [main] WARN API - CreditAPIValidateStatusCod Test failed
+2022-09-27 22:19:28,166 [main] WARN API - CreditAPIValidateResponseCodEqualsZero Test failed
+2022-09-27 22:19:28,169 [main] WARN API - CreditAPIValidateDescriptionEqualsNull Test failed
+2022-09-27 22:19:28,171 [main] WARN API - CreditAPIValidateResponseObjectEqualsNull Test failed
+2022-09-27 22:19:28,174 [main] WARN API - CreditAPIValidateBetIdNotNull Test failed
+2022-09-27 22:19:28,177 [main] WARN API - CreditAPIValidateTransactionIdNotNull Test failed
+2022-09-27 22:19:28,179 [main] WARN API - CreditAPIValidateClientID Test failed
+2022-09-27 22:19:28,183 [main] WARN API - CreditAPIValidateCurrencyIdNotNull Test failed
+2022-09-27 22:19:28,186 [main] WARN API - CreditAPIValidateBalance Test failed
+2022-09-27 22:19:28,189 [main] WARN API - CreditAPIValidateBalanceAfterCreditGetBalance Test failed
+2022-09-27 22:19:28,195 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-clREebaqQR","TransactionId":"QA_Test-clREebaqQR","CreditTransactionId":"QA_Test-clREebaqQR","ProductId":4,"Amount":1,"Token":"f4da50cff533403992c1cd08dc1b214c","CurrencyId":"EUR","BetState":0,"ClientId":51,"GameId":0,"OperationTypeId":0}
+2022-09-27 22:19:28,200 [main] WARN API - DebitAPIValidateStatusCod Test failed
+2022-09-27 22:19:28,203 [main] WARN API - DebitAPIValidateResponseCodEqualsZero Test failed
+2022-09-27 22:19:28,205 [main] WARN API - DebitAPIValidateDescriptionEqualsNull Test failed
+2022-09-27 22:19:28,209 [main] WARN API - DebitAPIValidateResponseObjectEqualsNull Test failed
+2022-09-27 22:19:28,212 [main] WARN API - CreditAPIValidateBetIdNotNull Test failed
+2022-09-27 22:19:28,215 [main] WARN API - CreditAPIValidateTransactionIdNotNull Test failed
+2022-09-27 22:19:28,217 [main] WARN API - CreditAPIValidateClientID Test failed
+2022-09-27 22:19:28,220 [main] WARN API - DebitAPIValidateCurrencyIdNotNull Test failed
+2022-09-27 22:19:28,224 [main] WARN API - CreditAPIValidateBalance Test failed
+2022-09-27 22:19:28,227 [main] WARN API - CreditAPIValidateBalanceAfterCreditGetBalance Test failed
+2022-09-27 22:19:28,228 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-09-27 22:19:28,510 [main] INFO API - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+2022-09-27 22:19:28,510 [main] INFO API - 
+2022-09-27 22:19:28,510 [main] INFO API - 
+2022-09-27 22:19:28,510 [main] INFO API - 

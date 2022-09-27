@@ -7,11 +7,11 @@
     </listeners>
     <test name="API Integration Automation Test">
         <classes>
-            <class name="testCases.API_1_GetUrl"/>
-            <class name="testCases.API_2_Authorization"/>
-            <class name="testCases.API_3_GetBalance"/>
-            <class name="testCases.API_4_Credit"/>
-            <class name="testCases.API_5_Debit"/>
+            <class name="testCases.IqSoft_API_1_GetUrl_Positive_Test"/>
+            <class name="testCases.IqSoft_API_2_Authorization_Positive_Test"/>
+            <class name="testCases.IqSoft_API_3_GetBalance_Positive_Test"/>
+            <class name="testCases.IqSoft_API_4_Credit_Positive_Test"/>
+            <class name="testCases.IqSoft_API_5_Debit_Positive_Test"/>
         </classes>
     </test>
 </suite>
