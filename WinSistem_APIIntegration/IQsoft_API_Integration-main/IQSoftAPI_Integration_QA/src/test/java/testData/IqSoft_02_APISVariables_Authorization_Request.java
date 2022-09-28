@@ -10,7 +10,7 @@ public class IqSoft_02_APISVariables_Authorization_Request {
     private String Token;
     @SerializedName("ProductId")
     @Expose
-    private int ProductId = 4;
+    private int ProductId ;
     @SerializedName("CurrencyId")
     @Expose
     private String CurrencyId = "EUR";

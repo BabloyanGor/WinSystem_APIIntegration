@@ -16,10 +16,11 @@ import java.io.IOException;
 public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     JSONObject jsonObjectBody;
     int statusCod;
+    int amount = 1;
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = creditAPIOneTime();
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, ID, ID,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -97,9 +98,9 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     }
 
     @Test(priority = 8, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response CurrencyId != null")
+    @Description("Verify Credit API_s Response CurrencyId = Request currencyID")
     public void CreditAPIValidateCurrencyIdNotNull() {
-        Assert.assertNotEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), "null");
+        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), currency);
     }
 
     double balanceAfter = 0;
@@ -114,18 +115,17 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseSecond.getBody());
         balanceAfter = Double.parseDouble(jsonObjectBody.get("Balance").toString());
         check = balance - balanceAfter;
-        Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount())*num);
+        Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount()) * num);
     }
 
     @Test(priority = 10, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify GetBalance API_s Balance after Credit")
     public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
-        HttpResponse<String> response = getBalanceAPI();
+        HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(response.getBody());
         double balanceAfterCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        Assert.assertEquals(balanceAfterCredit,balanceAfter);
+        Assert.assertEquals(balanceAfterCredit, balanceAfter);
     }
-
 
 
 }

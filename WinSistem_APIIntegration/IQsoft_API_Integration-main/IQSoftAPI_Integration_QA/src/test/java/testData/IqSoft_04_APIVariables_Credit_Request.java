@@ -26,7 +26,7 @@ public class IqSoft_04_APIVariables_Credit_Request {
 
     @SerializedName("Amount")
     @Expose
-    private int Amount = 1;
+    private double Amount;
 
     @SerializedName("Token")
     @Expose
@@ -34,7 +34,7 @@ public class IqSoft_04_APIVariables_Credit_Request {
 
     @SerializedName("CurrencyId")
     @Expose
-    private String CurrencyId = "EUR";
+    private String CurrencyId ;
 
     public String getRoundId() {
         return RoundId;
@@ -60,11 +60,11 @@ public class IqSoft_04_APIVariables_Credit_Request {
         ProductId = productId;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return Amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         Amount = amount;
     }
 

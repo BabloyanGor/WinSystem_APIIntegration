@@ -22,7 +22,7 @@ public class IqSoft_API_2_Authorization_Positive_Test extends BaseTest{
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = authorizationAPI();
+        HttpResponse<String> response = authorizationAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());

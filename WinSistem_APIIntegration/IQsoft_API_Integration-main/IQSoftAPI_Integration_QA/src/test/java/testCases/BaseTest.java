@@ -38,43 +38,33 @@ public class BaseTest {
     IqSoft_02_APISVariables_Authorization_Request iqSoft02ApisVariables_authorization_request = new IqSoft_02_APISVariables_Authorization_Request();
     IqSoft_02_APISVariables_Authorization_Response iqSoft_02_apisVariables_authorization_response = new IqSoft_02_APISVariables_Authorization_Response();
 
-    IqSoft_03_APIVariables_GetBalance_Request iqSoft03ApiVariables_getBalance_request = new IqSoft_03_APIVariables_GetBalance_Request();
-    IqSoft_03_APIVariables_GetBalance_Response iqSoft03ApiVariables_getBalance_response = new IqSoft_03_APIVariables_GetBalance_Response();
+    IqSoft_03_APIVariables_GetBalance_Request iqSoft_03_apiVariables_getBalance_request = new IqSoft_03_APIVariables_GetBalance_Request();
+    IqSoft_03_APIVariables_GetBalance_Response iqSoft_03_apiVariables_getBalance_response = new IqSoft_03_APIVariables_GetBalance_Response();
 
     IqSoft_04_APIVariables_Credit_Request iqSoft_04_apiVariables_credit_request = new IqSoft_04_APIVariables_Credit_Request();
     IqSoft_04_APIVariables_Credit_Response iqSoft_04_apiVariables_credit_response = new IqSoft_04_APIVariables_Credit_Response();
 
     IqSoft_05_APIVariables_Debit_Request iqSoft_05_apiVariables_debit_request = new IqSoft_05_APIVariables_Debit_Request();
     IqSoft_05_APIVariables_Debit_Response iqSoft_05_apiVariables_debit_response = new IqSoft_05_APIVariables_Debit_Response();
-    public static Logger logger;
-    ReadConfig readConfig = new ReadConfig();
 
+
+    public static Logger logger;
+
+    ReadConfig readConfig = new ReadConfig();
     public String gameLaunchURL = readConfig.getGameLaunchURL();
     public String callbackUrl = readConfig.getCallbackUrl();
-
 
     //region <Variables for gameLaunchURL API>
     public int partnerID = readConfig.getPartnerID();
     public int productID = readConfig.getProductID();
+    public int clientProductID = readConfig.getClientProductID();
     public int clientId = readConfig.getClientId();
+    public double betAmount = readConfig.getBetAmount();
+    public String currency = readConfig.getCurrency();
 
-    public String userToken = readConfig.getUserToken();
+
+    public String userToken = readConfig.getUserToken(); //If we need use token from config file
     //endregion
-
-
-    //region <Variables for Authorization API>
-
-
-    //endregion
-//    public int partnerID = readConfig.getPartnerID();
-//    public String callbackUrl = readConfig.getCallbackUrl();
-//    public String productID = readConfig.getProductID();
-//    public String sessionToken = readConfig.getSessionToken();
-//    public String currencyId = readConfig.getCurrencyId();
-//    public String languageId = readConfig.getLanguageId();
-
-
-    /////////////////////////////////////////////////////////////
 
 
     public HttpResponse<String> getUrlAPI(int PartnerID, int ProductID, int ClientID, String UserToken) throws UnirestException {
@@ -93,11 +83,11 @@ public class BaseTest {
         return response;
     }
 
-
-    public HttpResponse<String> authorizationAPI() throws UnirestException {
+    public HttpResponse<String> authorizationAPI(String AuthorizationToken, int ProductID ) throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        iqSoft02ApisVariables_authorization_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
+        iqSoft02ApisVariables_authorization_request.setToken(AuthorizationToken);
+        iqSoft02ApisVariables_authorization_request.setProductId(ProductID);
 //        iqSoft02ApisVariables_authorization_request.setPartnerId(partnerID);
         String authorizationRequestBody = gson.toJson(iqSoft02ApisVariables_authorization_request);
         logger.info("AuthorizationRequestBody : " + authorizationRequestBody);
@@ -109,13 +99,12 @@ public class BaseTest {
         return response;
     }
 
-
-    public HttpResponse<String> getBalanceAPI() throws UnirestException {
+    public HttpResponse<String> getBalanceAPI(String AuthorizationToken, int ProductID ) throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        iqSoft03ApiVariables_getBalance_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-//        iqSoft02ApisVariables_authorization_request.setPartnerId(partnerID);
-        String getBalanceRequestBody = gson.toJson(iqSoft03ApiVariables_getBalance_request);
+        iqSoft_03_apiVariables_getBalance_request.setToken(AuthorizationToken);
+        iqSoft_03_apiVariables_getBalance_request.setProductId(ProductID);
+        String getBalanceRequestBody = gson.toJson(iqSoft_03_apiVariables_getBalance_request);
         logger.info("GetBalanceRequestBody : " + getBalanceRequestBody);
 
         HttpResponse<String> response = Unirest.post(callbackUrl + "/GetBalance")
@@ -127,24 +116,30 @@ public class BaseTest {
 
 
     static ArrayList<String> IDArrayList = new ArrayList<>();
-    static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(10);
-    static int repeatNum = 10;
+    static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
 
+    static public String randomID(){
+       return  "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
+    }
+    static int repeatNum = 3;
     public ArrayList<String> generateRandomIDArray(int num) {
-        String randomNumber;
+        String randomID;
         for (int i = 0; i < num; i++) {
-            randomNumber = "QA_Test-" + RandomStringUtils.randomNumeric(10);
-            IDArrayList.add(randomNumber);
+            randomID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
+            IDArrayList.add(randomID);
         }
         return IDArrayList;
     }
 
-    public HttpResponse<String> creditAPIOneTime() throws UnirestException {
+    public HttpResponse<String> creditAPI(String AuthorizationToken, int ProductID, double Amount,String RoundId,String TransactionId,String Currency) throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        iqSoft_04_apiVariables_credit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-        iqSoft_04_apiVariables_credit_request.setRoundId(ID);
-        iqSoft_04_apiVariables_credit_request.setTransactionId(ID);
+        iqSoft_04_apiVariables_credit_request.setToken(AuthorizationToken);
+        iqSoft_04_apiVariables_credit_request.setProductId(ProductID);
+        iqSoft_04_apiVariables_credit_request.setAmount(Amount);
+        iqSoft_04_apiVariables_credit_request.setRoundId(RoundId);
+        iqSoft_04_apiVariables_credit_request.setCurrencyId(Currency);
+        iqSoft_04_apiVariables_credit_request.setTransactionId(TransactionId);
         String CreditRequestBody = gson.toJson(iqSoft_04_apiVariables_credit_request);
         logger.info("CreditRequestBody : " + CreditRequestBody);
         HttpResponse<String> response = Unirest.post(callbackUrl + "/Credit")
@@ -175,7 +170,7 @@ public class BaseTest {
     }
 
 
-    public HttpResponse<String> debitAPIOneTime() throws UnirestException {  //if type = 1 one time else IDArrayList size
+    public HttpResponse<String> debitAPI() throws UnirestException {  //if type = 1 one time else IDArrayList size
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
         iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());

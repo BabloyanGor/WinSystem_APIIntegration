@@ -11,7 +11,7 @@ public class IqSoft_03_APIVariables_GetBalance_Request {
     private String Token;
     @SerializedName("ProductId")
     @Expose
-    private int ProductId = 4;
+    private int ProductId;
 
 
     public String getToken() {

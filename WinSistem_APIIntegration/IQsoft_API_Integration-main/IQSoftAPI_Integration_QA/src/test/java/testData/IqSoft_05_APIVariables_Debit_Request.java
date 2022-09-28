@@ -23,7 +23,7 @@ public class IqSoft_05_APIVariables_Debit_Request {
 
     @SerializedName("Amount")
     @Expose
-    private int Amount = 1;
+    private double Amount = 1;
 
     @SerializedName("Token")
     @Expose
@@ -94,11 +94,11 @@ public class IqSoft_05_APIVariables_Debit_Request {
         ProductId = productId;
     }
 
-    public int getAmount() {
+    public double getAmount() {
         return Amount;
     }
 
-    public void setAmount(int amount) {
+    public void setAmount(double amount) {
         Amount = amount;
     }
 

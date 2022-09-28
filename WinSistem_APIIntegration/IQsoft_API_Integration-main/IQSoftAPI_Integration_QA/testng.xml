@@ -10,8 +10,11 @@
             <class name="testCases.IqSoft_API_1_GetUrl_Negative_Test"/>
             <class name="testCases.IqSoft_API_1_GetUrl_Positive_Test"/>
             <class name="testCases.IqSoft_API_2_Authorization_Positive_Test"/>
+            <class name="testCases.IqSoft_API_2_Authorization_Negative_Test"/>
             <class name="testCases.IqSoft_API_3_GetBalance_Positive_Test"/>
+            <class name="testCases.IqSoft_API_3_GetBalance_Negative_Test"/>
             <class name="testCases.IqSoft_API_4_Credit_Positive_Test"/>
+            <class name="testCases.IqSoft_API_4_Credit_Negative_Test"/>
             <class name="testCases.IqSoft_API_5_Debit_Positive_Test"/>
         </classes>
     </test>

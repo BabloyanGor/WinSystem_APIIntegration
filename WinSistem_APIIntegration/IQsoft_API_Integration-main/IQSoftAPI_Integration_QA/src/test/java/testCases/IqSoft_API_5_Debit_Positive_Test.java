@@ -20,7 +20,7 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = debitAPIOneTime();
+        HttpResponse<String> response = debitAPI();
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -122,7 +122,7 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
     @Test(priority = 10, dependsOnMethods = {"DebitAPIValidateStatusCod"})
     @Description("Verify GetBalance API_s Balance after Debit")
     public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
-        HttpResponse<String> response = getBalanceAPI();
+        HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(),4);
         jsonObjectBody = new JSONObject(response.getBody());
         double balanceAfterCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
         Assert.assertEquals(balanceAfterCredit,balanceAfter);

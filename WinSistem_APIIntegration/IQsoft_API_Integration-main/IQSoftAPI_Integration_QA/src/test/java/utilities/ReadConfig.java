@@ -35,11 +35,21 @@ public class ReadConfig {
     public int getProductID() {
         return Integer.parseInt(pro.getProperty("ProductId"));
     }
+    public int getClientProductID() {
+        return Integer.parseInt(pro.getProperty("ClientProductId"));
+    }
+
 
     public int getClientId() {
         return Integer.parseInt(pro.getProperty("ClientId"));
     }
+    public double getBetAmount() {
+        return Double.parseDouble(pro.getProperty("BetAmount"));
+    }
 
+    public String getCurrency() {
+        return pro.getProperty("CurrencyId");
+    }
     public String getUserToken() {
         return pro.getProperty("UserToken");
     }
