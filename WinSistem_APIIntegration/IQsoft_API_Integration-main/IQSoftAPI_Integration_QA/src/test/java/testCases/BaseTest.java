@@ -77,13 +77,13 @@ public class BaseTest {
     /////////////////////////////////////////////////////////////
 
 
-    public HttpResponse<String> getUrlAPI() throws UnirestException {
+    public HttpResponse<String> getUrlAPI(int PartnerID, int ProductID, int ClientID, String UserToken) throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        iqSoft02ApiVariables_getProductUrl_request.setPartnerId(partnerID);
-        iqSoft02ApiVariables_getProductUrl_request.setProductId(productID);
-        iqSoft02ApiVariables_getProductUrl_request.setClientId(clientId);
-        iqSoft02ApiVariables_getProductUrl_request.setUserToken(capturedToken);  //use var <userToken> if token was passed from config
+        iqSoft02ApiVariables_getProductUrl_request.setPartnerId(PartnerID);
+        iqSoft02ApiVariables_getProductUrl_request.setProductId(ProductID);
+        iqSoft02ApiVariables_getProductUrl_request.setClientId(ClientID);
+        iqSoft02ApiVariables_getProductUrl_request.setUserToken(UserToken);  //use String <userToken> if token will be passed from config
         String getURLRequestBody = gson.toJson(iqSoft02ApiVariables_getProductUrl_request);
         logger.info("getURLRequestBody :" + getURLRequestBody);
         HttpResponse<String> response = Unirest.post(gameLaunchURL)
@@ -214,7 +214,7 @@ public class BaseTest {
 
     static ChromeDriver driver;
     WebDriverWait webDriverWait;
-    String capturedToken;
+    static String capturedToken;
 
     public org.openqa.selenium.html5.LocalStorage getLocalStorage() {
         WebStorage webStorage = (WebStorage) driver;
@@ -231,9 +231,13 @@ public class BaseTest {
 
     @BeforeSuite
     public void setupSuite() throws InterruptedException {
+
         logger = Logger.getLogger("API");
         PropertyConfigurator.configure("Log4j.properties");
-        logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started ");
+
+
+        //region <Capture User Token>
+
 
         WebDriverManager.chromedriver().setup();
         ChromeOptions cOptions = new ChromeOptions();
@@ -270,6 +274,12 @@ public class BaseTest {
         capturedToken = getItem("token");
         logger.info("Captured User Token : " + capturedToken);
 
+        //endregion
+
+        logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started ");
+
+
+
 
     }
 
@@ -280,7 +290,6 @@ public class BaseTest {
         logger.info("");
         logger.info("");
         logger.info("");
-
 
     }
 

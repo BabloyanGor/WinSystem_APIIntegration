@@ -7,6 +7,7 @@
     </listeners>
     <test name="API Integration Automation Test">
         <classes>
+            <class name="testCases.IqSoft_API_1_GetUrl_Negative_Test"/>
             <class name="testCases.IqSoft_API_1_GetUrl_Positive_Test"/>
             <class name="testCases.IqSoft_API_2_Authorization_Positive_Test"/>
             <class name="testCases.IqSoft_API_3_GetBalance_Positive_Test"/>
