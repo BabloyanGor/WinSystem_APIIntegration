@@ -68,9 +68,9 @@ public class IqSoft_API_2_Authorization_Negative_Test extends  BaseTest{
 
         HttpResponse<String> response = authorizationAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() + "1", clientProductID);
         Unirest.shutdown();
+
         statusCod = response.getStatus();
         logger.info("Authorization API Response Status cod : " +statusCod);
-
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_02_apisVariables_authorization_response.setClientId(jsonObjectBody.get("ClientId").toString());

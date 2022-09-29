@@ -62,7 +62,6 @@ public class BaseTest {
     public double betAmount = readConfig.getBetAmount();
     public String currency = readConfig.getCurrency();
 
-    public String userToken = readConfig.getUserToken(); //If we need use token from config file
     //endregion
 
     public HttpResponse<String> getUrlAPI(int PartnerID, int ProductID, int ClientID, String UserToken) throws UnirestException {
@@ -115,6 +114,7 @@ public class BaseTest {
 
 
     static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
+    static String IDs = randomID();
 
     static public String randomID(){
        return  "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
@@ -131,6 +131,7 @@ public class BaseTest {
         return IDArrayList;
     }
 
+    static ArrayList<String> InvalidAmountTransactionID = new ArrayList<>();
     public HttpResponse<String> creditAPI(String AuthorizationToken, int ProductID, double Amount,String RoundId,String TransactionId,String Currency) throws UnirestException {
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
@@ -213,6 +214,8 @@ public class BaseTest {
     static ChromeDriver driver;
     WebDriverWait webDriverWait;
     static String capturedToken;
+
+    public String userToken = readConfig.getUserToken(); //If we need use token from config file
     static String timeOutCapturedToken;
     static String authorizationTimeOutToken;
 

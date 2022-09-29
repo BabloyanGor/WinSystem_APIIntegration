@@ -180,7 +180,8 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
 
 
         double errorAmount = Double.parseDouble(errAmount);
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, randomID(), randomID(), currency);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, IDs, IDs, currency);
+        InvalidAmountTransactionID.add(IDs);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -190,6 +191,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
 
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
         logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
+
         getTransactionIdArrayList.add(randomID());
 
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
