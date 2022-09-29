@@ -17,9 +17,15 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
 
     JSONObject jsonObjectBody;
     int statusCod;
+    double beforeDebit;
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
+        HttpResponse<String> responseGetBalance = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        jsonObjectBody = new JSONObject(responseGetBalance.getBody());
+        beforeDebit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+
+
         HttpResponse<String> response = debitAPI();
         Unirest.shutdown();
         statusCod = response.getStatus();
@@ -104,11 +110,18 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getCurrencyId(), "null");
     }
 
+    @Test(priority = 9, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Description("Verify Debit API_s Balance After Debit")
+    public void CreditAPIValidateBalanceAfterDebit() {
+        double afterCredit = iqSoft_04_apiVariables_credit_response.getBalance();
+        Assert.assertEquals(afterCredit , afterCredit+iqSoft_04_apiVariables_credit_request.getAmount());
+    }
+
     double balanceAfter = 0;
     double check = 0;
     int num = repeatNum;
 
-    @Test(priority = 9, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Test(priority = 20, dependsOnMethods = {"DebitAPIValidateStatusCod"})
     @Description("Verify Debit API_s Response Balance = Balance - BetAmount * num")
     public void CreditAPIValidateBalance() throws UnirestException {
         double balance = iqSoft_05_apiVariables_debit_response.getBalance();
@@ -119,7 +132,7 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         Assert.assertEquals(check, (iqSoft_05_apiVariables_debit_request.getAmount())*num);
     }
 
-    @Test(priority = 10, dependsOnMethods = {"DebitAPIValidateStatusCod"})
+    @Test(priority = 21, dependsOnMethods = {"DebitAPIValidateStatusCod"})
     @Description("Verify GetBalance API_s Balance after Debit")
     public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
         HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(),4);

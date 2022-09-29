@@ -62,10 +62,8 @@ public class BaseTest {
     public double betAmount = readConfig.getBetAmount();
     public String currency = readConfig.getCurrency();
 
-
     public String userToken = readConfig.getUserToken(); //If we need use token from config file
     //endregion
-
 
     public HttpResponse<String> getUrlAPI(int PartnerID, int ProductID, int ClientID, String UserToken) throws UnirestException {
         Gson gson = new Gson();
@@ -115,13 +113,15 @@ public class BaseTest {
     }
 
 
-    static ArrayList<String> IDArrayList = new ArrayList<>();
+
     static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
 
     static public String randomID(){
        return  "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
     }
-    static int repeatNum = 3;
+    static int repeatNum = 5;
+
+    static ArrayList<String> IDArrayList = new ArrayList<>();
     public ArrayList<String> generateRandomIDArray(int num) {
         String randomID;
         for (int i = 0; i < num; i++) {
@@ -170,6 +170,9 @@ public class BaseTest {
     }
 
 
+
+
+
     public HttpResponse<String> debitAPI() throws UnirestException {  //if type = 1 one time else IDArrayList size
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
@@ -210,6 +213,8 @@ public class BaseTest {
     static ChromeDriver driver;
     WebDriverWait webDriverWait;
     static String capturedToken;
+    static String timeOutCapturedToken;
+    static String authorizationTimeOutToken;
 
     public org.openqa.selenium.html5.LocalStorage getLocalStorage() {
         WebStorage webStorage = (WebStorage) driver;
@@ -224,16 +229,9 @@ public class BaseTest {
         return getLocalStorage().getItem(key);
     }
 
-    @BeforeSuite
-    public void setupSuite() throws InterruptedException {
-
-        logger = Logger.getLogger("API");
-        PropertyConfigurator.configure("Log4j.properties");
-
+    public String captureUserToken(){
 
         //region <Capture User Token>
-
-
         WebDriverManager.chromedriver().setup();
         ChromeOptions cOptions = new ChromeOptions();
         cOptions.addArguments("--headless", "--window-size=1920,1080");
@@ -266,16 +264,23 @@ public class BaseTest {
         WebElement balanceSection = driver.findElement(By.xpath("//div[@class='balance_section']"));
         waitElementToBeVisible(balanceSection);
 
-        capturedToken = getItem("token");
+        String capturedToken = getItem("token");
         logger.info("Captured User Token : " + capturedToken);
 
         //endregion
 
         logger.info(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started ");
+        return capturedToken;
+    }
 
 
+    @BeforeSuite
+    public void setupSuite() throws InterruptedException {
 
-
+        logger = Logger.getLogger("API");
+        PropertyConfigurator.configure("Log4j.properties");
+        timeOutCapturedToken=captureUserToken();
+        capturedToken = captureUserToken();
     }
 
     @AfterSuite

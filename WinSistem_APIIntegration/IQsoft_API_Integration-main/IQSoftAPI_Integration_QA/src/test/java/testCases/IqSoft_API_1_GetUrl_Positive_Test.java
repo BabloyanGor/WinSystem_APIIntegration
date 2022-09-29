@@ -29,6 +29,24 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
 
     @BeforeClass
     public void setUpTestCase() throws UnirestException, IOException {
+        HttpResponse<String> responseForTimeOutToken = getUrlAPI(partnerID,productID,clientId,capturedToken);
+        Unirest.shutdown();
+        statusCod = responseForTimeOutToken.getStatus();
+        jsonObjectBody = new JSONObject(responseForTimeOutToken.getBody());
+        iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
+        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
+        try {
+            String partsTimeOut[] = iqSoft01ApiVariables_getProductUrl_response.getResponseObject().split("=");
+            authorizationTimeOutToken = partsTimeOut[2];
+
+        } catch (Exception e) {
+            logger.info("authorizationTimeOutToken has Exception : " + e);
+        }
+        logger.info("authorizationTimeOutToken : " + authorizationTimeOutToken);
+
+
+
+
 
         HttpResponse<String> response = getUrlAPI(partnerID,productID,clientId,capturedToken);
         Unirest.shutdown();

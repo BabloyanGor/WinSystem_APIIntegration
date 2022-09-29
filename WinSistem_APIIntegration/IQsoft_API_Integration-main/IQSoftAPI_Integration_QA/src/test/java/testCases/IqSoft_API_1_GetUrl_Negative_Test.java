@@ -25,7 +25,7 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
 
         SoftAssert softAssert = new SoftAssert();
 
-        HttpResponse<String> response = getUrlAPI(partnerID,productID,clientId,capturedToken+"1");
+        HttpResponse<String> response = getUrlAPI(partnerID,productID,clientId,timeOutCapturedToken);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());

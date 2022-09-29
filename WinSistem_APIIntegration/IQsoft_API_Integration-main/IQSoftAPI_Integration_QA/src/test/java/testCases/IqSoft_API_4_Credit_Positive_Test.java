@@ -15,11 +15,16 @@ import java.io.IOException;
 
 public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     JSONObject jsonObjectBody;
+    double beforeCredit;
     int statusCod;
     int amount = 1;
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
+        HttpResponse<String> responseGetBalance = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        jsonObjectBody = new JSONObject(responseGetBalance.getBody());
+        beforeCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+
         HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, ID, ID,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
@@ -86,7 +91,7 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     }
 
     @Test(priority = 6, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response TransactionId != null")
+    @Description("Verify Credit API_s Response TransactionId = null")
     public void CreditAPIValidateTransactionIdNotNull() {
         Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
     }
@@ -103,11 +108,18 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
         Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), currency);
     }
 
+    @Test(priority = 9, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Description("Verify Credit API_s Balance After Debit")
+    public void CreditAPIValidateBalanceAfterCredit() {
+        double afterCredit = iqSoft_04_apiVariables_credit_response.getBalance();
+        Assert.assertEquals(afterCredit , beforeCredit-iqSoft_04_apiVariables_credit_request.getAmount());
+    }
+
     double balanceAfter = 0;
     double check = 0;
     int num = repeatNum;
 
-    @Test(priority = 9, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Test(priority = 20, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify Credit API_s Response Balance = Balance - BetAmount * num")
     public void CreditAPIValidateBalance() throws UnirestException {
         double balance = iqSoft_04_apiVariables_credit_response.getBalance();
@@ -118,7 +130,7 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
         Assert.assertEquals(check, (iqSoft_04_apiVariables_credit_request.getAmount()) * num);
     }
 
-    @Test(priority = 10, dependsOnMethods = {"CreditAPIValidateStatusCod"})
+    @Test(priority = 21, dependsOnMethods = {"CreditAPIValidateStatusCod"})
     @Description("Verify GetBalance API_s Balance after Credit")
     public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
         HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
