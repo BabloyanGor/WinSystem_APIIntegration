@@ -114,7 +114,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     }
 
     @Test(priority = 2)
-    @Description("Verify Credit API_s response with invalid Token")
+    @Description("Verify Credit API_s response with invalid ProductID")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidProductID() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
@@ -161,9 +161,61 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     }
 
 
-    public static ArrayList<String> getTransactionIdArrayList = new ArrayList<>();
+    @Test(priority = 3)
+    @Description("Verify Credit API_s response with using TransactionID twice")
+    @Severity(SeverityLevel.BLOCKER)
+    public void CreditAPIValidateResponseUsingTransactionIDTwice() throws UnirestException, IOException {
+        String TransactionIDCopy = randomID();
+        SoftAssert softAssert = new SoftAssert();
+        creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionIDCopy, TransactionIDCopy, currency);
+        Unirest.shutdown();
 
-    @Test(priority = 3, dataProvider = "invalidAmountData")
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionIDCopy, TransactionIDCopy, currency);
+        Unirest.shutdown();
+
+        statusCod = response.getStatus();
+        jsonObjectBody = new JSONObject(response.getBody());
+
+        iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
+        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
+
+        iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
+        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
+
+        iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
+        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
+
+        iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
+        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
+
+        iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
+        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
+
+        iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
+        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
+
+        iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
+        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
+
+        iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
+        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
+
+        softAssert.assertEquals(statusCod, 200);
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBalance(), 0.0);
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseCode(), 43);
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getDescription(), "ProductNotFound", "Error Description: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseObject(), "null");
+
+        softAssert.assertAll();
+    }
+
+
+//    public static ArrayList<String> getTransactionIdArrayList = new ArrayList<>();
+    @Test(priority = 4, dataProvider = "invalidAmountData")
     @Description("Verify Credit API_s response with invalid Amount")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidAmount(String errAmount) throws UnirestException, IOException {
@@ -179,9 +231,10 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         logger.info("GetBalance API Response balanceBefore : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
 
 
+        String randomTransactionID = randomID();
         double errorAmount = Double.parseDouble(errAmount);
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, IDs, IDs, currency);
-        InvalidAmountTransactionID.add(IDs);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, randomTransactionID, randomTransactionID, currency);
+        InvalidAmountTransactionID.add(randomTransactionID);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -192,7 +245,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
         logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
 
-        getTransactionIdArrayList.add(randomID());
+//        getTransactionIdArrayList.add(randomID());
 
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
         logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());

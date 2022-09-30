@@ -114,12 +114,11 @@ public class BaseTest {
 
 
     static String ID = "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
-    static String IDs = randomID();
 
     static public String randomID(){
        return  "QA_Test-" + RandomStringUtils.randomAlphanumeric(20);
     }
-    static int repeatNum = 5;
+    static int repeatNum = 2;
 
     static ArrayList<String> IDArrayList = new ArrayList<>();
     public ArrayList<String> generateRandomIDArray(int num) {
