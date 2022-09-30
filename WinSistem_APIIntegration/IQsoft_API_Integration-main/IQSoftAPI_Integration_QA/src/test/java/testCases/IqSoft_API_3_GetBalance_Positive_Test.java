@@ -54,48 +54,22 @@ public class IqSoft_API_3_GetBalance_Positive_Test extends BaseTest{
         Assert.assertEquals(200,statusCod);
     }
 
-
-
     @Test(priority = 2,dependsOnMethods = { "GetBalanceAPIValidateStatusCod" })
-    @Description("Verify GetBalance API_s Response ClientID != null")
-    public void GetBalanceAPIValidateClientIDISNotNull() {
-        Assert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
-    }
-
-    @Test(priority = 3,dependsOnMethods = { "GetBalanceAPIValidateStatusCod" })
-    @Description("Verify GetBalance API_s Response CurrencyId = Request CurrencyId ")
-    public void GetBalanceAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull() {
+    @Description("Verify GetBalance API_s Validate Positive Response")
+    public void GetBalanceAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId(),null);
-        softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
-    }
 
-    @Test(priority = 4,dependsOnMethods = { "GetBalanceAPIValidateStatusCod" })
-    @Description("Verify GetBalance API_s Response Balance != null")
-    public void GetBalanceAPIValidateBalanceNotNull() {
-        Assert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
-    }
+        softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
+        Assert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
+        softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
+        softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getResponseCode(), 0);
+        softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getDescription(), "null");
+        softAssert.assertEquals( iqSoft_03_apiVariables_getBalance_response.getResponseObject(),"null");
 
-
-    @Test(priority = 5, dependsOnMethods = {"GetBalanceAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Response ResponseCode = 0")
-    public void GetBalanceAPIValidateResponseCodEqualsZero() {
-        Assert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getResponseCode(), 0);
+        softAssert.assertAll();
     }
 
 
-    @Test(priority = 6, dependsOnMethods = {"GetBalanceAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Response Description = null")
-    public void GetBalanceAPIValidateDescriptionEqualsNull() {
-        Assert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getDescription(), "null");
-    }
-
-
-    @Test(priority = 7, dependsOnMethods = {"GetBalanceAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Response ResponseObject = null")
-    public void GetBalanceAPIValidateResponseObjectEqualsNull() {
-        Assert.assertEquals( iqSoft_03_apiVariables_getBalance_response.getResponseObject(),"null");
-    }
 
 
 

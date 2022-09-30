@@ -162,7 +162,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
 
 
     @Test(priority = 3)
-    @Description("Verify Credit API_s response  using TransactionID twice")
+    @Description("Verify Credit API_s response  using same TransactionID twice")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseUsingTransactionIDTwice() throws UnirestException, IOException {
         String TransactionIDCopy = randomID();
@@ -266,7 +266,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     }
 
 //    public static ArrayList<String> getTransactionIdArrayList = new ArrayList<>();
-    @Test(priority = 4, dataProvider = "invalidAmountData")
+    @Test(priority = 5, dataProvider = "invalidAmountData")
     @Description("Verify Credit API_s response with invalid Amount")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidAmount(String errAmount) throws UnirestException, IOException {
@@ -281,11 +281,16 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         double balanceBefore = iqSoft_03_apiVariables_getBalance_response.getBalance();
         logger.info("GetBalance API Response balanceBefore : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
 
-
         String randomTransactionID = randomID();
         double errorAmount = Double.parseDouble(errAmount);
         HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, randomTransactionID, randomTransactionID, currency);
+
+
         InvalidAmountTransactionID.add(randomTransactionID);
+
+
+
+
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());

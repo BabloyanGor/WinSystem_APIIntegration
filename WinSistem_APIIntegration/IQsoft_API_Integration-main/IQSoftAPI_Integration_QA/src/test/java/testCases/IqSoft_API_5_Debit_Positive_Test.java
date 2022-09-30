@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
@@ -25,8 +26,7 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         jsonObjectBody = new JSONObject(responseGetBalance.getBody());
         beforeDebit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
 
-
-        HttpResponse<String> response = debitAPI();
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, ID, ID,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -67,55 +67,26 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
     }
 
     @Test(priority = 2, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response ResponseCode = 0")
+    @Description("Verify Debit API_s Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void DebitAPIValidateResponseCodEqualsZero() {
-        Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 0);
-    }
+    public void DebitAPIValidatePositiveResponse() {
+        SoftAssert softAssert = new SoftAssert();
 
-    @Test(priority = 3, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response Description = null")
-    public void DebitAPIValidateDescriptionEqualsNull() {
-        Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "null");
-    }
-
-    @Test(priority = 4, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response ResponseObject = null")
-    public void DebitAPIValidateResponseObjectEqualsNull() {
-        Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseObject(), "null");
-    }
-
-
-    @Test(priority = 5, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response BetID != null")
-    public void CreditAPIValidateBetIdNotNull() {
-        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getBetId(), "null");
-    }
-
-    @Test(priority = 6, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response TransactionId != null")
-    public void CreditAPIValidateTransactionIdNotNull() {
-        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getTransactionId(), "null");
-    }
-
-    @Test(priority = 7, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response ClientID = 25")
-    public void CreditAPIValidateClientID() {
-        Assert.assertEquals(iqSoft_05_apiVariables_debit_response.getClientId(), String.valueOf(clientId));
-    }
-
-    @Test(priority = 8, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response CurrencyId != null")
-    public void DebitAPIValidateCurrencyIdNotNull() {
-        Assert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getCurrencyId(), "null");
-    }
-
-    @Test(priority = 9, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Balance After Debit")
-    public void CreditAPIValidateBalanceAfterDebit() {
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 0);
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "null");
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseObject(), "null");
+        softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getBetId(), "null");
+        softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getTransactionId(), "null");
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getClientId(), String.valueOf(clientId));
+        softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getCurrencyId(), "null");
         double afterCredit = iqSoft_04_apiVariables_credit_response.getBalance();
-        Assert.assertEquals(afterCredit , afterCredit+iqSoft_04_apiVariables_credit_request.getAmount());
+        softAssert.assertEquals(afterCredit , afterCredit+iqSoft_04_apiVariables_credit_request.getAmount());
+
+        softAssert.assertAll();
+
+
     }
+
 
     double balanceAfter = 0;
     double check = 0;

@@ -45,9 +45,6 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
         logger.info("authorizationTimeOutToken : " + authorizationTimeOutToken);
 
 
-
-
-
         HttpResponse<String> response = getUrlAPI(partnerID,productID,clientId,capturedToken);
         Unirest.shutdown();
         statusCod = response.getStatus();
@@ -90,9 +87,9 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
 
 
     @Test(priority = 3, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
-    @Description("Verify getGameUrl API_s Response ResponseCode = 0")
+    @Description("Verify getGameUrl Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidateResponsePositiveTest() {
+    public void getUrlAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseCode(), 0);
         softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getDescription(), "null", "Error Description: "+iqSoft01ApiVariables_getProductUrl_response.getDescription());
@@ -101,11 +98,6 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
         softAssert.assertAll();
 
     }
-
-
-
-
-
 
 
 

@@ -19,11 +19,11 @@ public class IqSoft_05_APIVariables_Debit_Request {
 
     @SerializedName("ProductId")
     @Expose
-    private int ProductId = 4;
+    private int ProductId ;
 
     @SerializedName("Amount")
     @Expose
-    private double Amount = 1;
+    private double Amount ;
 
     @SerializedName("Token")
     @Expose
@@ -31,7 +31,7 @@ public class IqSoft_05_APIVariables_Debit_Request {
 
     @SerializedName("CurrencyId")
     @Expose
-    private String CurrencyId="EUR" ;
+    private String CurrencyId ;
 
 
 
@@ -42,7 +42,7 @@ public class IqSoft_05_APIVariables_Debit_Request {
 
     @SerializedName("ClientId")
     @Expose
-    private int ClientId = 51;
+    private int ClientId ;
 
     @SerializedName("UserName")
     @Expose

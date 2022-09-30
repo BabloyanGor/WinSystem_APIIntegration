@@ -10,6 +10,7 @@ import org.json.JSONObject;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
+import org.testng.asserts.SoftAssert;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     JSONObject jsonObjectBody;
     double beforeCredit;
     int statusCod;
-    int amount = 1;
+
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
@@ -25,7 +26,7 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseGetBalance.getBody());
         beforeCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
 
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, ID, ID,currency);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, ID, ID,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -66,54 +67,24 @@ public class IqSoft_API_4_Credit_Positive_Test extends BaseTest {
     }
 
     @Test(priority = 2, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response ResponseCode = 0")
+    @Description("Verify Credit API_s Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void CreditAPIValidateResponseCodEqualsZero() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseCode(), 0);
-    }
+    public void CreditAPIValidatePositiveResponse() {
+        SoftAssert softAssert = new SoftAssert();
 
-    @Test(priority = 3, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response Description = null")
-    public void CreditAPIValidateDescriptionEqualsNull() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getDescription(), "null");
-    }
-
-    @Test(priority = 4, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response ResponseObject = null")
-    public void CreditAPIValidateResponseObjectEqualsNull() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseObject(), "null");
-    }
-
-    @Test(priority = 5, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response BetID != null")
-    public void CreditAPIValidateBetIdNotNull() {
-        Assert.assertNotEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
-    }
-
-    @Test(priority = 6, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response TransactionId = null")
-    public void CreditAPIValidateTransactionIdNotNull() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
-    }
-
-    @Test(priority = 7, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response ClientID = 25")
-    public void CreditAPIValidateClientID() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), String.valueOf(clientId));
-    }
-
-    @Test(priority = 8, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Response CurrencyId = Request currencyID")
-    public void CreditAPIValidateCurrencyIdNotNull() {
-        Assert.assertEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), currency);
-    }
-
-    @Test(priority = 9, dependsOnMethods = {"CreditAPIValidateStatusCod"})
-    @Description("Verify Credit API_s Balance After Debit")
-    public void CreditAPIValidateBalanceAfterCredit() {
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseCode(), 0);
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getDescription(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseObject(), "null");
+        softAssert.assertNotEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getClientId(), String.valueOf(clientId));
+        softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getCurrencyId(), currency);
         double afterCredit = iqSoft_04_apiVariables_credit_response.getBalance();
-        Assert.assertEquals(afterCredit , beforeCredit-iqSoft_04_apiVariables_credit_request.getAmount());
+        softAssert.assertEquals(afterCredit , beforeCredit-iqSoft_04_apiVariables_credit_request.getAmount());
+
+        softAssert.assertAll();
     }
+
 
     double balanceAfter = 0;
     double check = 0;

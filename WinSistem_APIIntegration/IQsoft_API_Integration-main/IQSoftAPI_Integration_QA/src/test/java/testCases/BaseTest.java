@@ -170,16 +170,17 @@ public class BaseTest {
     }
 
 
-
-
-
-    public HttpResponse<String> debitAPI() throws UnirestException {  //if type = 1 one time else IDArrayList size
+    public HttpResponse<String> debitAPI(String AuthorizationToken, int ProductID, double Amount,String RoundId,String TransactionId,String Currency) throws UnirestException {  //if type = 1 one time else IDArrayList size
         Gson gson = new Gson();
         Unirest.setTimeouts(0, 0);
-        iqSoft_05_apiVariables_debit_request.setToken(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken());
-        iqSoft_05_apiVariables_debit_request.setRoundId(ID);
-        iqSoft_05_apiVariables_debit_request.setTransactionId(ID);
-        iqSoft_05_apiVariables_debit_request.setCreditTransactionId(ID);
+        iqSoft_05_apiVariables_debit_request.setRoundId(RoundId);
+        iqSoft_05_apiVariables_debit_request.setTransactionId(TransactionId);
+        iqSoft_05_apiVariables_debit_request.setCreditTransactionId(TransactionId);
+        iqSoft_05_apiVariables_debit_request.setProductId(ProductID);
+        iqSoft_05_apiVariables_debit_request.setAmount(Amount);
+        iqSoft_05_apiVariables_debit_request.setCurrencyId(Currency);
+        iqSoft_05_apiVariables_debit_request.setToken(AuthorizationToken);
+
         String DebitRequestBody = gson.toJson(iqSoft_05_apiVariables_debit_request);
         logger.info("DebitRequestBody : " + DebitRequestBody);
         HttpResponse<String> response = Unirest.post(callbackUrl + "/Debit")

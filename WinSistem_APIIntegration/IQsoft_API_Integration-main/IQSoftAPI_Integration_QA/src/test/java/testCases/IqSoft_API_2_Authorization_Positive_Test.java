@@ -56,52 +56,25 @@ public class IqSoft_API_2_Authorization_Positive_Test extends BaseTest{
         Assert.assertEquals(200,statusCod);
     }
 
+
     @Test(priority = 2,dependsOnMethods = { "AuthorizationAPIValidateStatusCod" })
-    @Description("Verify Authorization API_s Response ClientID != null")
+    @Description("Verify Authorization API_s Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void AuthorizationAPIValidateClientIDISNotNull() {
-        Assert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),null);
-    }
-
-    @Test(priority = 3,dependsOnMethods = { "AuthorizationAPIValidateStatusCod" })
-    @Description("Verify Authorization API_s Response CurrencyId = Request CurrencyId ")
-    @Severity(SeverityLevel.NORMAL)
-    public void AuthorizationAPIValidateCurrencyIDEqualRequestCurrencyIDAndNotNull() {
+    public void AuthorizationAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
+        softAssert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),null);
         softAssert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(),null);
-        softAssert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
-    }
-
-    @Test(priority = 4,dependsOnMethods = { "AuthorizationAPIValidateStatusCod" })
-    @Description("Verify Authorization API_s Response Balance != null")
-    @Severity(SeverityLevel.BLOCKER)
-    public void AuthorizationAPIValidateBalanceNotNull() {
-        Assert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),null);
+        softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
+        softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getResponseCode(), 0);
+        softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getDescription(), "null");
+        softAssert.assertEquals( iqSoft_02_apisVariables_authorization_response.getResponseObject(),"null");
+        softAssert.assertAll();
     }
 
 
-    @Test(priority = 5, dependsOnMethods = {"AuthorizationAPIValidateStatusCod"})
-    @Description("Verify Authorization API_s Response ResponseCode = 0")
-    @Severity(SeverityLevel.BLOCKER)
-    public void AuthorizationAPIValidateResponseCodEqualsZero() {
-        Assert.assertEquals(iqSoft_02_apisVariables_authorization_response.getResponseCode(), 0);
-    }
 
 
-    @Test(priority = 6, dependsOnMethods = {"AuthorizationAPIValidateStatusCod"})
-    @Description("Verify Authorization API_s Response Description = null")
-    @Severity(SeverityLevel.BLOCKER)
-    public void AuthorizationAPIValidateDescriptionEqualsNull() {
-        Assert.assertEquals(iqSoft_02_apisVariables_authorization_response.getDescription(), "null");
-    }
 
-
-    @Test(priority = 7, dependsOnMethods = {"AuthorizationAPIValidateStatusCod"})
-    @Description("Verify Authorization API_s Response ResponseObject = null")
-    @Severity(SeverityLevel.NORMAL)
-    public void AuthorizationAPIValidateResponseObjectEqualsNull() {
-        Assert.assertEquals( iqSoft_02_apisVariables_authorization_response.getResponseObject(),"null");
-    }
 
 
 
