@@ -13,8 +13,8 @@ import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.html5.WebStorage;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -210,7 +210,7 @@ public class BaseTest {
     }
 
 
-    static ChromeDriver driver;
+    static FirefoxDriver driver;
     WebDriverWait webDriverWait;
     static String capturedToken;
 
@@ -234,13 +234,19 @@ public class BaseTest {
     public String captureUserToken(){
 
         //region <Capture User Token>
-        WebDriverManager.chromedriver().setup();
-        ChromeOptions cOptions = new ChromeOptions();
-        cOptions.addArguments("--headless", "--window-size=1920,1080");
-        cOptions.setHeadless(true);
-        driver = new ChromeDriver(cOptions);
-
+//        WebDriverManager.chromedriver().setup();
+//        ChromeOptions cOptions = new ChromeOptions();
+//        cOptions.addArguments("--headless", "--window-size=1920,1080");
+//        cOptions.setHeadless(true);
+//        driver = new ChromeDriver(cOptions);
 //        driver = new ChromeDriver();
+
+        WebDriverManager.firefoxdriver().setup();
+        FirefoxOptions fOptions = new FirefoxOptions();
+        fOptions.addArguments("--headless", "--window-size=1920,1080");
+        fOptions.setHeadless(true);
+        driver = new FirefoxDriver(fOptions);
+
 
         driver.manage().window().maximize();
         driver.get("https://ipls-staging.winsysgroup.com/home");
