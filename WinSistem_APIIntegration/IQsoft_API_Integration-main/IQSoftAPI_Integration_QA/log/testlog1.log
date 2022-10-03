@@ -1,0 +1,394 @@
+2022-10-03 10:33:08,898 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.31.0 (resolved driver for Firefox 104)
+2022-10-03 10:33:08,940 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\Nerses Khachatryan\.cache\selenium\geckodriver\win64\0.31.0\geckodriver.exe
+2022-10-03 10:33:29,567 [main] INFO API - Captured User Token : e43f261a50ab428897d27f8f90e99774
+2022-10-03 10:33:29,567 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-10-03 10:33:29,582 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Using geckodriver 0.31.0 (resolved driver for Firefox 104)
+2022-10-03 10:33:29,609 [main] INFO io.github.bonigarcia.wdm.WebDriverManager - Exporting webdriver.gecko.driver as C:\Users\Nerses Khachatryan\.cache\selenium\geckodriver\win64\0.31.0\geckodriver.exe
+2022-10-03 10:33:47,833 [main] INFO API - Captured User Token : e830812658df48699bc9920e5b8dfee2
+2022-10-03 10:33:47,833 [main] INFO API - >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  Test Suite was started 
+2022-10-03 10:33:48,044 [main] INFO API - API Integration Automation Test: Test execution starts
+2022-10-03 10:33:48,464 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"e43f261a50ab428897d27f8f90e99774"}
+2022-10-03 10:33:49,310 [main] INFO API - getGameUrl API ResponseCode is Equal: 28
+2022-10-03 10:33:49,310 [main] INFO API - getGameUrl API Description is Equal: SessionNotFound
+2022-10-03 10:33:49,311 [main] INFO API - getGameUrl API ResponseObject is Equal: null
+2022-10-03 10:33:49,311 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-10-03 10:33:49,327 [main] INFO API - getUrlAPIValidateResponseWithInvalidToken: Test passed
+2022-10-03 10:33:49,414 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":100,"PartnerId":1,"ProductId":80001,"Token":"e830812658df48699bc9920e5b8dfee2"}
+2022-10-03 10:33:50,327 [main] INFO API - getGameUrl API ResponseCode is Equal: 28
+2022-10-03 10:33:50,328 [main] INFO API - getGameUrl API Description is Equal: SessionNotFound
+2022-10-03 10:33:50,328 [main] INFO API - getGameUrl API ResponseObject is Equal: null
+2022-10-03 10:33:50,328 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-10-03 10:33:50,338 [main] ERROR API - getUrlAPIValidateResponseWithInvalidClientID Test failed
+2022-10-03 10:33:50,353 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":8000,"Token":"e830812658df48699bc9920e5b8dfee2"}
+2022-10-03 10:33:50,947 [main] INFO API - getGameUrl API ResponseCode is Equal: 43
+2022-10-03 10:33:50,947 [main] INFO API - getGameUrl API Description is Equal: ProductNotFound
+2022-10-03 10:33:50,947 [main] INFO API - getGameUrl API ResponseObject is Equal: null
+2022-10-03 10:33:50,947 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-10-03 10:33:50,948 [main] INFO API - getUrlAPIValidateResponseWithInvalidProductID: Test passed
+2022-10-03 10:33:50,956 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"e830812658df48699bc9920e5b8dfee2"}
+2022-10-03 10:33:51,617 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=77396d106de840ef8250457e31a562f9
+2022-10-03 10:33:51,618 [main] INFO API - authorizationTimeOutToken : 77396d106de840ef8250457e31a562f9
+2022-10-03 10:33:51,625 [main] INFO API - getURLRequestBody :{"Controller":"Main","DeviceType":1,"IsForDemo":false,"IsForMobile":false,"LanguageId":"en","Loader":true,"PageIndex":0,"PageSize":100,"Position":"","RequestData":"{}","TimeZone":4,"Method":"GetProductUrl","ClientId":25,"PartnerId":1,"ProductId":80001,"Token":"e830812658df48699bc9920e5b8dfee2"}
+2022-10-03 10:33:52,397 [main] INFO API - getGameUrl API ResponseCode is Equal: 0
+2022-10-03 10:33:52,397 [main] INFO API - getGameUrl API Description is Equal: null
+2022-10-03 10:33:52,397 [main] INFO API - getGameUrl API ResponseObject is Equal: http://ipls-stg.winsysgroup.com/games/?gameId=4&token=1bef386b8a0c4f6ea81426f2782374c2
+2022-10-03 10:33:52,398 [main] INFO API - authorizationToken : 1bef386b8a0c4f6ea81426f2782374c2
+2022-10-03 10:33:52,401 [main] INFO API - getGameUrl API Response Status Cod is Equal: 200
+2022-10-03 10:33:52,402 [main] INFO API - getUrlAPIValidateStatusCod: Test passed
+2022-10-03 10:33:52,416 [main] INFO API - getUrlAPIValidateAuthorizationTokenNotNull: Test passed
+2022-10-03 10:33:52,427 [main] INFO API - getUrlAPIValidatePositiveResponse: Test passed
+2022-10-03 10:33:52,446 [main] INFO API - AuthorizationRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-10-03 10:33:53,608 [main] INFO API - Authorization API Response ClientId : 25
+2022-10-03 10:33:53,609 [main] INFO API - Authorization API Response CurrencyId : EUR
+2022-10-03 10:33:53,612 [main] INFO API - Authorization API Response Balance : 616.0
+2022-10-03 10:33:53,613 [main] INFO API - Authorization API Response ResponseCode : 0
+2022-10-03 10:33:53,613 [main] INFO API - Authorization API Response Description : null
+2022-10-03 10:33:53,613 [main] INFO API - Authorization API Response ResponseObject : null
+2022-10-03 10:33:53,618 [main] INFO API - Authorization API Status Cod is Equal: 200
+2022-10-03 10:33:53,618 [main] INFO API - AuthorizationAPIValidateStatusCod: Test passed
+2022-10-03 10:33:53,629 [main] INFO API - AuthorizationAPIValidatePositiveResponse: Test passed
+2022-10-03 10:33:53,645 [main] INFO API - AuthorizationRequestBody : {"Token":"77396d106de840ef8250457e31a562f9","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-10-03 10:33:53,977 [main] INFO API - Authorization API Response Status cod : 200
+2022-10-03 10:33:53,977 [main] INFO API - Authorization API Response ClientId : null
+2022-10-03 10:33:53,978 [main] INFO API - Authorization API Response CurrencyId : null
+2022-10-03 10:33:53,978 [main] INFO API - Authorization API Response Balance : 0.0
+2022-10-03 10:33:53,978 [main] INFO API - Authorization API Response ResponseCode : 29
+2022-10-03 10:33:53,978 [main] INFO API - Authorization API Response Description : SessionExpired
+2022-10-03 10:33:53,978 [main] INFO API - Authorization API Response ResponseObject : null
+2022-10-03 10:33:53,980 [main] INFO API - AuthorizationAPIValidateResponseWithExpiredToken: Test passed
+2022-10-03 10:33:53,997 [main] INFO API - AuthorizationRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c21","ProductId":4,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-10-03 10:33:54,316 [main] INFO API - Authorization API Response Status cod : 200
+2022-10-03 10:33:54,316 [main] INFO API - Authorization API Response ClientId : null
+2022-10-03 10:33:54,316 [main] INFO API - Authorization API Response CurrencyId : null
+2022-10-03 10:33:54,317 [main] INFO API - Authorization API Response Balance : 0.0
+2022-10-03 10:33:54,317 [main] INFO API - Authorization API Response ResponseCode : 28
+2022-10-03 10:33:54,317 [main] INFO API - Authorization API Response Description : SessionNotFound
+2022-10-03 10:33:54,317 [main] INFO API - Authorization API Response ResponseObject : null
+2022-10-03 10:33:54,317 [main] INFO API - AuthorizationAPIValidateResponseWithInvalidToken: Test passed
+2022-10-03 10:33:54,331 [main] INFO API - AuthorizationRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":1000,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}
+2022-10-03 10:33:54,658 [main] INFO API - Authorization API Response Status cod : 200
+2022-10-03 10:33:54,660 [main] INFO API - Authorization API Response ClientId : null
+2022-10-03 10:33:54,661 [main] INFO API - Authorization API Response CurrencyId : null
+2022-10-03 10:33:54,662 [main] INFO API - Authorization API Response Balance : 0.0
+2022-10-03 10:33:54,662 [main] INFO API - Authorization API Response ResponseCode : 43
+2022-10-03 10:33:54,662 [main] INFO API - Authorization API Response Description : ProductNotFound
+2022-10-03 10:33:54,662 [main] INFO API - Authorization API Response ResponseObject : null
+2022-10-03 10:33:54,662 [main] INFO API - AuthorizationAPIValidateResponseWithInvalidProductID: Test passed
+2022-10-03 10:33:54,678 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:33:54,946 [main] INFO API - GetBalance API Response ClientId : 25
+2022-10-03 10:33:54,946 [main] INFO API - GetBalance API Response CurrencyId : EUR
+2022-10-03 10:33:54,946 [main] INFO API - GetBalance API Response Balance : 616.0
+2022-10-03 10:33:54,946 [main] INFO API - GetBalance API Response ResponseCode : 0
+2022-10-03 10:33:54,947 [main] INFO API - GetBalance API Response Description : null
+2022-10-03 10:33:54,947 [main] INFO API - GetBalance API Response ResponseObject : null
+2022-10-03 10:33:54,949 [main] INFO API - GetBalance API Status Cod is Equal: 200
+2022-10-03 10:33:54,949 [main] INFO API - GetBalanceAPIValidateStatusCod: Test passed
+2022-10-03 10:33:54,954 [main] INFO API - GetBalanceAPIValidatePositiveResponse: Test passed
+2022-10-03 10:33:54,971 [main] INFO API - GetBalanceRequestBody : {"Token":"77396d106de840ef8250457e31a562f9","ProductId":4}
+2022-10-03 10:33:55,266 [main] INFO API - GetBalance API Response ClientId : null
+2022-10-03 10:33:55,267 [main] INFO API - GetBalance API Response CurrencyId : null
+2022-10-03 10:33:55,267 [main] INFO API - GetBalance API Response Balance : 0.0
+2022-10-03 10:33:55,267 [main] INFO API - GetBalance API Response ResponseCode : 29
+2022-10-03 10:33:55,267 [main] INFO API - GetBalance API Response Description : SessionExpired
+2022-10-03 10:33:55,267 [main] INFO API - GetBalance API Response ResponseObject : null
+2022-10-03 10:33:55,267 [main] INFO API - GetBalanceAPIValidateResponseWithExpiredToken: Test passed
+2022-10-03 10:33:55,284 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c21","ProductId":4}
+2022-10-03 10:33:55,577 [main] INFO API - GetBalance API Response ClientId : null
+2022-10-03 10:33:55,578 [main] INFO API - GetBalance API Response CurrencyId : null
+2022-10-03 10:33:55,579 [main] INFO API - GetBalance API Response Balance : 0.0
+2022-10-03 10:33:55,579 [main] INFO API - GetBalance API Response ResponseCode : 28
+2022-10-03 10:33:55,580 [main] INFO API - GetBalance API Response Description : SessionNotFound
+2022-10-03 10:33:55,581 [main] INFO API - GetBalance API Response ResponseObject : null
+2022-10-03 10:33:55,582 [main] INFO API - GetBalanceAPIValidateResponseWithInvalidToken: Test passed
+2022-10-03 10:33:55,603 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":1000}
+2022-10-03 10:33:55,928 [main] INFO API - GetBalance API Response ClientId : null
+2022-10-03 10:33:55,928 [main] INFO API - GetBalance API Response CurrencyId : null
+2022-10-03 10:33:55,929 [main] INFO API - GetBalance API Response Balance : 0.0
+2022-10-03 10:33:55,929 [main] INFO API - GetBalance API Response ResponseCode : 43
+2022-10-03 10:33:55,930 [main] INFO API - GetBalance API Response Description : ProductNotFound
+2022-10-03 10:33:55,930 [main] INFO API - GetBalance API Response ResponseObject : null
+2022-10-03 10:33:55,931 [main] INFO API - GetBalanceAPIValidateResponseWithInvalidProductID: Test passed
+2022-10-03 10:33:55,963 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:33:56,317 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-lmZhCPeKT6JSFAohePGb","TransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:57,636 [main] INFO API - Credit API Response BetId : 964
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response ClientId : 25
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response CurrencyId : EUR
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response Balance : 615.0
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response ResponseCode : 0
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response Description : null
+2022-10-03 10:33:57,637 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:33:57,639 [main] INFO API - Credit API Status Cod is Equal: 200
+2022-10-03 10:33:57,639 [main] INFO API - CreditAPIValidateStatusCod: Test passed
+2022-10-03 10:33:57,714 [main] INFO API - CreditAPIValidatePositiveResponse: Test passed
+2022-10-03 10:33:57,825 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-tnPfjRyjCVMVqUVqaITp","TransactionId":"QA_Test-tnPfjRyjCVMVqUVqaITp","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:58,122 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-VcSwVp5ygRdH1cxtT0dx","TransactionId":"QA_Test-VcSwVp5ygRdH1cxtT0dx","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:58,477 [main] INFO API - CreditAPIValidateBalance: Test passed
+2022-10-03 10:33:58,491 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:33:58,776 [main] INFO API - CreditAPIValidateBalanceAfterCreditGetBalance: Test passed
+2022-10-03 10:33:58,787 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-lmZhCPeKT6JSFAohePGb","TransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","ProductId":4,"Amount":1.0,"Token":"77396d106de840ef8250457e31a562f9","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:59,076 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response ResponseCode : 29
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response Description : SessionExpired
+2022-10-03 10:33:59,077 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:33:59,078 [main] INFO API - CreditAPIValidateResponseWithExpiredToken: Test passed
+2022-10-03 10:33:59,088 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-lmZhCPeKT6JSFAohePGb","TransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c21","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:59,466 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:33:59,466 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:33:59,466 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:33:59,466 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:33:59,466 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:33:59,467 [main] INFO API - Credit API Response ResponseCode : 28
+2022-10-03 10:33:59,467 [main] INFO API - Credit API Response Description : SessionNotFound
+2022-10-03 10:33:59,467 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:33:59,467 [main] INFO API - CreditAPIValidateResponseWithInvalidToken: Test passed
+2022-10-03 10:33:59,487 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-lmZhCPeKT6JSFAohePGb","TransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","ProductId":1000,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:33:59,807 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response ResponseCode : 43
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response Description : ProductNotFound
+2022-10-03 10:33:59,808 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:33:59,809 [main] INFO API - CreditAPIValidateResponseWithInvalidProductID: Test passed
+2022-10-03 10:33:59,819 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-XrHkh8mLSKbowh971TwE","TransactionId":"QA_Test-XrHkh8mLSKbowh971TwE","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:00,170 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-XrHkh8mLSKbowh971TwE","TransactionId":"QA_Test-XrHkh8mLSKbowh971TwE","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response ResponseCode : 69
+2022-10-03 10:34:00,577 [main] INFO API - Credit API Response Description : ClientDocumentAlreadyExists
+2022-10-03 10:34:00,578 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:00,578 [main] INFO API - CreditAPIValidateResponseUsingTransactionIDTwice: Test passed
+2022-10-03 10:34:00,585 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-ebdusRt0tV7zaJcyVJ8K","TransactionId":"QA_Test-ebdusRt0tV7zaJcyVJ8K","ProductId":4,"Amount":1.0E11,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:01,298 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:01,298 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:01,298 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:01,299 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:01,299 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:01,299 [main] INFO API - Credit API Response ResponseCode : 71
+2022-10-03 10:34:01,299 [main] INFO API - Credit API Response Description : LowBalance
+2022-10-03 10:34:01,299 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:01,299 [main] INFO API - CreditAPIValidateResponseUsingAmountHigherThenBalance: Test passed
+2022-10-03 10:34:01,312 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:01,597 [main] INFO API - GetBalance API Response balanceBefore : 612.0
+2022-10-03 10:34:01,608 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-S1isU6iuFxtqUezn1uXL","TransactionId":"QA_Test-S1isU6iuFxtqUezn1uXL","ProductId":4,"Amount":0.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response BetId : 968
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response ClientId : 25
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response CurrencyId : EUR
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response Balance : 612.0
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response ResponseCode : 0
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response Description : null
+2022-10-03 10:34:01,917 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:01,923 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:02,218 [main] INFO API - GetBalance API Response balanceAfter : 612.0
+2022-10-03 10:34:02,219 [main] ERROR API - CreditAPIValidateResponseWithInvalidAmount Test failed
+2022-10-03 10:34:02,240 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:02,667 [main] INFO API - GetBalance API Response balanceBefore : 612.0
+2022-10-03 10:34:02,679 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-MUT93yrNa4E4flLRbUV4","TransactionId":"QA_Test-MUT93yrNa4E4flLRbUV4","ProductId":4,"Amount":-1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:03,056 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response ResponseCode : 39
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response Description : WrongOperationAmount
+2022-10-03 10:34:03,057 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:03,062 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:03,356 [main] INFO API - GetBalance API Response balanceAfter : 612.0
+2022-10-03 10:34:03,357 [main] INFO API - CreditAPIValidateResponseWithInvalidAmount: Test passed
+2022-10-03 10:34:03,364 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:03,657 [main] INFO API - GetBalance API Response balanceBefore : 612.0
+2022-10-03 10:34:03,663 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-kvPstsdXkBzHLgrqpsa4","TransactionId":"QA_Test-kvPstsdXkBzHLgrqpsa4","ProductId":4,"Amount":-1.5,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:04,017 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:04,017 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:04,018 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:04,018 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:04,018 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:04,018 [main] INFO API - Credit API Response ResponseCode : 39
+2022-10-03 10:34:04,018 [main] INFO API - Credit API Response Description : WrongOperationAmount
+2022-10-03 10:34:04,019 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:04,030 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:04,337 [main] INFO API - GetBalance API Response balanceAfter : 612.0
+2022-10-03 10:34:04,338 [main] INFO API - CreditAPIValidateResponseWithInvalidAmount: Test passed
+2022-10-03 10:34:04,361 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:04,717 [main] INFO API - GetBalance API Response balanceBefore : 612.0
+2022-10-03 10:34:04,731 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-NQzNsYU2yLuBSRSZtlHM","TransactionId":"QA_Test-NQzNsYU2yLuBSRSZtlHM","ProductId":4,"Amount":-1.05,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response ResponseCode : 39
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response Description : WrongOperationAmount
+2022-10-03 10:34:05,207 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:05,213 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:05,516 [main] INFO API - GetBalance API Response balanceAfter : 612.0
+2022-10-03 10:34:05,517 [main] INFO API - CreditAPIValidateResponseWithInvalidAmount: Test passed
+2022-10-03 10:34:05,532 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:05,808 [main] INFO API - GetBalance API Response balanceBefore : 612.0
+2022-10-03 10:34:05,816 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-m5lxAeMd3ltJQcte7Mlu","TransactionId":"QA_Test-m5lxAeMd3ltJQcte7Mlu","ProductId":4,"Amount":-1.45,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:06,117 [main] INFO API - Credit API Response BetId : null
+2022-10-03 10:34:06,117 [main] INFO API - Credit API Response TransactionId : null
+2022-10-03 10:34:06,118 [main] INFO API - Credit API Response ClientId : null
+2022-10-03 10:34:06,118 [main] INFO API - Credit API Response CurrencyId : null
+2022-10-03 10:34:06,118 [main] INFO API - Credit API Response Balance : 0.0
+2022-10-03 10:34:06,118 [main] INFO API - Credit API Response ResponseCode : 39
+2022-10-03 10:34:06,118 [main] INFO API - Credit API Response Description : WrongOperationAmount
+2022-10-03 10:34:06,119 [main] INFO API - Credit API Response ResponseObject : null
+2022-10-03 10:34:06,130 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:06,417 [main] INFO API - GetBalance API Response balanceAfter : 612.0
+2022-10-03 10:34:06,417 [main] INFO API - CreditAPIValidateResponseWithInvalidAmount: Test passed
+2022-10-03 10:34:06,425 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:06,713 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-lmZhCPeKT6JSFAohePGb","TransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","CreditTransactionId":"QA_Test-lmZhCPeKT6JSFAohePGb","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:07,236 [main] INFO API - Debit API Response BetId : 964
+2022-10-03 10:34:07,236 [main] INFO API - Debit API Response TransactionId : 969
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response ClientId : 25
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response CurrencyId : EUR
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response Balance : 613.0
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response ResponseCode : 0
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response Description : null
+2022-10-03 10:34:07,237 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:07,240 [main] INFO API - Debit API Status Cod is Equal: 200
+2022-10-03 10:34:07,240 [main] INFO API - DebitAPIValidateStatusCod: Test passed
+2022-10-03 10:34:07,247 [main] INFO API - DebitAPIValidatePositiveResponse: Test passed
+2022-10-03 10:34:07,262 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-tnPfjRyjCVMVqUVqaITp","TransactionId":"QA_Test-tnPfjRyjCVMVqUVqaITp","CreditTransactionId":"QA_Test-tnPfjRyjCVMVqUVqaITp","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:07,661 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-VcSwVp5ygRdH1cxtT0dx","TransactionId":"QA_Test-VcSwVp5ygRdH1cxtT0dx","CreditTransactionId":"QA_Test-VcSwVp5ygRdH1cxtT0dx","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:07,987 [main] INFO API - CreditAPIValidateBalance: Test passed
+2022-10-03 10:34:07,999 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:08,307 [main] INFO API - CreditAPIValidateBalanceAfterCreditGetBalance: Test passed
+2022-10-03 10:34:08,316 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-eH6h9PtcTRPv61zLkKTF","TransactionId":"QA_Test-eH6h9PtcTRPv61zLkKTF","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:08,700 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-rsgRrguSNkGbHFzpSO5X","TransactionId":"QA_Test-rsgRrguSNkGbHFzpSO5X","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:09,121 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-OhNFpf1t6YzrZYEc3G70","TransactionId":"QA_Test-OhNFpf1t6YzrZYEc3G70","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:09,443 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","TransactionId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:09,764 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-66VOAPXCndzQLnqnfE9y","TransactionId":"QA_Test-66VOAPXCndzQLnqnfE9y","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:10,072 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-N2SIauJFhx2guiJa58OQ","TransactionId":"QA_Test-N2SIauJFhx2guiJa58OQ","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:10,411 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-WSADpKZHMM69EPMIyorY","TransactionId":"QA_Test-WSADpKZHMM69EPMIyorY","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:10,840 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-lJqTDFAGUCYidTk8zvyb","TransactionId":"QA_Test-lJqTDFAGUCYidTk8zvyb","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:11,233 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-WwzLiUUWB6XZ3ve9eUQk","TransactionId":"QA_Test-WwzLiUUWB6XZ3ve9eUQk","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:11,541 [main] INFO API - CreditRequestBody : {"RoundId":"QA_Test-J7RNB0moH1pffIIzHDab","TransactionId":"QA_Test-J7RNB0moH1pffIIzHDab","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","TypeId":1,"OperationTypeId":3,"BetState":1}
+2022-10-03 10:34:11,883 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-eH6h9PtcTRPv61zLkKTF","TransactionId":"QA_Test-eH6h9PtcTRPv61zLkKTF","CreditTransactionId":"QA_Test-eH6h9PtcTRPv61zLkKTF","ProductId":4,"Amount":1.0,"Token":"77396d106de840ef8250457e31a562f9","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:12,236 [main] INFO API - Debit API Response BetId : 972
+2022-10-03 10:34:12,236 [main] INFO API - Debit API Response TransactionId : 982
+2022-10-03 10:34:12,236 [main] INFO API - Debit API Response ClientId : 25
+2022-10-03 10:34:12,237 [main] INFO API - Debit API Response CurrencyId : EUR
+2022-10-03 10:34:12,237 [main] INFO API - Debit API Response Balance : 606.0
+2022-10-03 10:34:12,237 [main] INFO API - Debit API Response ResponseCode : 0
+2022-10-03 10:34:12,237 [main] INFO API - Debit API Response Description : null
+2022-10-03 10:34:12,237 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:12,238 [main] INFO API - DebitAPIValidateResponseWithExpiredToken: Test passed
+2022-10-03 10:34:12,248 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-rsgRrguSNkGbHFzpSO5X","TransactionId":"QA_Test-rsgRrguSNkGbHFzpSO5X","CreditTransactionId":"QA_Test-rsgRrguSNkGbHFzpSO5X","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c21","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:12,637 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:12,638 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:12,638 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:12,638 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:12,639 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:12,639 [main] INFO API - Debit API Response ResponseCode : 28
+2022-10-03 10:34:12,639 [main] INFO API - Debit API Response Description : SessionNotFound
+2022-10-03 10:34:12,639 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:12,640 [main] INFO API - DebitAPIValidateResponseWithInvalidToken: Test passed
+2022-10-03 10:34:12,660 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-OhNFpf1t6YzrZYEc3G70","TransactionId":"QA_Test-OhNFpf1t6YzrZYEc3G70","CreditTransactionId":"QA_Test-OhNFpf1t6YzrZYEc3G70","ProductId":10000,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:13,036 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response ResponseCode : 43
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response Description : ProductNotFound
+2022-10-03 10:34:13,037 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:13,038 [main] INFO API - DebitAPIValidateResponseUsingInvalidProductID: Test passed
+2022-10-03 10:34:13,054 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","TransactionId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","CreditTransactionId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:13,396 [main] INFO API - Debit API Response Balance : 607.0
+2022-10-03 10:34:13,400 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","TransactionId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","CreditTransactionId":"QA_Test-ZcE9rKviQEOuuMoH7z7n","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:13,768 [main] INFO API - Debit API Response BetId : 975
+2022-10-03 10:34:13,769 [main] INFO API - Debit API Response TransactionId : 983
+2022-10-03 10:34:13,769 [main] INFO API - Debit API Response ClientId : 25
+2022-10-03 10:34:13,770 [main] INFO API - Debit API Response CurrencyId : EUR
+2022-10-03 10:34:13,770 [main] INFO API - Debit API Response Balance : 607.0
+2022-10-03 10:34:13,770 [main] INFO API - Debit API Response ResponseCode : 0
+2022-10-03 10:34:13,771 [main] INFO API - Debit API Response Description : null
+2022-10-03 10:34:13,771 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:13,771 [main] INFO API - DebitAPIValidateResponseUsingTransactionIDTwice: Test passed
+2022-10-03 10:34:13,799 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-66VOAPXCndzQLnqnfE9y","TransactionId":"QA_Test-66VOAPXCndzQLnqnfE9y","CreditTransactionId":"QA_Test-66VOAPXCndzQLnqnfE9y","ProductId":4,"Amount":-10.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:14,097 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:14,098 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:14,098 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:14,098 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:14,099 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:14,099 [main] INFO API - Debit API Response ResponseCode : 39
+2022-10-03 10:34:14,099 [main] INFO API - Debit API Response Description : WrongOperationAmount
+2022-10-03 10:34:14,099 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:14,100 [main] INFO API - DebitAPIValidateResponseUsingInvalidAmount: Test passed
+2022-10-03 10:34:14,128 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:14,466 [main] INFO API - Balance Was :607.0
+2022-10-03 10:34:14,470 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-S1isU6iuFxtqUezn1uXL","TransactionId":"QA_Test-S1isU6iuFxtqUezn1uXL","CreditTransactionId":"QA_Test-S1isU6iuFxtqUezn1uXL","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:14,826 [main] INFO API - Debit API Response BetId : 968
+2022-10-03 10:34:14,826 [main] INFO API - Debit API Response TransactionId : 984
+2022-10-03 10:34:14,826 [main] INFO API - Debit API Response ClientId : 25
+2022-10-03 10:34:14,826 [main] INFO API - Debit API Response CurrencyId : EUR
+2022-10-03 10:34:14,827 [main] INFO API - Debit API Response Balance : 608.0
+2022-10-03 10:34:14,827 [main] INFO API - Debit API Response ResponseCode : 0
+2022-10-03 10:34:14,827 [main] INFO API - Debit API Response Description : null
+2022-10-03 10:34:14,827 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:14,827 [main] ERROR API - DebitAPIValidateResponseUsingInvalidCreditTransactionID Test failed
+2022-10-03 10:34:14,835 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:15,086 [main] INFO API - Balance Was :608.0
+2022-10-03 10:34:15,092 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-MUT93yrNa4E4flLRbUV4","TransactionId":"QA_Test-MUT93yrNa4E4flLRbUV4","CreditTransactionId":"QA_Test-MUT93yrNa4E4flLRbUV4","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:15,396 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response ResponseCode : 50
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response Description : CanNotConnectCreditAndDebit
+2022-10-03 10:34:15,397 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:15,397 [main] INFO API - DebitAPIValidateResponseUsingInvalidCreditTransactionID: Test passed
+2022-10-03 10:34:15,406 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:15,656 [main] INFO API - Balance Was :608.0
+2022-10-03 10:34:15,661 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-kvPstsdXkBzHLgrqpsa4","TransactionId":"QA_Test-kvPstsdXkBzHLgrqpsa4","CreditTransactionId":"QA_Test-kvPstsdXkBzHLgrqpsa4","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:15,976 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:15,977 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:15,977 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:15,977 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:15,977 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:15,977 [main] INFO API - Debit API Response ResponseCode : 50
+2022-10-03 10:34:15,978 [main] INFO API - Debit API Response Description : CanNotConnectCreditAndDebit
+2022-10-03 10:34:15,978 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:15,978 [main] INFO API - DebitAPIValidateResponseUsingInvalidCreditTransactionID: Test passed
+2022-10-03 10:34:15,993 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:16,296 [main] INFO API - Balance Was :608.0
+2022-10-03 10:34:16,302 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-NQzNsYU2yLuBSRSZtlHM","TransactionId":"QA_Test-NQzNsYU2yLuBSRSZtlHM","CreditTransactionId":"QA_Test-NQzNsYU2yLuBSRSZtlHM","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:16,657 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:16,658 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:16,658 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:16,658 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:16,659 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:16,659 [main] INFO API - Debit API Response ResponseCode : 50
+2022-10-03 10:34:16,659 [main] INFO API - Debit API Response Description : CanNotConnectCreditAndDebit
+2022-10-03 10:34:16,659 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:16,660 [main] INFO API - DebitAPIValidateResponseUsingInvalidCreditTransactionID: Test passed
+2022-10-03 10:34:16,668 [main] INFO API - GetBalanceRequestBody : {"Token":"1bef386b8a0c4f6ea81426f2782374c2","ProductId":4}
+2022-10-03 10:34:16,977 [main] INFO API - Balance Was :608.0
+2022-10-03 10:34:16,991 [main] INFO API - DebitRequestBody : {"RoundId":"QA_Test-m5lxAeMd3ltJQcte7Mlu","TransactionId":"QA_Test-m5lxAeMd3ltJQcte7Mlu","CreditTransactionId":"QA_Test-m5lxAeMd3ltJQcte7Mlu","ProductId":4,"Amount":1.0,"Token":"1bef386b8a0c4f6ea81426f2782374c2","CurrencyId":"EUR","BetState":0,"ClientId":0,"GameId":0,"OperationTypeId":0}
+2022-10-03 10:34:17,317 [main] INFO API - Debit API Response BetId : null
+2022-10-03 10:34:17,317 [main] INFO API - Debit API Response TransactionId : null
+2022-10-03 10:34:17,318 [main] INFO API - Debit API Response ClientId : null
+2022-10-03 10:34:17,318 [main] INFO API - Debit API Response CurrencyId : null
+2022-10-03 10:34:17,318 [main] INFO API - Debit API Response Balance : 0.0
+2022-10-03 10:34:17,318 [main] INFO API - Debit API Response ResponseCode : 50
+2022-10-03 10:34:17,319 [main] INFO API - Debit API Response Description : CanNotConnectCreditAndDebit
+2022-10-03 10:34:17,319 [main] INFO API - Debit API Response ResponseObject : null
+2022-10-03 10:34:17,319 [main] INFO API - DebitAPIValidateResponseUsingInvalidCreditTransactionID: Test passed
+2022-10-03 10:34:17,322 [main] INFO API - API Integration Automation Test: Test execution finished
+2022-10-03 10:34:18,218 [main] INFO API - <<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<  Test Suite finished  >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+2022-10-03 10:34:18,218 [main] INFO API - 
+2022-10-03 10:34:18,218 [main] INFO API - 
+2022-10-03 10:34:18,218 [main] INFO API - 
