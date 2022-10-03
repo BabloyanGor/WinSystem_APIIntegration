@@ -86,7 +86,7 @@ public class IqSoft_04_APIVariables_Credit_Request {
 
     @SerializedName("TypeId")
     @Expose
-    private int TypeId = 1 ;
+    private int TypeId;
 
     @SerializedName("OperationTypeId")
     @Expose
@@ -94,7 +94,7 @@ public class IqSoft_04_APIVariables_Credit_Request {
 
     @SerializedName("BetState")
     @Expose
-    private int BetState = 1 ;
+    private int BetState ;
 
     public int getTypeId() {
         return TypeId;
