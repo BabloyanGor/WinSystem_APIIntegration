@@ -26,7 +26,7 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         jsonObjectBody = new JSONObject(responseGetBalance.getBody());
         beforeDebit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
 
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, ID, ID,currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, ID, ID+"D",ID+"C",currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -83,7 +83,6 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         softAssert.assertEquals(afterCredit , afterCredit+iqSoft_04_apiVariables_credit_request.getAmount());
 
         softAssert.assertAll();
-
 
     }
 

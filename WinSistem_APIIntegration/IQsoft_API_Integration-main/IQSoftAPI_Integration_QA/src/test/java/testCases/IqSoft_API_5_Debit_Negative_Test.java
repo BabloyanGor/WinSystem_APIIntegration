@@ -16,7 +16,7 @@ import org.testng.asserts.SoftAssert;
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
+public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
     JSONObject jsonObjectBody;
     int statusCod;
     int amount = 1;
@@ -25,13 +25,12 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
 
-        for(int i=0; i<10; i++){
-            String TransactionID = randomID();
-            HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionID, TransactionID,currency);
+        for (int i = 0; i < 9; i++) {
+            String TransactionID = randomID() ;
+            creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionID, TransactionID+ "C", currency);
             IDForDebitArrayList.add(TransactionID);
             Unirest.shutdown();
         }
-
     }
 
     @Test(priority = 1)
@@ -39,7 +38,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseWithExpiredToken() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = debitAPI(authorizationTimeOutToken, clientProductID, betAmount, IDForDebitArrayList.get(0), IDForDebitArrayList.get(0),currency);
+        HttpResponse<String> response = debitAPI(authorizationTimeOutToken, clientProductID, betAmount, IDForDebitArrayList.get(0),
+                            IDForDebitArrayList.get(0) + "C",IDForDebitArrayList.get(0) + "D" ,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -68,7 +68,6 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
         logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
-
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getBetId(), "null");
         softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getTransactionId(), "null");
@@ -88,7 +87,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseWithInvalidToken() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() + "1", clientProductID, betAmount, IDForDebitArrayList.get(1), IDForDebitArrayList.get(1),currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() + "1", clientProductID, betAmount,
+                                    IDForDebitArrayList.get(1), IDForDebitArrayList.get(1)+ "C", IDForDebitArrayList.get(1)+ "D", currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -137,7 +137,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseUsingInvalidProductID() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), 10000, betAmount, IDForDebitArrayList.get(2), IDForDebitArrayList.get(2),currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), 10000, betAmount,
+                                                IDForDebitArrayList.get(2), IDForDebitArrayList.get(2) + "C",IDForDebitArrayList.get(2) + "D", currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -181,29 +182,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     @Test(priority = 4)
     @Description("Verify Debit API_s response using same TransactionID twice")
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseUsingTransactionIDTwice() throws UnirestException, IOException {
 
-        HttpResponse<String> responseFirst = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, IDForDebitArrayList.get(3), IDForDebitArrayList.get(3),currency);
+        HttpResponse<String> responseFirst = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount,
+                        IDForDebitArrayList.get(3), IDForDebitArrayList.get(3)+ "C",IDForDebitArrayList.get(3)+ "D", currency);
         JSONObject jsonObjectBodyFirst = new JSONObject(responseFirst.getBody());
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBodyFirst.get("Balance").toString()));
         logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
@@ -211,7 +196,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
         Unirest.shutdown();
 
 
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, IDForDebitArrayList.get(3), IDForDebitArrayList.get(3),currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount,
+                IDForDebitArrayList.get(3), IDForDebitArrayList.get(3)+ "C",IDForDebitArrayList.get(3)+ "D", currency);
         Unirest.shutdown();
 
         statusCod = response.getStatus();
@@ -243,17 +229,19 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
         logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
 
-        Assert.assertEquals(balanceFirst,balanceSecond);
+        Assert.assertEquals(balanceFirst, balanceSecond);
     }
 
+    int i = 4;
 
-    @Test(priority = 5)
+    @Test(priority = 5, dataProvider = "invalidAmount")
     @Description("Verify Debit API_s response using Invalid Amount")
     @Severity(SeverityLevel.BLOCKER)
-    public void DebitAPIValidateResponseUsingInvalidAmount() throws UnirestException, IOException {
+    public void DebitAPIValidateResponseUsingInvalidAmount(Double errorAmount) throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
 
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, -10, IDForDebitArrayList.get(4), IDForDebitArrayList.get(4),currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount,
+                IDForDebitArrayList.get(i), IDForDebitArrayList.get(i)+ "C",IDForDebitArrayList.get(i)+ "D", currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -293,14 +281,24 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "WrongOperationAmount", "Error Description: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseObject(), "null");
 
+        i++;
         softAssert.assertAll();
     }
 
+    @DataProvider(name = "invalidAmount")
+    Object[][] invalidAmount() {
+        Double[][] arr = {
+                {0.0},
+                {-1.0},
+                {-1.5},
+                {-1.05},
+                {-1.005}
+        };
+        return arr;
+    }
 
 
-
-
-    @Test(priority = 6,dataProvider = "invalidTransactionID")
+    @Test(priority = 6, dataProvider = "invalidTransactionID")
     @Description("Verify Debit API_s response using Invalid Amount")
     @Severity(SeverityLevel.BLOCKER)
     public void DebitAPIValidateResponseUsingInvalidCreditTransactionID(String errorTransactionID) throws UnirestException, IOException {
@@ -311,7 +309,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
         double beforeCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
         logger.info("Balance Was :" + beforeCredit);
 
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, errorTransactionID, errorTransactionID,currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount,
+                                        errorTransactionID, errorTransactionID + "C",errorTransactionID+ "D", currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -356,7 +355,7 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
 
 
     @DataProvider(name = "invalidTransactionID")
-    Object[][] AmountInvalidData()  {
+    Object[][] AmountInvalidData() {
         String[][] arr = {
                 {InvalidAmountTransactionID.get(0)},
                 {InvalidAmountTransactionID.get(1)},
@@ -370,6 +369,6 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest{
 //            arr[i][0] = eeTransID;
 //            System.out.println();
 //        }
-        return arr ;
+        return arr;
     }
 }
