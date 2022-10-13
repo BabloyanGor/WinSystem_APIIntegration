@@ -29,7 +29,8 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
 
     @BeforeClass
     public void setUpTestCase() throws UnirestException, IOException {
-        HttpResponse<String> responseForTimeOutToken = getUrlAPI(partnerID,productID,clientId,capturedToken);
+
+        HttpResponse<String> responseForTimeOutToken = getUrlAPI(partnerID, productID, clientId, capturedToken);
         Unirest.shutdown();
         statusCod = responseForTimeOutToken.getStatus();
         jsonObjectBody = new JSONObject(responseForTimeOutToken.getBody());
@@ -45,7 +46,7 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
         logger.info("authorizationTimeOutToken : " + authorizationTimeOutToken);
 
 
-        HttpResponse<String> response = getUrlAPI(partnerID,productID,clientId,capturedToken);
+        HttpResponse<String> response = getUrlAPI(partnerID, productID, clientId, capturedToken);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -70,40 +71,26 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
 
 
     @Test(priority = 1)
-    @Description("Verify getURL API_s Status Cod equals to 200")
+    @Description("Verify Authorization API_s Response Status Cod equals to 200")
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlAPIValidateStatusCod() {
-        logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
-        Assert.assertEquals(statusCod, 200);
+        logger.info("getUrlAPI Status Cod is Equal: " + statusCod);
+        Assert.assertEquals(200,statusCod);
     }
 
-
-    @Test(priority = 2, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
-    @Description("Verify getGameUrl API_s Response AuthorizationToken != null")
-    @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidateAuthorizationTokenNotNull() {
-        Assert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), null);
-    }
-
-
-    @Test(priority = 3, dependsOnMethods = {"getUrlAPIValidateStatusCod"})
+    @Test(priority = 2,dependsOnMethods = { "getUrlAPIValidateStatusCod" })
     @Description("Verify getGameUrl Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
     public void getUrlAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
-        softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseCode(), 0);
-        softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getDescription(), "null", "Error Description: "+iqSoft01ApiVariables_getProductUrl_response.getDescription());
-        softAssert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseObject(),"null");
-        softAssert.assertTrue(iqSoft01ApiVariables_getProductUrl_response.getResponseObject().contains("http://"));
+        Assert.assertEquals(statusCod, 200);
+        Assert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), null,"1");
+        softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseCode(), 0,"2");
+        softAssert.assertEquals(iqSoft01ApiVariables_getProductUrl_response.getDescription(), "null", "Error Description: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
+        softAssert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getResponseObject(), "null","3");
         softAssert.assertAll();
-
     }
 
 
-
-    @AfterClass
-    public void tearDownTestCase() {
-
-    }
 
 }

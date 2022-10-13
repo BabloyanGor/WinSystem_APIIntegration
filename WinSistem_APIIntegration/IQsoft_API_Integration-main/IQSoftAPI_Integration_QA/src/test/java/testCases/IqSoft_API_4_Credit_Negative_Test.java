@@ -19,12 +19,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     int statusCod;
     int amount = 1;
 
-    @Test(priority = 0)
+    @Test(priority = 1)
     @Description("Verify Credit API_s response with Expired Token")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithExpiredToken() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = creditAPI(authorizationTimeOutToken, clientProductID, amount, ID, ID+"C", currency);
+        HttpResponse<String> response = creditAPI(authorizationTimeOutToken, currency,clientProductID,
+                3, creditValidTransactionID, betAmountCredit,1);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -66,12 +67,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 1)
+    @Test(priority = 2)
     @Description("Verify Credit API_s response with invalid Token")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidToken() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() + "1", clientProductID, amount, ID, ID+"C", currency);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() + "1", currency,clientProductID,
+                3, creditValidTransactionID, betAmountCredit,1);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -113,12 +115,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Test(priority = 2)
+    @Test(priority = 3)
     @Description("Verify Credit API_s response with invalid ProductID")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidProductID() throws UnirestException, IOException {
         SoftAssert softAssert = new SoftAssert();
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), 1000, amount, ID, ID+"C", currency);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), currency,-10,
+                3, creditValidTransactionID, betAmountCredit,1);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -161,16 +164,18 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     }
 
 
-    @Test(priority = 3)
+    @Test(priority = 4)
     @Description("Verify Credit API_s response  using same TransactionID twice")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseUsingTransactionIDTwice() throws UnirestException, IOException {
-        String TransactionIDCopy = randomID() + "C";
+        String TransactionIDCopy = randomCreditTransactionID();
         SoftAssert softAssert = new SoftAssert();
-        creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionIDCopy, TransactionIDCopy, currency);
+        creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), currency,clientProductID,
+                3, TransactionIDCopy, betAmountCredit,1);
         Unirest.shutdown();
 
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, amount, TransactionIDCopy, TransactionIDCopy, currency);
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), currency,clientProductID,
+                3, TransactionIDCopy, betAmountCredit,1);
         Unirest.shutdown();
 
         statusCod = response.getStatus();
@@ -215,14 +220,19 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
 
 
 
-    @Test(priority = 4)
+    @Test(priority = 5)
     @Description("Verify Credit API_s response  using Amount Higher Then Balance")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseUsingAmountHigherThenBalance() throws UnirestException, IOException {
-        String TransactionID = randomID();
+        String TransactionID =randomCreditTransactionID();
         SoftAssert softAssert = new SoftAssert();
 
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, 100000000000.0, TransactionID, TransactionID+"C", currency);
+        HttpResponse<String> responseGetBalance = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        jsonObjectBody = new JSONObject(responseGetBalance.getBody());
+        double beforeCreditBalance = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+
+        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), currency,clientProductID,
+                3, TransactionID, beforeCreditBalance+10,1);
         Unirest.shutdown();
 
         statusCod = response.getStatus();
@@ -266,7 +276,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
     }
 
 //    public static ArrayList<String> getTransactionIdArrayList = new ArrayList<>();
-    @Test(priority = 5, dataProvider = "invalidAmountData")
+    @Test(priority = 6, dataProvider = "invalidAmountData")
     @Description("Verify Credit API_s response with invalid Amount")
     @Severity(SeverityLevel.BLOCKER)
     public void CreditAPIValidateResponseWithInvalidAmount(String errAmount) throws UnirestException, IOException {
@@ -278,22 +288,17 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         statusCod = responseGetBalanceAPIBefore.getStatus();
         jsonObjectBody = new JSONObject(responseGetBalanceAPIBefore.getBody());
         iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        double balanceBefore = iqSoft_03_apiVariables_getBalance_response.getBalance();
+        double balanceBeforeCredit = iqSoft_03_apiVariables_getBalance_response.getBalance();
         logger.info("GetBalance API Response balanceBefore : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
 
-        String randomTransactionID = randomID();
+        String randomTransactionID = randomCreditTransactionID();
         double errorAmount = Double.parseDouble(errAmount);
-        HttpResponse<String> response = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, errorAmount, randomTransactionID, randomTransactionID+"C", currency);
-
-
-        InvalidAmountTransactionID.add(randomTransactionID);
-
-
-
+        HttpResponse<String> responseCreditAPI = creditAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), currency,clientProductID,
+                3, randomTransactionID, errorAmount,1);
 
         Unirest.shutdown();
-        statusCod = response.getStatus();
-        jsonObjectBody = new JSONObject(response.getBody());
+        statusCod = responseCreditAPI.getStatus();
+        jsonObjectBody = new JSONObject(responseCreditAPI.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
         logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
@@ -321,6 +326,16 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
         logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
+
+        HttpResponse<String> responseGetBalanceAPIAfter = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        Unirest.shutdown();
+        statusCod = responseGetBalanceAPIAfter.getStatus();
+        jsonObjectBody = new JSONObject(responseGetBalanceAPIAfter.getBody());
+        iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
+        double balanceAfterCredit = iqSoft_03_apiVariables_getBalance_response.getBalance();
+        logger.info("GetBalance API Response balanceAfter : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
+
+
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getTransactionId(), "null");
@@ -330,17 +345,7 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseCode(), 39);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getDescription(), "WrongOperationAmount", "Error Description: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getResponseObject(), "null");
-
-
-        HttpResponse<String> responseGetBalanceAPIAfter = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
-        Unirest.shutdown();
-        statusCod = responseGetBalanceAPIAfter.getStatus();
-        jsonObjectBody = new JSONObject(responseGetBalanceAPIAfter.getBody());
-        iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        double balanceAfter = iqSoft_03_apiVariables_getBalance_response.getBalance();
-        logger.info("GetBalance API Response balanceAfter : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
-
-        softAssert.assertEquals(balanceBefore, balanceAfter);
+        softAssert.assertEquals(balanceBeforeCredit, balanceAfterCredit);
         softAssert.assertAll();
     }
 

@@ -43,8 +43,15 @@ public class ReadConfig {
     public int getClientId() {
         return Integer.parseInt(pro.getProperty("ClientId"));
     }
-    public double getBetAmount() {
-        return Double.parseDouble(pro.getProperty("BetAmount"));
+    public double getBetAmountCredit() {
+        return Double.parseDouble(pro.getProperty("BetAmountCredit"));
+    }
+    public double getBetAmountDebit() {
+        return Double.parseDouble(pro.getProperty("BetAmountDebit"));
+    }
+
+    public String getUserName() {
+        return pro.getProperty("UserName");
     }
 
     public String getCurrency() {

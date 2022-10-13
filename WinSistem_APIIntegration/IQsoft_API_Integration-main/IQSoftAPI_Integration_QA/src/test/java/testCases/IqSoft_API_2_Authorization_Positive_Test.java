@@ -22,10 +22,10 @@ public class IqSoft_API_2_Authorization_Positive_Test extends BaseTest{
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
-        HttpResponse<String> response = authorizationAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        HttpResponse<String> responseAuthorizationAPI = authorizationAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         Unirest.shutdown();
-        statusCod = response.getStatus();
-        jsonObjectBody = new JSONObject(response.getBody());
+        statusCod = responseAuthorizationAPI.getStatus();
+        jsonObjectBody = new JSONObject(responseAuthorizationAPI.getBody());
 
         iqSoft_02_apisVariables_authorization_response.setClientId(jsonObjectBody.get("ClientId").toString());
         logger.info("Authorization API Response ClientId : " + iqSoft_02_apisVariables_authorization_response.getClientId());
@@ -61,10 +61,11 @@ public class IqSoft_API_2_Authorization_Positive_Test extends BaseTest{
     @Description("Verify Authorization API_s Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
     public void AuthorizationAPIValidatePositiveResponse() {
+        Assert.assertEquals(200,statusCod);
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),null);
         softAssert.assertNotEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(),null);
-        softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
+        softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getCurrencyId(), iqSoft_02_apisVariables_authorization_request.getCurrencyId());
         softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getResponseCode(), 0);
         softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getDescription(), "null");
         softAssert.assertEquals( iqSoft_02_apisVariables_authorization_response.getResponseObject(),"null");

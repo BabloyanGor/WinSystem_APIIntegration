@@ -17,6 +17,11 @@
             <class name="testCases.IqSoft_API_4_Credit_Negative_Test"/>
             <class name="testCases.IqSoft_API_5_Debit_Positive_Test"/>
             <class name="testCases.IqSoft_API_5_Debit_Negative_Test"/>
+            <class name="testCases.IqSoft_API_6_RollBack_Credit_Positive_Test"/>
+            <class name="testCases.IqSoft_API_6_RollBack_CreditDebit_Positive_Test"/>
+            <class name="testCases.IqSoft_API_6_RollBack_Debit_Positive_Test"/>
+
+
         </classes>
     </test>
 </suite>

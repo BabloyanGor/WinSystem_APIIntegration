@@ -58,9 +58,8 @@ public class IqSoft_API_3_GetBalance_Positive_Test extends BaseTest{
     @Description("Verify GetBalance API_s Validate Positive Response")
     public void GetBalanceAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
-
-        softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
-        Assert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId(), iqSoft02ApisVariables_authorization_request.getCurrencyId());
+        softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId(), iqSoft_02_apisVariables_authorization_request.getCurrencyId());
+        softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getCurrencyId().length(), 3);
         softAssert.assertNotEquals(iqSoft_03_apiVariables_getBalance_response.getClientId(),null);
         softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getResponseCode(), 0);
         softAssert.assertEquals(iqSoft_03_apiVariables_getBalance_response.getDescription(), "null");

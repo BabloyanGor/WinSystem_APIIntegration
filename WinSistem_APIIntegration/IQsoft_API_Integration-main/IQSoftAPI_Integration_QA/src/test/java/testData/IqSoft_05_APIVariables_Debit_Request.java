@@ -42,7 +42,7 @@ public class IqSoft_05_APIVariables_Debit_Request {
 
     @SerializedName("ClientId")
     @Expose
-    private int ClientId ;
+    private String ClientId ;
 
     @SerializedName("UserName")
     @Expose
@@ -126,11 +126,11 @@ public class IqSoft_05_APIVariables_Debit_Request {
         BetState = betState;
     }
 
-    public int getClientId() {
+    public String getClientId() {
         return ClientId;
     }
 
-    public void setClientId(int clientId) {
+    public void setClientId(String clientId) {
         ClientId = clientId;
     }
 

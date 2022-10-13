@@ -100,7 +100,7 @@ public class IqSoft_API_3_GetBalance_Negative_Test extends BaseTest{
     @Description("Verify GetBalance API_s response with invalid ProductID")
     @Severity(SeverityLevel.BLOCKER)
     public void GetBalanceAPIValidateResponseWithInvalidProductID() throws UnirestException, IOException {
-        HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() ,1000);
+        HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken() ,-10);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());

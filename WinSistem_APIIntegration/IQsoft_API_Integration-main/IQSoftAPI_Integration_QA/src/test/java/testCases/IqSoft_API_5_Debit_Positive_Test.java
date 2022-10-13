@@ -18,15 +18,17 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
 
     JSONObject jsonObjectBody;
     int statusCod;
-    double beforeDebit;
+    double beforeDebitBalance1;
+    double afterDebitBalance1;
 
     @BeforeClass
     public void setUp() throws UnirestException, IOException {
         HttpResponse<String> responseGetBalance = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalance.getBody());
-        beforeDebit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
+        beforeDebitBalance1 = Double.parseDouble(jsonObjectBody.get("Balance").toString());
 
-        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmount, ID, ID+"D",ID+"C",currency);
+        HttpResponse<String> response = debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmountDebit,
+                                                debitValidTransactionID,creditValidTransactionID,currency);
         Unirest.shutdown();
         statusCod = response.getStatus();
         jsonObjectBody = new JSONObject(response.getBody());
@@ -55,6 +57,9 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
         logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
+        HttpResponse<String> responseGetBalance2 = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
+        jsonObjectBody = new JSONObject(responseGetBalance2.getBody());
+        afterDebitBalance1 = Double.parseDouble(jsonObjectBody.get("Balance").toString());
     }
 
 
@@ -79,36 +84,12 @@ public class IqSoft_API_5_Debit_Positive_Test extends BaseTest{
         softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getTransactionId(), "null");
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getClientId(), String.valueOf(clientId));
         softAssert.assertNotEquals(iqSoft_05_apiVariables_debit_response.getCurrencyId(), "null");
-        double afterCredit = iqSoft_04_apiVariables_credit_response.getBalance();
-        softAssert.assertEquals(afterCredit , afterCredit+iqSoft_04_apiVariables_credit_request.getAmount());
+
+        softAssert.assertEquals(beforeDebitBalance1 , afterDebitBalance1-betAmountDebit);
 
         softAssert.assertAll();
 
     }
 
-
-    double balanceAfter = 0;
-    double check = 0;
-    int num = repeatNum;
-
-    @Test(priority = 20, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify Debit API_s Response Balance = Balance - BetAmount * num")
-    public void CreditAPIValidateBalance() throws UnirestException {
-        double balance = iqSoft_05_apiVariables_debit_response.getBalance();
-        HttpResponse<String> responseSecond = debitAPINumTimes();
-        jsonObjectBody = new JSONObject(responseSecond.getBody());
-        balanceAfter = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        check =  balanceAfter - balance;
-        Assert.assertEquals(check, (iqSoft_05_apiVariables_debit_request.getAmount())*num);
-    }
-
-    @Test(priority = 21, dependsOnMethods = {"DebitAPIValidateStatusCod"})
-    @Description("Verify GetBalance API_s Balance after Debit")
-    public void CreditAPIValidateBalanceAfterCreditGetBalance() throws UnirestException {
-        HttpResponse<String> response = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(),4);
-        jsonObjectBody = new JSONObject(response.getBody());
-        double balanceAfterCredit = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        Assert.assertEquals(balanceAfterCredit,balanceAfter);
-    }
 
 }
