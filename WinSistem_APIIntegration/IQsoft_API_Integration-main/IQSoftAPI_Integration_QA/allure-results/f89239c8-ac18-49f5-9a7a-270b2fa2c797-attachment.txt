@@ -1,1 +1,0 @@
-{"BetId":null,"TransactionId":null,"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":43,"Description":"ProductNotFound","ResponseObject":null}  ResponseTime 305 ms

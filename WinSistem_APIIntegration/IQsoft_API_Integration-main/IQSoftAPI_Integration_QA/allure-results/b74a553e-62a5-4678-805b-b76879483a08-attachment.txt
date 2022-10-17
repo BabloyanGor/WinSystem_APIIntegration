@@ -1,1 +1,0 @@
-{"TransactionId":"QA_Test-dMYkLNoTp23GycY6jKKq_C","ProductId":-10,"Amount":1.0,"CurrencyId":"EUR","TypeId":0,"OperationTypeId":3,"BetState":1}

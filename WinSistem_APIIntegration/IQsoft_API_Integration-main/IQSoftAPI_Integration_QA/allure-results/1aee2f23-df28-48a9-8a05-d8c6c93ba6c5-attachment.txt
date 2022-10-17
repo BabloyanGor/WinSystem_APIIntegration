@@ -1,1 +1,0 @@
-{"ProductId":1000,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}

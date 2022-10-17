@@ -1,1 +1,0 @@
-{"BetId":null,"TransactionId":null,"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":28,"Description":"SessionNotFound","ResponseObject":null}  ResponseTime 379 ms

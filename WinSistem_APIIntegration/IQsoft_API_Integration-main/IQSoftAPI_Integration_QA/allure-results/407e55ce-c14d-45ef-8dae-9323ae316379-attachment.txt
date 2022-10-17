@@ -1,1 +1,0 @@
-{"Token":"d7672b59726140a7a274de544e7ddbbd","ProductId":1000,"CurrencyId":"EUR","PartnerId":1,"LanguageId":""}

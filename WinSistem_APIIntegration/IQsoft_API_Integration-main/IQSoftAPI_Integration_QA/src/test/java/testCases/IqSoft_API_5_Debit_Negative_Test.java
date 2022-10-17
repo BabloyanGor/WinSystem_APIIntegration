@@ -247,8 +247,8 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         softAssert.assertEquals(statusCod, 200);
 
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getBalance(), 0.0,"1");
-        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 50);
-        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "CanNotConnectCreditAndDebit",
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 69);
+        softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getDescription(), "ClientDocumentAlreadyExists",
                 "Error Description: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseObject(), "null","2");
         softAssert.assertEquals(beforeCreditBalance, afterCreditBalance1+betAmountCredit,"3");

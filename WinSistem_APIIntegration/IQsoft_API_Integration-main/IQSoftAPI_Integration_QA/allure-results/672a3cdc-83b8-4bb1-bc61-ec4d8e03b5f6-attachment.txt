@@ -1,1 +1,0 @@
-{"BetId":null,"TransactionId":null,"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":30,"Description":"DocumentNotFound","ResponseObject":null}  ResponseTime 300 ms

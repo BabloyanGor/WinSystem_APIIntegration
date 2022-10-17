@@ -1,1 +1,0 @@
-{"BetId":"1463","TransactionId":null,"ClientId":"25","CurrencyId":"EUR","Balance":410.0,"ResponseCode":0,"Description":null,"ResponseObject":null}  ResponseTime 372 ms
