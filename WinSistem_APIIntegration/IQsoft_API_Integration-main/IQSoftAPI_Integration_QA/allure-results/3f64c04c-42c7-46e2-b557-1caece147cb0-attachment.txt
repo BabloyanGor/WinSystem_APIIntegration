@@ -1,0 +1,1 @@
+{"BetId":null,"TransactionId":null,"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":69,"Description":"ClientDocumentAlreadyExists","ResponseObject":null}  ResponseTime 387 ms

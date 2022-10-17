@@ -73,15 +73,15 @@ public class IqSoft_API_1_GetUrl_Positive_Test extends BaseTest {
     @Test(priority = 1)
     @Description("Verify Authorization API_s Response Status Cod equals to 200")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidateStatusCod() {
+    public void GetUrlAPIValidateStatusCod() {
         logger.info("getUrlAPI Status Cod is Equal: " + statusCod);
         Assert.assertEquals(200,statusCod);
     }
 
-    @Test(priority = 2,dependsOnMethods = { "getUrlAPIValidateStatusCod" })
+    @Test(priority = 2,dependsOnMethods = { "GetUrlAPIValidateStatusCod" })
     @Description("Verify getGameUrl Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidatePositiveResponse() {
+    public void GetUrlAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
         Assert.assertEquals(statusCod, 200);
         Assert.assertNotEquals(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), null,"1");

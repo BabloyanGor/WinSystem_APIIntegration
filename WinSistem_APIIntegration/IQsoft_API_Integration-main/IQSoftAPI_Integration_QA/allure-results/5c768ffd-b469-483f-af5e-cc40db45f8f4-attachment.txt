@@ -1,0 +1,1 @@
+{"BetId":null,"TransactionId":null,"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":39,"Description":"WrongOperationAmount","ResponseObject":null}  ResponseTime 340 ms

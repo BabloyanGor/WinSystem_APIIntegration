@@ -1,0 +1,1 @@
+{"ClientId":null,"CurrencyId":null,"Balance":0.0,"ResponseCode":29,"Description":"SessionExpired","ResponseObject":null}  ResponseTime 307 ms

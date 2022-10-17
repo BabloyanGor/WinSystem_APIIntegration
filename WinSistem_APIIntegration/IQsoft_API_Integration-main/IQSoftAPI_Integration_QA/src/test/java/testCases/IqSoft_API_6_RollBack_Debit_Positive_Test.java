@@ -81,15 +81,15 @@ public class IqSoft_API_6_RollBack_Debit_Positive_Test extends BaseTest{
     @Test(priority = 1)
     @Description("Verify RollBack API_s Response Status Cod equals to 200")
     @Severity(SeverityLevel.BLOCKER)
-    public void rollBackAPIValidateStatusCod() {
+    public void RollBackAPIValidateStatusCod() {
         logger.info("RollBack API Status Cod is Equal: " + statusCod);
         Assert.assertEquals(200, statusCod);
     }
 
-    @Test(priority = 2, dependsOnMethods = {"rollBackAPIValidateStatusCod"})
+    @Test(priority = 2, dependsOnMethods = {"RollBackAPIValidateStatusCod"})
     @Description("Verify RollBack API_s Validate Positive Response")
     @Severity(SeverityLevel.BLOCKER)
-    public void rollBackAPIValidatePositiveResponse() {
+    public void RollBackAPIValidatePositiveResponse() {
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertEquals(iqSoft_05_apiVariables_debit_response.getResponseCode(), 0,"1");

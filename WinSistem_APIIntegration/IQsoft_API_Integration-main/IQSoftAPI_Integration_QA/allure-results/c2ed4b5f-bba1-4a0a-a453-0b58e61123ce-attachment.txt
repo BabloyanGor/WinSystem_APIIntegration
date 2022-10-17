@@ -1,0 +1,1 @@
+{"ClientId":"25","CurrencyId":"EUR","Balance":407.0,"ResponseCode":0,"Description":null,"ResponseObject":null}  ResponseTime 292 ms

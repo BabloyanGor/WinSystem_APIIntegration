@@ -21,7 +21,7 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
     @Test(priority = 1)
     @Description("Verify getURL API_s response with invalid Token")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidateResponseWithExpiredToken() throws UnirestException, IOException {
+    public void GetUrlAPIValidateResponseWithExpiredToken() throws UnirestException, IOException {
 
         SoftAssert softAssert = new SoftAssert();
 
@@ -50,7 +50,7 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
     @Test(priority = 2)
     @Description("Verify getURL API_s response with invalid Token")
     @Severity(SeverityLevel.BLOCKER)
-    public void getUrlAPIValidateResponseWithInvalidToken() throws UnirestException, IOException {
+    public void GetUrlAPIValidateResponseWithInvalidToken() throws UnirestException, IOException {
 
         SoftAssert softAssert = new SoftAssert();
 
@@ -79,7 +79,7 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
     @Test(priority = 3)
     @Description("Verify getURL API_s response with invalid ClientID")
     @Severity(SeverityLevel.NORMAL)
-    public void getUrlAPIValidateResponseWithInvalidClientID() throws UnirestException, IOException {
+    public void GetUrlAPIValidateResponseWithInvalidClientID() throws UnirestException, IOException {
 
         SoftAssert softAssert = new SoftAssert();
 
@@ -109,7 +109,7 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
     @Test(priority = 4)
     @Description("Verify getURL API_s response with invalid ProductID")
     @Severity(SeverityLevel.NORMAL)
-    public void getUrlAPIValidateResponseWithInvalidProductID() throws UnirestException, IOException {
+    public void GetUrlAPIValidateResponseWithInvalidProductID() throws UnirestException, IOException {
 
         SoftAssert softAssert = new SoftAssert();
 
