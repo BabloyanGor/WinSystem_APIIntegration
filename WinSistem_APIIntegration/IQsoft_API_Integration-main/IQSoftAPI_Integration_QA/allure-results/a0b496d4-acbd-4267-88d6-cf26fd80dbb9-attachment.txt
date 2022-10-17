@@ -1,0 +1,1 @@
+{"TransactionId":"QA_Test-yLJNF7KtyASeWWJhpxTs_D","CreditTransactionId":"QA_Test-boAXnUavqE02snS8eBp0_C","ProductId":30,"Amount":5.0,"Token":"3d8d0c4801904ec19e3e748d7c2b74ae","CurrencyId":"EUR","BetState":0,"GameId":0,"OperationTypeId":0}
