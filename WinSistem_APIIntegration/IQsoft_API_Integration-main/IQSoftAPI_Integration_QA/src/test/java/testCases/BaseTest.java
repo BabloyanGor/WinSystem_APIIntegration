@@ -100,7 +100,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("GetUrlAPI:  Url: " + url + "        RequestBody ", getProductUrlRequestBody);
-        Allure.addAttachment("GetUrlAPI: ResponseTime" + (end - start) + "ms        ResponseBody", getUrlResponse.getBody());
+        Allure.addAttachment("GetUrlAPI: ResponseTime_" + (end - start) + "ms :       ResponseBody", getUrlResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("GetUrlAPI: RequestBody "+ getProductUrlRequestBody);
@@ -127,7 +127,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("AuthorizationAPI:  Url  " + url + "        RequestBody", authorizationRequestBody);
-        Allure.addAttachment("AuthorizationAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", authorizationResponse.getBody());
+        Allure.addAttachment("AuthorizationAPI:  ResponseTime_" + (end - start) + "ms :        ResponseBody", authorizationResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("AuthorizationAPI:  RequestBody" + authorizationRequestBody);
@@ -155,7 +155,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("GetBalanceAPI:  Url:  " + url + "        RequestBody", getBalanceRequestBody);
-        Allure.addAttachment("GetBalanceAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", getBalanceResponse.getBody());
+        Allure.addAttachment("GetBalanceAPI:  ResponseTime_" + (end - start) + "ms :        ResponseBody", getBalanceResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("GetBalanceAPI:  RequestBody"+ getBalanceRequestBody);
@@ -194,7 +194,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("CreditAPI:  Url:  " + url + "        RequestBody", CreditRequestBody);
-        Allure.addAttachment("CreditAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", creditResponse.getBody());
+        Allure.addAttachment("CreditAPI:  ResponseTime_" + (end - start) + "ms :         ResponseBody", creditResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("CreditAPI:  RequestBody"+ CreditRequestBody);
@@ -226,7 +226,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("DebitAPI  Url:  " + url + "        RequestBody", DebitRequestBody);
-        Allure.addAttachment("DebitAPI    ResponseTime" + (end - start) + "ms        ResponseBody", debitResponse.getBody());
+        Allure.addAttachment("DebitAPI    ResponseTime_" + (end - start) + "ms :        ResponseBody", debitResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("DebitAPI:  RequestBody"+ DebitRequestBody);
@@ -259,7 +259,7 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("RollBackAPI:  Url:  " + url + "        RequestBody", RollBackRequestBody);
-        Allure.addAttachment("RollBackAPI:    ResponseTime" + (end - start) + "ms        ResponseBody", rollBackResponse.getBody());
+        Allure.addAttachment("RollBackAPI:    ResponseTime_" + (end - start) + "ms :        ResponseBody", rollBackResponse.getBody());
         logger.info("");
         logger.info(url);
         logger.info("RollBackAPI:  RequestBody"+ RollBackRequestBody);
