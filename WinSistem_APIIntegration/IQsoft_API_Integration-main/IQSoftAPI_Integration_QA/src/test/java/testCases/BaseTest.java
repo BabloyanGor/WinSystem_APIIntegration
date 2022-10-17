@@ -65,9 +65,9 @@ public class BaseTest {
 
     public static Logger logger;
     ReadConfig readConfig = new ReadConfig();
-    public String gameLaunchURL = readConfig.getGameLaunchURL();
-    public String callbackUrl = readConfig.getCallbackUrl();
     public int partnerID = readConfig.getPartnerID();
+    public String gameLaunchURL = "https://websitewebapi.ipls-staging.winsysgroup.com/"+partnerID+"/api/Main/GetProductUrl";
+    public String callbackUrl = readConfig.getCallbackUrl();
     public int productID = readConfig.getProductID();
 
     public int clientProductID = readConfig.getClientProductID();
@@ -100,11 +100,11 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("GetUrlAPI:  Url: " + url + "        RequestBody ", getProductUrlRequestBody);
-        Allure.addAttachment( "getUrlResponse:  "+(end - start) + " ms"+"  ResponseBody ", getUrlResponse.getBody());
+        Allure.addAttachment("GetUrlAPI: ResponseTime" + (end - start) + "ms        ResponseBody", getUrlResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("GetUrlAPI:  Url: " + url + "        RequestBody "+ getProductUrlRequestBody);
-        logger.info("getUrlResponse:  "+(end - start) + " ms"+"  ResponseBody  "+ getUrlResponse.getBody());
+        logger.info("GetUrlAPI: RequestBody "+ getProductUrlRequestBody);
+        logger.info("GetUrlAPI: ResponseTime" + (end - start) + "ms        ResponseBody"+ getUrlResponse.getBody());
         logger.info("");
         return getUrlResponse;
     }
@@ -127,12 +127,13 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("AuthorizationAPI:  Url  " + url + "        RequestBody", authorizationRequestBody);
-        Allure.addAttachment("AuthorizationAPI:  "+(end - start) + " ms" +"  ResponseBody", authorizationResponse.getBody());
+        Allure.addAttachment("AuthorizationAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", authorizationResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("AuthorizationAPI:  Url  " + url + "        RequestBody   "+authorizationRequestBody);
-        logger.info("AuthorizationAPI:  "+(end - start) + " ms" +"  ResponseBody   "+ authorizationResponse.getBody());
+        logger.info("AuthorizationAPI:  RequestBody" + authorizationRequestBody);
+        logger.info("AuthorizationAPI:  ResponseBody" + authorizationResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
         logger.info("");
+
         return authorizationResponse;
     }
 
@@ -154,15 +155,15 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("GetBalanceAPI:  Url:  " + url + "        RequestBody", getBalanceRequestBody);
-        Allure.addAttachment("ResponseTime " + (end - start) + " ms" + "        GetBalanceAPI:  ResponseBody", getBalanceResponse.getBody());
+        Allure.addAttachment("GetBalanceAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", getBalanceResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("GetBalanceAPI:  Url:  " + url + "        RequestBody   "+ getBalanceRequestBody);
-        logger.info("GetBalanceAPI "+(end - start) + " ms"+"  ResponseBody " + getBalanceResponse.getBody());
+        logger.info("GetBalanceAPI:  RequestBody"+ getBalanceRequestBody);
+        logger.info("GetBalanceAPI:  ResponseBody"+getBalanceResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
         logger.info("");
+
         return getBalanceResponse;
     }
-
 
     public HttpResponse<String> creditAPI(String AuthorizationToken, String CurrencyID, int GameID, int OperationTypeId,
                                           String TransactionId, double Amount, int BetState) throws UnirestException {
@@ -192,12 +193,12 @@ public class BaseTest {
 
         long end = System.currentTimeMillis();
 
-        Allure.addAttachment("CreditAPI  Url:  " + url + "        RequestBody", CreditRequestBody);
-        Allure.addAttachment("ResponseTime " + (end - start) + " ms" + "        CreditAPI  ResponseBody", creditResponse.getBody());
+        Allure.addAttachment("CreditAPI:  Url:  " + url + "        RequestBody", CreditRequestBody);
+        Allure.addAttachment("CreditAPI:  ResponseTime" + (end - start) + "ms        ResponseBody", creditResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("CreditAPI  Url:  " + url + "        RequestBody   " + CreditRequestBody);
-        logger.info("CreditAPI ResponseBody " + creditResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
+        logger.info("CreditAPI:  RequestBody"+ CreditRequestBody);
+        logger.info("CreditAPI:  ResponseBody"+ creditResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
         logger.info("");
 
         return creditResponse;
@@ -225,16 +226,15 @@ public class BaseTest {
         long end = System.currentTimeMillis();
 
         Allure.addAttachment("DebitAPI  Url:  " + url + "        RequestBody", DebitRequestBody);
-        Allure.addAttachment("ResponseTime " + (end - start) + " ms" + "        DebitAPI  ResponseBody", debitResponse.getBody());
+        Allure.addAttachment("DebitAPI    ResponseTime" + (end - start) + "ms        ResponseBody", debitResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("DebitAPI  Url:  " + url + "        RequestBody   " + DebitRequestBody);
-        logger.info("ResponseTime " + (end - start) + " ms" + "   DebitAPI  ResponseBody   " + debitResponse.getBody());
+        logger.info("DebitAPI:  RequestBody"+ DebitRequestBody);
+        logger.info("DebitAPI:  ResponseBody"+debitResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
         logger.info("");
 
         return debitResponse;
     }
-
 
     public HttpResponse<String> rollBackAPI(String AuthorizationToken, String UserName, int GameId, String RollbackTransactionId,
                                             String TransactionId, int OperationTypeId) throws UnirestException {
@@ -258,13 +258,12 @@ public class BaseTest {
                 .asString();
         long end = System.currentTimeMillis();
 
-
-        Allure.addAttachment("RollBackAPI  Url:  " + url + "        RequestBody", RollBackRequestBody);
-        Allure.addAttachment("ResponseTime " + (end - start) + " ms" + "        RollBackAPI  ResponseBody", rollBackResponse.getBody());
+        Allure.addAttachment("RollBackAPI:  Url:  " + url + "        RequestBody", RollBackRequestBody);
+        Allure.addAttachment("RollBackAPI:    ResponseTime" + (end - start) + "ms        ResponseBody", rollBackResponse.getBody());
         logger.info("");
         logger.info(url);
-        logger.info("RollBackAPI  Url:  " + url + "        RequestBody  " + RollBackRequestBody);
-        logger.info("ResponseTime " + (end - start) + " ms" + "RollBackAPI  ResponseBody  " + rollBackResponse.getBody());
+        logger.info("RollBackAPI:  RequestBody"+ RollBackRequestBody);
+        logger.info("RollBackAPI:  ResponseBody"+ rollBackResponse.getBody() + "  ResponseTime " + (end - start) + " ms");
         logger.info("");
 
         return rollBackResponse;

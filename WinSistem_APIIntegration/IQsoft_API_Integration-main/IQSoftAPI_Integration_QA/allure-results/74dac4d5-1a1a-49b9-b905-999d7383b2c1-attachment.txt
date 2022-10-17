@@ -1,0 +1,1 @@
+{"ResponseCode":0,"Description":null,"ResponseObject":"https://ipls-stg.winsysgroup.com/games/?gameId=30&token=03b464a113724ab787c33ff0c870ecf2"}

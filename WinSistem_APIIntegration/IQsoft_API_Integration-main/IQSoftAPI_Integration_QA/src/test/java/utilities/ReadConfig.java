@@ -20,9 +20,9 @@ public class ReadConfig {
     }
 
 
-    public String getGameLaunchURL() {
-        return pro.getProperty("gameLaunchURL");
-    }
+//    public String getGameLaunchURL() {
+//        return pro.getProperty("gameLaunchURL");
+//    }
     public String getCallbackUrl() {
         return pro.getProperty("callbackUrl");
     }
@@ -63,24 +63,8 @@ public class ReadConfig {
 
     //endregion
 
-    //region <Getting Variables for Authorization API>
 
-    //endregion
 
-    //region <Getting Variables for getBalance API>
 
-    //endregion
-
-    //region <Getting Variables for Credit API>
-
-    //endregion
-
-    //region <Getting Variables for Debit API>
-
-    //endregion
-
-    //region <Getting Variables for RollBack API>
-
-    //endregion
 
 }

@@ -47,28 +47,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseDebitAPI.getBody());
         Unirest.shutdown();
         iqSoft_05_apiVariables_debit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Debit API Response BetId : " + iqSoft_05_apiVariables_debit_response.getBetId());
-
         iqSoft_05_apiVariables_debit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Debit API Response TransactionId : " + iqSoft_05_apiVariables_debit_response.getTransactionId());
-
         iqSoft_05_apiVariables_debit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Debit API Response ClientId : " + iqSoft_05_apiVariables_debit_response.getClientId());
-
         iqSoft_05_apiVariables_debit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Debit API Response CurrencyId : " + iqSoft_05_apiVariables_debit_response.getCurrencyId());
-
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
-
         iqSoft_05_apiVariables_debit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Debit API Response ResponseCode : " + iqSoft_05_apiVariables_debit_response.getResponseCode());
-
         iqSoft_05_apiVariables_debit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Debit API Response Description : " + iqSoft_05_apiVariables_debit_response.getDescription());
-
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
         HttpResponse<String> responseGetBalanceAfterDebit = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit.getBody());
@@ -119,28 +104,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseDebitAPI.getBody());
         Unirest.shutdown();
         iqSoft_05_apiVariables_debit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Debit API Response BetId : " + iqSoft_05_apiVariables_debit_response.getBetId());
-
         iqSoft_05_apiVariables_debit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Debit API Response TransactionId : " + iqSoft_05_apiVariables_debit_response.getTransactionId());
-
         iqSoft_05_apiVariables_debit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Debit API Response ClientId : " + iqSoft_05_apiVariables_debit_response.getClientId());
-
         iqSoft_05_apiVariables_debit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Debit API Response CurrencyId : " + iqSoft_05_apiVariables_debit_response.getCurrencyId());
-
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
-
         iqSoft_05_apiVariables_debit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Debit API Response ResponseCode : " + iqSoft_05_apiVariables_debit_response.getResponseCode());
-
         iqSoft_05_apiVariables_debit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Debit API Response Description : " + iqSoft_05_apiVariables_debit_response.getDescription());
-
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
         HttpResponse<String> responseGetBalanceAfterDebit = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit.getBody());
@@ -213,28 +183,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         Unirest.shutdown();
 
         iqSoft_05_apiVariables_debit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Debit API Response BetId : " + iqSoft_05_apiVariables_debit_response.getBetId());
-
         iqSoft_05_apiVariables_debit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Debit API Response TransactionId : " + iqSoft_05_apiVariables_debit_response.getTransactionId());
-
         iqSoft_05_apiVariables_debit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Debit API Response ClientId : " + iqSoft_05_apiVariables_debit_response.getClientId());
-
         iqSoft_05_apiVariables_debit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Debit API Response CurrencyId : " + iqSoft_05_apiVariables_debit_response.getCurrencyId());
-
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
-
         iqSoft_05_apiVariables_debit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Debit API Response ResponseCode : " + iqSoft_05_apiVariables_debit_response.getResponseCode());
-
         iqSoft_05_apiVariables_debit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Debit API Response Description : " + iqSoft_05_apiVariables_debit_response.getDescription());
-
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
         HttpResponse<String> responseGetBalanceAfterDebit2 = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit2.getBody());
@@ -373,28 +328,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         statusCod = responseDebitAPI.getStatus();
         Unirest.shutdown();
         iqSoft_05_apiVariables_debit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Debit API Response BetId : " + iqSoft_05_apiVariables_debit_response.getBetId());
-
         iqSoft_05_apiVariables_debit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Debit API Response TransactionId : " + iqSoft_05_apiVariables_debit_response.getTransactionId());
-
         iqSoft_05_apiVariables_debit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Debit API Response ClientId : " + iqSoft_05_apiVariables_debit_response.getClientId());
-
         iqSoft_05_apiVariables_debit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Debit API Response CurrencyId : " + iqSoft_05_apiVariables_debit_response.getCurrencyId());
-
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
-
         iqSoft_05_apiVariables_debit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Debit API Response ResponseCode : " + iqSoft_05_apiVariables_debit_response.getResponseCode());
-
         iqSoft_05_apiVariables_debit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Debit API Response Description : " + iqSoft_05_apiVariables_debit_response.getDescription());
-
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
         HttpResponse<String> responseGetBalanceAfterDebit = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit.getBody());
@@ -446,28 +386,13 @@ public class IqSoft_API_5_Debit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseDebitAPI.getBody());
         Unirest.shutdown();
         iqSoft_05_apiVariables_debit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Debit API Response BetId : " + iqSoft_05_apiVariables_debit_response.getBetId());
-
         iqSoft_05_apiVariables_debit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Debit API Response TransactionId : " + iqSoft_05_apiVariables_debit_response.getTransactionId());
-
         iqSoft_05_apiVariables_debit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Debit API Response ClientId : " + iqSoft_05_apiVariables_debit_response.getClientId());
-
         iqSoft_05_apiVariables_debit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Debit API Response CurrencyId : " + iqSoft_05_apiVariables_debit_response.getCurrencyId());
-
         iqSoft_05_apiVariables_debit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Debit API Response Balance : " + iqSoft_05_apiVariables_debit_response.getBalance());
-
         iqSoft_05_apiVariables_debit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Debit API Response ResponseCode : " + iqSoft_05_apiVariables_debit_response.getResponseCode());
-
         iqSoft_05_apiVariables_debit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Debit API Response Description : " + iqSoft_05_apiVariables_debit_response.getDescription());
-
         iqSoft_05_apiVariables_debit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Debit API Response ResponseObject : " + iqSoft_05_apiVariables_debit_response.getResponseObject());
 
         HttpResponse<String> responseGetBalanceAfterDebit = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit.getBody());

@@ -31,13 +31,8 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseGetUrlAPI.getBody());
 
         iqSoft01ApiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("getGameUrl API ResponseCode is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseCode());
-
         iqSoft01ApiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("getGameUrl API Description is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
-
         iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
-        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
 
         logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
         softAssert.assertEquals(statusCod, 200);
@@ -60,13 +55,8 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft01ApiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("getGameUrl API ResponseCode is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseCode());
-
         iqSoft01ApiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("getGameUrl API Description is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
-
         iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
-        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
 
         logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
         softAssert.assertEquals(statusCod, 200);
@@ -89,13 +79,8 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft01ApiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("getGameUrl API ResponseCode is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseCode());
-
         iqSoft01ApiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("getGameUrl API Description is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
-
         iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
-        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
 
         logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
         softAssert.assertEquals(statusCod, 200);
@@ -119,13 +104,8 @@ public class IqSoft_API_1_GetUrl_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft01ApiVariables_getProductUrl_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("getGameUrl API ResponseCode is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseCode());
-
         iqSoft01ApiVariables_getProductUrl_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("getGameUrl API Description is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getDescription());
-
         iqSoft01ApiVariables_getProductUrl_response.setResponseObject(jsonObjectBody.get("ResponseObject").toString());
-        logger.info("getGameUrl API ResponseObject is Equal: " + iqSoft01ApiVariables_getProductUrl_response.getResponseObject());
 
         logger.info("getGameUrl API Response Status Cod is Equal: " + statusCod);
         softAssert.assertEquals(statusCod, 200);

@@ -26,22 +26,12 @@ public class IqSoft_API_3_GetBalance_Negative_Test extends BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_03_apiVariables_getBalance_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("GetBalance API Response ClientId : " + iqSoft_03_apiVariables_getBalance_response.getClientId());
-
         iqSoft_03_apiVariables_getBalance_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("GetBalance API Response CurrencyId : " + iqSoft_03_apiVariables_getBalance_response.getCurrencyId());
-
         iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("GetBalance API Response Balance : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("GetBalance API Response ResponseCode : " + iqSoft_03_apiVariables_getBalance_response.getResponseCode());
-
         iqSoft_03_apiVariables_getBalance_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("GetBalance API Response Description : " + iqSoft_03_apiVariables_getBalance_response.getDescription());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("GetBalance API Response ResponseObject : " + iqSoft_03_apiVariables_getBalance_response.getResponseObject());
+
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertEquals(statusCod, 200);
@@ -65,22 +55,12 @@ public class IqSoft_API_3_GetBalance_Negative_Test extends BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_03_apiVariables_getBalance_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("GetBalance API Response ClientId : " + iqSoft_03_apiVariables_getBalance_response.getClientId());
-
         iqSoft_03_apiVariables_getBalance_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("GetBalance API Response CurrencyId : " + iqSoft_03_apiVariables_getBalance_response.getCurrencyId());
-
         iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("GetBalance API Response Balance : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("GetBalance API Response ResponseCode : " + iqSoft_03_apiVariables_getBalance_response.getResponseCode());
-
         iqSoft_03_apiVariables_getBalance_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("GetBalance API Response Description : " + iqSoft_03_apiVariables_getBalance_response.getDescription());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("GetBalance API Response ResponseObject : " + iqSoft_03_apiVariables_getBalance_response.getResponseObject());
+
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertEquals(statusCod, 200);
@@ -106,22 +86,12 @@ public class IqSoft_API_3_GetBalance_Negative_Test extends BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_03_apiVariables_getBalance_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("GetBalance API Response ClientId : " + iqSoft_03_apiVariables_getBalance_response.getClientId());
-
         iqSoft_03_apiVariables_getBalance_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("GetBalance API Response CurrencyId : " + iqSoft_03_apiVariables_getBalance_response.getCurrencyId());
-
         iqSoft_03_apiVariables_getBalance_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("GetBalance API Response Balance : " + iqSoft_03_apiVariables_getBalance_response.getBalance());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("GetBalance API Response ResponseCode : " + iqSoft_03_apiVariables_getBalance_response.getResponseCode());
-
         iqSoft_03_apiVariables_getBalance_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("GetBalance API Response Description : " + iqSoft_03_apiVariables_getBalance_response.getDescription());
-
         iqSoft_03_apiVariables_getBalance_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("GetBalance API Response ResponseObject : " + iqSoft_03_apiVariables_getBalance_response.getResponseObject());
+
         SoftAssert softAssert = new SoftAssert();
 
         softAssert.assertEquals(statusCod, 200);

@@ -31,28 +31,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
-
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
@@ -79,28 +64,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
-
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
@@ -127,28 +97,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
-
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
@@ -182,28 +137,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
-
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
@@ -239,28 +179,13 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
-
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_04_apiVariables_credit_response.getBetId(), "null");
@@ -301,30 +226,16 @@ public class IqSoft_API_4_Credit_Negative_Test extends BaseTest {
         jsonObjectBody = new JSONObject(responseCreditAPI.getBody());
 
         iqSoft_04_apiVariables_credit_response.setBetId(jsonObjectBody.get("BetId").toString());
-        logger.info("Credit API Response BetId : " + iqSoft_04_apiVariables_credit_response.getBetId());
-
         iqSoft_04_apiVariables_credit_response.setTransactionId(jsonObjectBody.get("TransactionId").toString());
-        logger.info("Credit API Response TransactionId : " + iqSoft_04_apiVariables_credit_response.getTransactionId());
 
 //        getTransactionIdArrayList.add(randomID());
 
         iqSoft_04_apiVariables_credit_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Credit API Response ClientId : " + iqSoft_04_apiVariables_credit_response.getClientId());
-
         iqSoft_04_apiVariables_credit_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Credit API Response CurrencyId : " + iqSoft_04_apiVariables_credit_response.getCurrencyId());
-
         iqSoft_04_apiVariables_credit_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Credit API Response Balance : " + iqSoft_04_apiVariables_credit_response.getBalance());
-
         iqSoft_04_apiVariables_credit_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Credit API Response ResponseCode : " + iqSoft_04_apiVariables_credit_response.getResponseCode());
-
         iqSoft_04_apiVariables_credit_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Credit API Response Description : " + iqSoft_04_apiVariables_credit_response.getDescription());
-
         iqSoft_04_apiVariables_credit_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Credit API Response ResponseObject : " + iqSoft_04_apiVariables_credit_response.getResponseObject());
 
 
         HttpResponse<String> responseGetBalanceAPIAfter = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);

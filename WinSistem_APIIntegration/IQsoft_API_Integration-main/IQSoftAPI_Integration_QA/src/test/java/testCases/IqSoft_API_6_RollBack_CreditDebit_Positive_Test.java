@@ -45,8 +45,6 @@ public class IqSoft_API_6_RollBack_CreditDebit_Positive_Test extends BaseTest{
         jsonObjectBody = new JSONObject(responseGetBalanceAfterCredit.getBody());
         Unirest.shutdown();
         afterCreditBalance = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        logger.info("");
-
 
         debitAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID, betAmountDebit,
                 debitTransactionID,creditTransactionID,currency);
@@ -56,26 +54,21 @@ public class IqSoft_API_6_RollBack_CreditDebit_Positive_Test extends BaseTest{
         jsonObjectBody = new JSONObject(responseGetBalanceAfterDebit.getBody());
         Unirest.shutdown();
         afterDebitBalance = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        logger.info("");
 
-        HttpResponse<String> responseRollBack = rollBackAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(),userName,clientProductID,creditTransactionID, rollBackTransactionID,1);
+        HttpResponse<String> responseRollBack = rollBackAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(),
+                userName,clientProductID,creditTransactionID, rollBackTransactionID,1);
         jsonObjectBody = new JSONObject(responseRollBack.getBody());
         statusCod = responseRollBack.getStatus();
         Unirest.shutdown();
 
         iqSoft_06_apiVariables_rollBack_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("RollBack API Response ResponseCode : " + iqSoft_06_apiVariables_rollBack_response.getResponseCode());
-
         iqSoft_06_apiVariables_rollBack_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("RollBack API Response Description : " + iqSoft_06_apiVariables_rollBack_response.getDescription());
-
 
 
         HttpResponse<String> responseGetBalanceAfterRollBack = getBalanceAPI(iqSoft01ApiVariables_getProductUrl_response.getAuthorizationToken(), clientProductID);
         JSONObject jsonObjectBody = new JSONObject(responseGetBalanceAfterRollBack.getBody());
         Unirest.shutdown();
         afterRollBackBalance = Double.parseDouble(jsonObjectBody.get("Balance").toString());
-        logger.info("");
     }
 
 

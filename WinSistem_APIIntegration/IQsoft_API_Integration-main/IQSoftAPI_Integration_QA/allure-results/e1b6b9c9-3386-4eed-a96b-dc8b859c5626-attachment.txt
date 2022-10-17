@@ -1,1 +1,0 @@
-{"BetId":"1613","TransactionId":null,"ClientId":"25","CurrencyId":"EUR","Balance":395.0,"ResponseCode":0,"Description":null,"ResponseObject":null}

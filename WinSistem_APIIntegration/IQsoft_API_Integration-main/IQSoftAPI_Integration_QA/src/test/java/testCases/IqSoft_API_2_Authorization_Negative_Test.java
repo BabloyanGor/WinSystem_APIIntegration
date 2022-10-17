@@ -32,22 +32,11 @@ public class IqSoft_API_2_Authorization_Negative_Test extends  BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_02_apisVariables_authorization_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Authorization API Response ClientId : " + iqSoft_02_apisVariables_authorization_response.getClientId());
-
         iqSoft_02_apisVariables_authorization_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Authorization API Response CurrencyId : " + iqSoft_02_apisVariables_authorization_response.getCurrencyId());
-
         iqSoft_02_apisVariables_authorization_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Authorization API Response Balance : " + iqSoft_02_apisVariables_authorization_response.getBalance());
-
         iqSoft_02_apisVariables_authorization_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Authorization API Response ResponseCode : " + iqSoft_02_apisVariables_authorization_response.getResponseCode());
-
         iqSoft_02_apisVariables_authorization_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Authorization API Response Description : " + iqSoft_02_apisVariables_authorization_response.getDescription());
-
         iqSoft_02_apisVariables_authorization_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Authorization API Response ResponseObject : " + iqSoft_02_apisVariables_authorization_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),"null");
@@ -74,22 +63,11 @@ public class IqSoft_API_2_Authorization_Negative_Test extends  BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_02_apisVariables_authorization_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Authorization API Response ClientId : " + iqSoft_02_apisVariables_authorization_response.getClientId());
-
         iqSoft_02_apisVariables_authorization_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Authorization API Response CurrencyId : " + iqSoft_02_apisVariables_authorization_response.getCurrencyId());
-
         iqSoft_02_apisVariables_authorization_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Authorization API Response Balance : " + iqSoft_02_apisVariables_authorization_response.getBalance());
-
         iqSoft_02_apisVariables_authorization_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Authorization API Response ResponseCode : " + iqSoft_02_apisVariables_authorization_response.getResponseCode());
-
         iqSoft_02_apisVariables_authorization_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Authorization API Response Description : " + iqSoft_02_apisVariables_authorization_response.getDescription());
-
         iqSoft_02_apisVariables_authorization_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Authorization API Response ResponseObject : " + iqSoft_02_apisVariables_authorization_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),"null");
@@ -117,22 +95,11 @@ public class IqSoft_API_2_Authorization_Negative_Test extends  BaseTest{
         jsonObjectBody = new JSONObject(response.getBody());
 
         iqSoft_02_apisVariables_authorization_response.setClientId(jsonObjectBody.get("ClientId").toString());
-        logger.info("Authorization API Response ClientId : " + iqSoft_02_apisVariables_authorization_response.getClientId());
-
         iqSoft_02_apisVariables_authorization_response.setCurrencyId(jsonObjectBody.get("CurrencyId").toString());
-        logger.info("Authorization API Response CurrencyId : " + iqSoft_02_apisVariables_authorization_response.getCurrencyId());
-
         iqSoft_02_apisVariables_authorization_response.setBalance(Double.parseDouble(jsonObjectBody.get("Balance").toString()));
-        logger.info("Authorization API Response Balance : " + iqSoft_02_apisVariables_authorization_response.getBalance());
-
         iqSoft_02_apisVariables_authorization_response.setResponseCode(Integer.parseInt(jsonObjectBody.get("ResponseCode").toString()));
-        logger.info("Authorization API Response ResponseCode : " + iqSoft_02_apisVariables_authorization_response.getResponseCode());
-
         iqSoft_02_apisVariables_authorization_response.setDescription(jsonObjectBody.get("Description").toString());
-        logger.info("Authorization API Response Description : " + iqSoft_02_apisVariables_authorization_response.getDescription());
-
         iqSoft_02_apisVariables_authorization_response.setResponseObject((jsonObjectBody.get("ResponseObject").toString()));
-        logger.info("Authorization API Response ResponseObject : " + iqSoft_02_apisVariables_authorization_response.getResponseObject());
 
         softAssert.assertEquals(statusCod, 200);
         softAssert.assertEquals(iqSoft_02_apisVariables_authorization_response.getClientId(),"null");

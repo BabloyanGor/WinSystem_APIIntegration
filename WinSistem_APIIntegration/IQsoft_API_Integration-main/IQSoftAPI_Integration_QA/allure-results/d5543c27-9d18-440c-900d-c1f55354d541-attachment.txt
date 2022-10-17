@@ -1,1 +1,0 @@
-{"TransactionId":"QA_Test-s6QyP0ORej0VgY5ZaF2N_C","ProductId":30,"Amount":400.0,"Token":"3d8d0c4801904ec19e3e748d7c2b74ae","CurrencyId":"EUR","TypeId":0,"OperationTypeId":3,"BetState":1}
